@@ -7,7 +7,12 @@ pandas
 fredapi
 streamlit
 plotly
-pandas
 pyyaml
 lxml
 plotly
+alpha_vantage
+requests
+setuptools>=67
+pandas_datareader>=0.10
+numpy
+scipy

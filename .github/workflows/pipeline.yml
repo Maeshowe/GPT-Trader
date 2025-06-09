@@ -42,7 +42,11 @@ jobs:
         run: |
           python data_fetch/fetch_data.py
           python run_prompts.py
+          python news_sentiment.py 
           python generator_runner.py
+          python backtest.py
+          python backtest_rebal.py
+          python risk_budget.py
 
       # ── 6) Kimenetek commitálása, ha változtak ───────────────────────
       - name: Commit outputs
