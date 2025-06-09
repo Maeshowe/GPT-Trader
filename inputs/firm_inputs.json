@@ -5,20 +5,20 @@
     "company_name": "AAPL",
     "industry": "Technology",
     "firm_financials_json": {
-      "P/E": 31.76,
+      "P/E": 31.87,
       "Beta": 1.21,
       "ROE": 1.38,
       "Quick Ratio": 0.68
     },
     "firm_news_snippets": [
-      "Apple's AI Siri Update Reportedly Facing Uphill Battle",
-      "AAPL WWDC, TSLA & Trump, MSFT All-Time High: Charting Mag 7 Developments",
-      "Down 21%, Should You Buy the Dip on Apple Stock? The Answer Might Surprise You."
+      "Options Traders Target Tech Giant Ahead of WWDC",
+      "Apple Under Pressure for AI Progress at Today's WWDC Event",
+      "Apple WWDC kicks off today. Here's what developers are looking for"
     ],
     "today": "2025-06-09",
     "firm_score": 78,
     "firm_shap": {
-      "P/E": 6.35,
+      "P/E": 6.37,
       "PEG": -0.0,
       "Beta": -0.12,
       "ROE": 0.55,
@@ -31,20 +31,20 @@
     "company_name": "MSFT",
     "industry": "Technology",
     "firm_financials_json": {
-      "P/E": 36.35,
+      "P/E": 36.47,
       "Beta": 1.03,
       "ROE": 0.34,
       "Quick Ratio": 1.24
     },
     "firm_news_snippets": [
-      "Microsoft: Financial Strength Personified, Remain Strong Buy",
-      "AAPL WWDC, TSLA & Trump, MSFT All-Time High: Charting Mag 7 Developments",
-      "Microsoft reveals new handheld Xbox Ally gaming PC in partnership with Asus"
+      "National Advertising Division Finds Certain Microsoft Copilot Claims Supported; Recommends Others be Modified or Discontinued",
+      "ETFs Poised to Win in the MSFT vs. NVDA Market Cap Battle",
+      "Microsoft enters portable gaming with new ROG Xbox Ally devices"
     ],
     "today": "2025-06-09",
-    "firm_score": 92,
+    "firm_score": 85,
     "firm_shap": {
-      "P/E": 7.27,
+      "P/E": 7.29,
       "PEG": -0.0,
       "Beta": -0.1,
       "ROE": 0.14,
@@ -57,20 +57,20 @@
     "company_name": "NVDA",
     "industry": "Technology",
     "firm_financials_json": {
-      "P/E": 45.72,
+      "P/E": 45.98,
       "Beta": 2.12,
       "ROE": 1.15,
       "Quick Ratio": 2.86
     },
     "firm_news_snippets": [
-      "UK financial regulator partners with Nvidia in AI 'sandbox'",
-      "UK finance watchdog teams up with Nvidia to let banks experiment with AI",
-      "Nvidia: After A 50% Run, Near-Term AI Spending Outlook Remains Uncertain (Rating Downgrade)"
+      "Stock Of The Day: NVIDIA Tests New Resistance \u2014 Could Another Breakout Be Brewing?",
+      "Nvidia CEO Jensen Huang praises UK AI scene",
+      "ETFs Poised to Win in the MSFT vs. NVDA Market Cap Battle"
     ],
     "today": "2025-06-09",
     "firm_score": 78,
     "firm_shap": {
-      "P/E": 9.14,
+      "P/E": 9.2,
       "PEG": -0.0,
       "Beta": -0.21,
       "ROE": 0.46,
@@ -83,14 +83,14 @@
     "company_name": "JPM",
     "industry": "Financials",
     "firm_financials_json": {
-      "P/E": 13.04,
+      "P/E": 13.07,
       "Beta": 1.08,
       "ROE": 0.17
     },
     "firm_news_snippets": [
-      "5 Relatively Secure And Cheap Dividend Stocks, Yields Up To 10% (June 2025)",
-      "Can JPMorgan be unionized? Employees turn to their peers at Wells Fargo for advice.",
-      "Buy 7 Ideal 'Safer' May Dividends, Out Of 40 Reader Tags"
+      "Can JPMorgan's IB Division Weather the Near-Term Macro Challenges?",
+      "These 3 Dividend Stocks Pay You to Stay Calm in Summer",
+      "5 Relatively Secure And Cheap Dividend Stocks, Yields Up To 10% (June 2025)"
     ],
     "today": "2025-06-09",
     "firm_score": 78,
@@ -108,7 +108,7 @@
     "company_name": "BAC",
     "industry": "Financials",
     "firm_financials_json": {
-      "P/E": 13.42,
+      "P/E": 13.44,
       "Beta": 1.31,
       "ROE": 0.09
     },
@@ -120,7 +120,7 @@
     "today": "2025-06-09",
     "firm_score": 65,
     "firm_shap": {
-      "P/E": 2.68,
+      "P/E": 2.69,
       "PEG": -0.0,
       "Beta": -0.13,
       "ROE": 0.04,
@@ -133,18 +133,18 @@
     "company_name": "GS",
     "industry": "Financials",
     "firm_financials_json": {
-      "P/E": 14.25,
+      "P/E": 14.26,
       "Beta": 1.31,
       "ROE": 0.12,
       "Quick Ratio": 1.41
     },
     "firm_news_snippets": [
+      "'Trump accounts': CEOs to unveil investments for newborns at White House",
       "Julie R. Smith Named Metiri Group CEO",
-      "Goldman Refocuses on Investment Banking: Will It Pivot to Profit?",
-      "Goldman Sachs (GS) Stock Declines While Market Improves: Some Information for Investors"
+      "Julie R. Smith Named Metiri Group CEO"
     ],
     "today": "2025-06-09",
-    "firm_score": 68,
+    "firm_score": 75,
     "firm_shap": {
       "P/E": 2.85,
       "PEG": -0.0,
@@ -159,20 +159,20 @@
     "company_name": "XOM",
     "industry": "Energy",
     "firm_financials_json": {
-      "P/E": 13.83,
+      "P/E": 13.99,
       "Beta": 0.46,
       "ROE": 0.14,
       "Quick Ratio": 0.86
     },
     "firm_news_snippets": [
+      "ExxonMobil's Valuation Remains Premium: Are Investors Overpaying?",
       "3 Top Energy Stocks to Buy Without Hesitation in June",
-      "2 Top High-Yield Dividend Stocks You Can Confidently Buy and Hold Until at Least 2030",
-      "Golden Buying Opportunity For Big Dividend Investors: 8-9% Yields Set To Soar"
+      "2 Top High-Yield Dividend Stocks You Can Confidently Buy and Hold Until at Least 2030"
     ],
     "today": "2025-06-09",
     "firm_score": 78,
     "firm_shap": {
-      "P/E": 2.77,
+      "P/E": 2.8,
       "PEG": -0.0,
       "Beta": -0.05,
       "ROE": 0.06,
@@ -185,20 +185,20 @@
     "company_name": "CVX",
     "industry": "Energy",
     "firm_financials_json": {
-      "P/E": 16.02,
+      "P/E": 16.19,
       "Beta": 0.8,
       "ROE": 0.1,
       "Quick Ratio": 0.68
     },
     "firm_news_snippets": [
-      "Golden Buying Opportunity For Big Dividend Investors: 8-9% Yields Set To Soar",
-      "The Schwab U.S. Dividend Equity ETF Loaded Up on Energy Stocks. Here Are the Top 3.",
-      "Chevron: Buy In Before The Rebound"
+      "As Oil Prices Rebound, These Stocks Could Fuel the Next Rally",
+      "These 3 Dividend Stocks Pay You to Stay Calm in Summer",
+      "Chevron's Texas Job Cuts: What's Really Driving the Layoffs?"
     ],
     "today": "2025-06-09",
-    "firm_score": 75,
+    "firm_score": 72,
     "firm_shap": {
-      "P/E": 3.2,
+      "P/E": 3.24,
       "PEG": -0.0,
       "Beta": -0.08,
       "ROE": 0.04,
@@ -211,7 +211,7 @@
     "company_name": "SLB",
     "industry": "Energy",
     "firm_financials_json": {
-      "P/E": 11.48,
+      "P/E": 11.61,
       "Beta": 1.03,
       "ROE": 0.2,
       "Quick Ratio": 0.83
@@ -224,7 +224,7 @@
     "today": "2025-06-09",
     "firm_score": 78,
     "firm_shap": {
-      "P/E": 2.3,
+      "P/E": 2.32,
       "PEG": -0.0,
       "Beta": -0.1,
       "ROE": 0.08,
