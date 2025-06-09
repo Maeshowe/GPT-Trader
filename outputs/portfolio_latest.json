@@ -2,109 +2,102 @@
   "date": "2025-06-09",
   "table": [
     {
-      "Asset": "MSFT ",
-      "Weight (%)": " 10 ",
+      "Asset": " NVDA  ",
+      "Weight (%)": 10,
       "Thesis": " Top-ranked firm ",
-      "Edge": " Strong tech sector ",
-      "Risk": " Market volatility"
+      "Edge": " AI and chip demand ",
+      "Risk": " High valuation "
     },
     {
-      "Asset": "AAPL ",
-      "Weight (%)": " 7 ",
-      "Thesis": " SENTIMENT\u2193-0.081 ",
-      "Edge": " Innovation leader ",
-      "Risk": " Sentiment risk"
-    },
-    {
-      "Asset": "NVDA ",
-      "Weight (%)": " 10 ",
-      "Thesis": " Top-ranked firm ",
-      "Edge": " AI and GPU demand ",
-      "Risk": " Tech sector volatility"
-    },
-    {
-      "Asset": "JPM ",
-      "Weight (%)": " 10 ",
+      "Asset": " JPM   ",
+      "Weight (%)": 10,
       "Thesis": " Top-ranked firm ",
       "Edge": " Financial stability ",
-      "Risk": " Interest rate changes"
+      "Risk": " Interest rate changes "
     },
     {
-      "Asset": "XOM ",
-      "Weight (%)": " 10 ",
+      "Asset": " GS    ",
+      "Weight (%)": 10,
       "Thesis": " Top-ranked firm ",
-      "Edge": " Energy sector strength ",
-      "Risk": " Oil price fluctuations"
+      "Edge": " Investment banking strength ",
+      "Risk": " Economic downturn "
     },
     {
-      "Asset": "SLB ",
-      "Weight (%)": " 10 ",
+      "Asset": " SLB   ",
+      "Weight (%)": 10,
       "Thesis": " Top-ranked firm ",
-      "Edge": " Energy services demand ",
-      "Risk": " Commodity price risk"
+      "Edge": " Energy sector growth ",
+      "Risk": " Oil price fluctuations "
     },
     {
-      "Asset": "GS ",
-      "Weight (%)": " 10 ",
+      "Asset": " XOM   ",
+      "Weight (%)": 10,
       "Thesis": " Top-ranked firm ",
-      "Edge": " Investment banking ",
-      "Risk": " Economic downturn"
+      "Edge": " Strong energy sector ",
+      "Risk": " Regulatory risks "
     },
     {
-      "Asset": "CVX ",
-      "Weight (%)": " 10 ",
-      "Thesis": " Top-ranked firm ",
-      "Edge": " Energy sector strength ",
-      "Risk": " Regulatory changes"
-    },
-    {
-      "Asset": "BAC ",
-      "Weight (%)": " 10 ",
+      "Asset": " BAC   ",
+      "Weight (%)": 10,
       "Thesis": " Top-ranked firm ",
       "Edge": " Banking sector resilience ",
-      "Risk": " Credit risk"
+      "Risk": " Credit risk "
     },
     {
-      "Asset": "XLK ",
-      "Weight (%)": " 3 ",
+      "Asset": " CVX   ",
+      "Weight (%)": 10,
+      "Thesis": " Top-ranked firm ",
+      "Edge": " Energy sector strength ",
+      "Risk": " Geopolitical tensions "
+    },
+    {
+      "Asset": " AAPL  ",
+      "Weight (%)": 7,
+      "Thesis": " SENTIMENT\u2193-0.13 ",
+      "Edge": " Innovation leadership ",
+      "Risk": " Market sentiment "
+    },
+    {
+      "Asset": " XLK   ",
+      "Weight (%)": 3,
       "Thesis": " Tech sector ETF ",
-      "Edge": " Diversification ",
-      "Risk": " Sector concentration"
+      "Edge": " Tech sector growth ",
+      "Risk": " Sector concentration "
     },
     {
-      "Asset": "XLF ",
-      "Weight (%)": " 3 ",
+      "Asset": " XLF   ",
+      "Weight (%)": 3,
       "Thesis": " Financial sector ETF ",
-      "Edge": " Diversification ",
-      "Risk": " Economic sensitivity"
+      "Edge": " Financial sector stability ",
+      "Risk": " Interest rate sensitivity "
     },
     {
-      "Asset": "XLE ",
-      "Weight (%)": " 3 ",
+      "Asset": " XLE   ",
+      "Weight (%)": 3,
       "Thesis": " Energy sector ETF ",
-      "Edge": " Diversification ",
-      "Risk": " Commodity price risk"
+      "Edge": " Energy sector performance ",
+      "Risk": " Commodity price risk "
     },
     {
-      "Asset": "AMZN ",
-      "Weight (%)": " 2 ",
+      "Asset": " AMZN  ",
+      "Weight (%)": 2,
       "Thesis": " E-commerce leader ",
-      "Edge": " Market share growth ",
-      "Risk": " Competitive pressure"
+      "Edge": " Retail and cloud growth ",
+      "Risk": " Competitive pressures "
     },
     {
-      "Asset": "TSLA ",
-      "Weight (%)": " 2 ",
+      "Asset": " TSLA  ",
+      "Weight (%)": 1,
       "Thesis": " EV market leader ",
-      "Edge": " Innovation ",
-      "Risk": " Production challenges"
+      "Edge": " Innovation in EVs ",
+      "Risk": " Production challenges "
     },
     {
-      "Asset": "GOOGL ",
-      "Weight (%)": " 3 ",
-      "Thesis": " Digital advertising ",
-      "Edge": " Data-driven growth ",
-      "Risk": " Regulatory scrutiny"
+      "Asset": " META  ",
+      "Weight (%)": 1,
+      "Thesis": " Social media giant ",
+      "Edge": " Advertising revenue ",
+      "Risk": " Regulatory scrutiny "
     }
   ]
 }

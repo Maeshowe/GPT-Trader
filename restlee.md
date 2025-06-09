@@ -44,3 +44,11 @@ git remote add origin https://github.com/Maeshowe/GPT-Trader.git
 git branch -M main
 git push -u origin main
 
+python data_fetch/fetch_data.py
+python run_prompts.py
+python news_sentiment.py
+python backtest.py
+python backtest_rebal.py
+python risk_budget.py
+
+streamlit run dashboard/app.py  

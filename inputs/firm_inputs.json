@@ -5,20 +5,20 @@
     "company_name": "AAPL",
     "industry": "Technology",
     "firm_financials_json": {
-      "P/E": 31.87,
+      "P/E": 31.52,
       "Beta": 1.21,
       "ROE": 1.38,
       "Quick Ratio": 0.68
     },
     "firm_news_snippets": [
-      "Options Traders Target Tech Giant Ahead of WWDC",
-      "Apple Under Pressure for AI Progress at Today's WWDC Event",
-      "Apple WWDC kicks off today. Here's what developers are looking for"
+      "watchOS 26 delivers more personalized ways to stay active, healthy, and connected",
+      "Apple introduces live translation across Messages, FaceTime, and Phone at WWDC 25",
+      "Apple elevates the iPhone experience with iOS 26"
     ],
     "today": "2025-06-09",
-    "firm_score": 78,
+    "firm_score": 85,
     "firm_shap": {
-      "P/E": 6.37,
+      "P/E": 6.3,
       "PEG": -0.0,
       "Beta": -0.12,
       "ROE": 0.55,
@@ -31,7 +31,7 @@
     "company_name": "MSFT",
     "industry": "Technology",
     "firm_financials_json": {
-      "P/E": 36.47,
+      "P/E": 36.53,
       "Beta": 1.03,
       "ROE": 0.34,
       "Quick Ratio": 1.24
@@ -44,7 +44,7 @@
     "today": "2025-06-09",
     "firm_score": 85,
     "firm_shap": {
-      "P/E": 7.29,
+      "P/E": 7.31,
       "PEG": -0.0,
       "Beta": -0.1,
       "ROE": 0.14,
@@ -57,7 +57,7 @@
     "company_name": "NVDA",
     "industry": "Technology",
     "firm_financials_json": {
-      "P/E": 45.98,
+      "P/E": 45.91,
       "Beta": 2.12,
       "ROE": 1.15,
       "Quick Ratio": 2.86
@@ -70,7 +70,7 @@
     "today": "2025-06-09",
     "firm_score": 78,
     "firm_shap": {
-      "P/E": 9.2,
+      "P/E": 9.18,
       "PEG": -0.0,
       "Beta": -0.21,
       "ROE": 0.46,
@@ -83,7 +83,7 @@
     "company_name": "JPM",
     "industry": "Financials",
     "firm_financials_json": {
-      "P/E": 13.07,
+      "P/E": 13.13,
       "Beta": 1.08,
       "ROE": 0.17
     },
@@ -95,7 +95,7 @@
     "today": "2025-06-09",
     "firm_score": 78,
     "firm_shap": {
-      "P/E": 2.61,
+      "P/E": 2.63,
       "PEG": -0.0,
       "Beta": -0.11,
       "ROE": 0.07,
@@ -108,7 +108,7 @@
     "company_name": "BAC",
     "industry": "Financials",
     "firm_financials_json": {
-      "P/E": 13.44,
+      "P/E": 13.49,
       "Beta": 1.31,
       "ROE": 0.09
     },
@@ -120,7 +120,7 @@
     "today": "2025-06-09",
     "firm_score": 65,
     "firm_shap": {
-      "P/E": 2.69,
+      "P/E": 2.7,
       "PEG": -0.0,
       "Beta": -0.13,
       "ROE": 0.04,
@@ -133,7 +133,7 @@
     "company_name": "GS",
     "industry": "Financials",
     "firm_financials_json": {
-      "P/E": 14.26,
+      "P/E": 14.34,
       "Beta": 1.31,
       "ROE": 0.12,
       "Quick Ratio": 1.41
@@ -144,9 +144,9 @@
       "Julie R. Smith Named Metiri Group CEO"
     ],
     "today": "2025-06-09",
-    "firm_score": 75,
+    "firm_score": 78,
     "firm_shap": {
-      "P/E": 2.85,
+      "P/E": 2.87,
       "PEG": -0.0,
       "Beta": -0.13,
       "ROE": 0.05,
@@ -159,18 +159,18 @@
     "company_name": "XOM",
     "industry": "Energy",
     "firm_financials_json": {
-      "P/E": 13.99,
+      "P/E": 14.02,
       "Beta": 0.46,
       "ROE": 0.14,
       "Quick Ratio": 0.86
     },
     "firm_news_snippets": [
+      "3 Bargain Dividend Stocks to Buy Today",
       "ExxonMobil's Valuation Remains Premium: Are Investors Overpaying?",
-      "3 Top Energy Stocks to Buy Without Hesitation in June",
-      "2 Top High-Yield Dividend Stocks You Can Confidently Buy and Hold Until at Least 2030"
+      "3 Top Energy Stocks to Buy Without Hesitation in June"
     ],
     "today": "2025-06-09",
-    "firm_score": 78,
+    "firm_score": 75,
     "firm_shap": {
       "P/E": 2.8,
       "PEG": -0.0,
@@ -185,7 +185,7 @@
     "company_name": "CVX",
     "industry": "Energy",
     "firm_financials_json": {
-      "P/E": 16.19,
+      "P/E": 16.2,
       "Beta": 0.8,
       "ROE": 0.1,
       "Quick Ratio": 0.68
@@ -196,7 +196,7 @@
       "Chevron's Texas Job Cuts: What's Really Driving the Layoffs?"
     ],
     "today": "2025-06-09",
-    "firm_score": 72,
+    "firm_score": 65,
     "firm_shap": {
       "P/E": 3.24,
       "PEG": -0.0,
@@ -211,7 +211,7 @@
     "company_name": "SLB",
     "industry": "Energy",
     "firm_financials_json": {
-      "P/E": 11.61,
+      "P/E": 11.67,
       "Beta": 1.03,
       "ROE": 0.2,
       "Quick Ratio": 0.83
@@ -224,7 +224,7 @@
     "today": "2025-06-09",
     "firm_score": 78,
     "firm_shap": {
-      "P/E": 2.32,
+      "P/E": 2.33,
       "PEG": -0.0,
       "Beta": -0.1,
       "ROE": 0.08,
