@@ -5,6 +5,9 @@ on:
     branches: [ main ]        # cseréld, ha nem "main" az alapág
   workflow_dispatch:          # kézi indítás gomb
 
+permissions:
+  contents: write            # engedély a tartalom írására
+
 jobs:
   run-pipeline:
     runs-on: ubuntu-latest
