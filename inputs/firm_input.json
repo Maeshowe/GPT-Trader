@@ -1,0 +1,20 @@
+{
+  "macro_news_snippets": [
+    "The Fed signalled a potential pause in rate hikes.",
+    "Consumer confidence shows a positive rebound."
+  ],
+  "company_name": "NVIDIA",
+  "industry": "Semiconductors",
+  "firm_financials_json": {
+    "P/E": 45.72,
+    "Beta": 2.12,
+    "ROE": 1.15,
+    "Quick Ratio": 2.86
+  },
+  "firm_news_snippets": [
+    "Nvidia: After A 50% Run, Near-Term AI Spending Outlook Remains Uncertain (Rating Downgrade)",
+    "Better Artificial Intelligence (AI) Stock: CoreWeave vs. Nvidia"
+  ],
+  "today": "2025-06-09",
+  "firm_score": 78
+}

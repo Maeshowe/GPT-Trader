@@ -1,0 +1,15 @@
+{
+  "macro_indicators_json": {
+    "GDP": 29976.64,
+    "CPI": 320.32,
+    "Unemployment": 4.2,
+    "InterestRate": 4.33
+  },
+  "macro_news_snippets": [
+    "The Fed signalled a potential pause in rate hikes.",
+    "Consumer confidence shows a positive rebound."
+  ],
+  "sector_news_snippets": [],
+  "today": "2025-06-09",
+  "sector_score": 75
+}

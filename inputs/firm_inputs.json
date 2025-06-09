@@ -1,0 +1,234 @@
+[
+  {
+    "sector": "technology",
+    "ticker": "AAPL",
+    "company_name": "AAPL",
+    "industry": "Technology",
+    "firm_financials_json": {
+      "P/E": 31.76,
+      "Beta": 1.21,
+      "ROE": 1.38,
+      "Quick Ratio": 0.68
+    },
+    "firm_news_snippets": [
+      "Apple's AI Siri Update Reportedly Facing Uphill Battle",
+      "AAPL WWDC, TSLA & Trump, MSFT All-Time High: Charting Mag 7 Developments",
+      "Down 21%, Should You Buy the Dip on Apple Stock? The Answer Might Surprise You."
+    ],
+    "today": "2025-06-09",
+    "firm_score": 65,
+    "firm_shap": {
+      "P/E": 6.35,
+      "PEG": -0.0,
+      "Beta": -0.12,
+      "ROE": 0.55,
+      "Quick Ratio": 0.2
+    }
+  },
+  {
+    "sector": "technology",
+    "ticker": "MSFT",
+    "company_name": "MSFT",
+    "industry": "Technology",
+    "firm_financials_json": {
+      "P/E": 36.35,
+      "Beta": 1.03,
+      "ROE": 0.34,
+      "Quick Ratio": 1.24
+    },
+    "firm_news_snippets": [
+      "AAPL WWDC, TSLA & Trump, MSFT All-Time High: Charting Mag 7 Developments",
+      "Microsoft reveals new handheld Xbox Ally gaming PC in partnership with Asus",
+      "Microsoft unveils Xbox gaming handheld launching in 2025 (updated with hands-on)"
+    ],
+    "today": "2025-06-09",
+    "firm_score": 85,
+    "firm_shap": {
+      "P/E": 7.27,
+      "PEG": -0.0,
+      "Beta": -0.1,
+      "ROE": 0.14,
+      "Quick Ratio": 0.37
+    }
+  },
+  {
+    "sector": "technology",
+    "ticker": "NVDA",
+    "company_name": "NVDA",
+    "industry": "Technology",
+    "firm_financials_json": {
+      "P/E": 45.72,
+      "Beta": 2.12,
+      "ROE": 1.15,
+      "Quick Ratio": 2.86
+    },
+    "firm_news_snippets": [
+      "Nvidia: After A 50% Run, Near-Term AI Spending Outlook Remains Uncertain (Rating Downgrade)",
+      "Better Artificial Intelligence (AI) Stock: CoreWeave vs. Nvidia",
+      "Mag 7 Giving AVGO New Edge Over NVDA as Chipmakers Evolve"
+    ],
+    "today": "2025-06-09",
+    "firm_score": 68,
+    "firm_shap": {
+      "P/E": 9.14,
+      "PEG": -0.0,
+      "Beta": -0.21,
+      "ROE": 0.46,
+      "Quick Ratio": 0.86
+    }
+  },
+  {
+    "sector": "financials",
+    "ticker": "JPM",
+    "company_name": "JPM",
+    "industry": "Financials",
+    "firm_financials_json": {
+      "P/E": 13.04,
+      "Beta": 1.08,
+      "ROE": 0.17
+    },
+    "firm_news_snippets": [
+      "5 Relatively Secure And Cheap Dividend Stocks, Yields Up To 10% (June 2025)",
+      "Can JPMorgan be unionized? Employees turn to their peers at Wells Fargo for advice.",
+      "Buy 7 Ideal 'Safer' May Dividends, Out Of 40 Reader Tags"
+    ],
+    "today": "2025-06-09",
+    "firm_score": 78,
+    "firm_shap": {
+      "P/E": 2.61,
+      "PEG": -0.0,
+      "Beta": -0.11,
+      "ROE": 0.07,
+      "Quick Ratio": 0.0
+    }
+  },
+  {
+    "sector": "financials",
+    "ticker": "BAC",
+    "company_name": "BAC",
+    "industry": "Financials",
+    "firm_financials_json": {
+      "P/E": 13.42,
+      "Beta": 1.31,
+      "ROE": 0.09
+    },
+    "firm_news_snippets": [
+      "SoFi Loan Boom Impresses But Bank Of America Sticks To 'Underperform'",
+      "Is Most-Watched Stock Bank of America Corporation (BAC) Worth Betting on Now?",
+      "BAC's Push to Expand Financial Centers: A Catalyst for Growth?"
+    ],
+    "today": "2025-06-09",
+    "firm_score": 65,
+    "firm_shap": {
+      "P/E": 2.68,
+      "PEG": -0.0,
+      "Beta": -0.13,
+      "ROE": 0.04,
+      "Quick Ratio": 0.0
+    }
+  },
+  {
+    "sector": "financials",
+    "ticker": "GS",
+    "company_name": "GS",
+    "industry": "Financials",
+    "firm_financials_json": {
+      "P/E": 14.25,
+      "Beta": 1.31,
+      "ROE": 0.12,
+      "Quick Ratio": 1.41
+    },
+    "firm_news_snippets": [
+      "Julie R. Smith Named Metiri Group CEO",
+      "Goldman Refocuses on Investment Banking: Will It Pivot to Profit?",
+      "Goldman Sachs (GS) Stock Declines While Market Improves: Some Information for Investors"
+    ],
+    "today": "2025-06-09",
+    "firm_score": 72,
+    "firm_shap": {
+      "P/E": 2.85,
+      "PEG": -0.0,
+      "Beta": -0.13,
+      "ROE": 0.05,
+      "Quick Ratio": 0.42
+    }
+  },
+  {
+    "sector": "energy",
+    "ticker": "XOM",
+    "company_name": "XOM",
+    "industry": "Energy",
+    "firm_financials_json": {
+      "P/E": 13.83,
+      "Beta": 0.46,
+      "ROE": 0.14,
+      "Quick Ratio": 0.86
+    },
+    "firm_news_snippets": [
+      "2 Top High-Yield Dividend Stocks You Can Confidently Buy and Hold Until at Least 2030",
+      "Golden Buying Opportunity For Big Dividend Investors: 8-9% Yields Set To Soar",
+      "ExxonMobil, SOCAR Sign Deal to Explore Onshore Oil in Azerbaijan"
+    ],
+    "today": "2025-06-09",
+    "firm_score": 78,
+    "firm_shap": {
+      "P/E": 2.77,
+      "PEG": -0.0,
+      "Beta": -0.05,
+      "ROE": 0.06,
+      "Quick Ratio": 0.26
+    }
+  },
+  {
+    "sector": "energy",
+    "ticker": "CVX",
+    "company_name": "CVX",
+    "industry": "Energy",
+    "firm_financials_json": {
+      "P/E": 16.02,
+      "Beta": 0.8,
+      "ROE": 0.1,
+      "Quick Ratio": 0.68
+    },
+    "firm_news_snippets": [
+      "Golden Buying Opportunity For Big Dividend Investors: 8-9% Yields Set To Soar",
+      "The Schwab U.S. Dividend Equity ETF Loaded Up on Energy Stocks. Here Are the Top 3.",
+      "Chevron: Buy In Before The Rebound"
+    ],
+    "today": "2025-06-09",
+    "firm_score": 75,
+    "firm_shap": {
+      "P/E": 3.2,
+      "PEG": -0.0,
+      "Beta": -0.08,
+      "ROE": 0.04,
+      "Quick Ratio": 0.2
+    }
+  },
+  {
+    "sector": "energy",
+    "ticker": "SLB",
+    "company_name": "SLB",
+    "industry": "Energy",
+    "firm_financials_json": {
+      "P/E": 11.48,
+      "Beta": 1.03,
+      "ROE": 0.2,
+      "Quick Ratio": 0.83
+    },
+    "firm_news_snippets": [
+      "Is It Worth Investing in Schlumberger (SLB) Based on Wall Street's Bullish Views?",
+      "Schlumberger (SLB) Outperforms Broader Market: What You Need to Know",
+      "Why I Just Bought Back SLB (Schlumberger)"
+    ],
+    "today": "2025-06-09",
+    "firm_score": 78,
+    "firm_shap": {
+      "P/E": 2.3,
+      "PEG": -0.0,
+      "Beta": -0.1,
+      "ROE": 0.08,
+      "Quick Ratio": 0.25
+    }
+  }
+]

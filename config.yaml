@@ -1,0 +1,17 @@
+sectors:
+  - name: technology
+    etf: XLK
+    keyword: technology
+    override_tickers: ["AAPL", "MSFT", "NVDA"]
+
+  - name: financials
+    etf: XLF
+    keyword: financial
+    override_tickers: ["JPM", "BAC", "GS"]
+
+  - name: energy
+    etf: XLE
+    keyword: energy
+    override_tickers: ["XOM", "CVX", "SLB"]
+
+max_firms_per_sector: 3

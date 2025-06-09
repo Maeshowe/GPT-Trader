@@ -1,0 +1,110 @@
+{
+  "date": "2025-06-09",
+  "table": [
+    {
+      "Asset": "MSFT ",
+      "Weight (%)": " 10 ",
+      "Thesis": " Top-ranked firm ",
+      "Edge": " Strong tech sector ",
+      "Risk": " Market volatility"
+    },
+    {
+      "Asset": "JPM ",
+      "Weight (%)": " 8 ",
+      "Thesis": " Top-ranked firm ",
+      "Edge": " Financial stability ",
+      "Risk": " Interest rate changes"
+    },
+    {
+      "Asset": "XOM ",
+      "Weight (%)": " 8 ",
+      "Thesis": " Top-ranked firm ",
+      "Edge": " Energy sector strength ",
+      "Risk": " Oil price fluctuations"
+    },
+    {
+      "Asset": "SLB ",
+      "Weight (%)": " 7 ",
+      "Thesis": " Top-ranked firm ",
+      "Edge": " Energy sector strength ",
+      "Risk": " Commodity price risk"
+    },
+    {
+      "Asset": "CVX ",
+      "Weight (%)": " 7 ",
+      "Thesis": " Top-ranked firm ",
+      "Edge": " Energy sector strength ",
+      "Risk": " Geopolitical risk"
+    },
+    {
+      "Asset": "GS ",
+      "Weight (%)": " 7 ",
+      "Thesis": " Top-ranked firm ",
+      "Edge": " Financial sector resilience ",
+      "Risk": " Regulatory changes"
+    },
+    {
+      "Asset": "NVDA ",
+      "Weight (%)": " 6 ",
+      "Thesis": " Top-ranked firm ",
+      "Edge": " Tech innovation ",
+      "Risk": " High valuation risk"
+    },
+    {
+      "Asset": "AAPL ",
+      "Weight (%)": " 6 ",
+      "Thesis": " Top-ranked firm ",
+      "Edge": " Consumer tech demand ",
+      "Risk": " Supply chain issues"
+    },
+    {
+      "Asset": "BAC ",
+      "Weight (%)": " 6 ",
+      "Thesis": " Top-ranked firm ",
+      "Edge": " Financial sector stability ",
+      "Risk": " Economic downturn"
+    },
+    {
+      "Asset": "XLK ",
+      "Weight (%)": " 10 ",
+      "Thesis": " Tech sector ETF ",
+      "Edge": " Tech sector growth ",
+      "Risk": " Sector concentration"
+    },
+    {
+      "Asset": "XLF ",
+      "Weight (%)": " 10 ",
+      "Thesis": " Financial sector ETF ",
+      "Edge": " Financial sector resilience ",
+      "Risk": " Economic sensitivity"
+    },
+    {
+      "Asset": "XLE ",
+      "Weight (%)": " 10 ",
+      "Thesis": " Energy sector ETF ",
+      "Edge": " Energy sector strength ",
+      "Risk": " Commodity price risk"
+    },
+    {
+      "Asset": "AMZN ",
+      "Weight (%)": " 5 ",
+      "Thesis": " E-commerce leader ",
+      "Edge": " Consumer spending ",
+      "Risk": " Competitive pressure"
+    },
+    {
+      "Asset": "GOOGL ",
+      "Weight (%)": " 5 ",
+      "Thesis": " Digital advertising leader ",
+      "Edge": " Ad revenue growth ",
+      "Risk": " Regulatory scrutiny"
+    },
+    {
+      "Asset": "TSLA ",
+      "Weight (%)": " 5 ",
+      "Thesis": " EV market leader ",
+      "Edge": " Innovation in EVs ",
+      "Risk": " Production challenges"
+    }
+  ]
+}

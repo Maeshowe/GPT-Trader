@@ -1,0 +1,35 @@
+{
+  "top_firms_list": [
+    {
+      "name": "NVDA",
+      "score": 95,
+      "thesis": "Leadership in AI hardware"
+    },
+    {
+      "name": "AAPL",
+      "score": 92,
+      "thesis": "Ecosystem lock-in with AI integrations"
+    },
+    {
+      "name": "MSFT",
+      "score": 90,
+      "thesis": "Cloud scale and Copilot rollout"
+    }
+  ],
+  "macro_forecast_table": {
+    "InterestRates": "4.33%",
+    "Inflation": "320.32%",
+    "Tariffs": "Stable"
+  },
+  "etf_universe_list": [
+    "XLK",
+    "XLF",
+    "SPY",
+    "ARKK",
+    "TLT",
+    "XLE",
+    "XLY",
+    "XLI"
+  ],
+  "today": "2025-06-09"
+}

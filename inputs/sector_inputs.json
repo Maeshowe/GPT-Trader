@@ -1,0 +1,38 @@
+[
+  {
+    "name": "technology",
+    "macro_indicators_json": {
+      "GDP": 29.98,
+      "CPI": 320.32,
+      "Unemployment": 4.2,
+      "InterestRate": 4.33
+    },
+    "sector_news_snippets": [],
+    "today": "2025-06-09",
+    "sector_score": 78
+  },
+  {
+    "name": "financials",
+    "macro_indicators_json": {
+      "GDP": 29.98,
+      "CPI": 320.32,
+      "Unemployment": 4.2,
+      "InterestRate": 4.33
+    },
+    "sector_news_snippets": [],
+    "today": "2025-06-09",
+    "sector_score": 72
+  },
+  {
+    "name": "energy",
+    "macro_indicators_json": {
+      "GDP": 29.98,
+      "CPI": 320.32,
+      "Unemployment": 4.2,
+      "InterestRate": 4.33
+    },
+    "sector_news_snippets": [],
+    "today": "2025-06-09",
+    "sector_score": 78
+  }
+]
