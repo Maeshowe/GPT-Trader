@@ -2,46 +2,59 @@ name: GPT Portfolio Pipeline
 
 on:
   push:
-    branches: [ main ]        # ← a te főágad neve
+    branches: [ main ]        # cseréld, ha nem "main" az alapág
   workflow_dispatch:          # kézi indítás gomb
 
 jobs:
   run-pipeline:
     runs-on: ubuntu-latest
+
     steps:
+      # ── 1) Kód checkout ───────────────────────────────────────────────
       - name: Checkout repo
         uses: actions/checkout@v4
 
+      # ── 2) Python környezet ───────────────────────────────────────────
       - name: Setup Python
         uses: actions/setup-python@v5
         with:
           python-version: '3.11'
 
+      # ── 3) Függőségek telepítése ──────────────────────────────────────
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
           pip install -r requirements.txt
           pip install yfinance lxml fredapi pyyaml
 
+      # ── 4) Secretek env-vé tétele ─────────────────────────────────────
       - name: Export secrets
         run: |
           echo "OPENAI_API_KEY=${{ secrets.OPENAI_API_KEY }}"      >> $GITHUB_ENV
           echo "FRED_API_KEY=${{ secrets.FRED_API_KEY }}"          >> $GITHUB_ENV
           echo "STOCKNEWS_API_KEY=${{ secrets.STOCKNEWS_API_KEY }}" >> $GITHUB_ENV
 
+      # ── 5) Teljes pipeline futtatása ─────────────────────────────────
       - name: Run full pipeline
         run: |
           python data_fetch/fetch_data.py
           python run_prompts.py
           python generator_runner.py
 
+      # ── 6) Kimenetek commitálása, ha változtak ───────────────────────
       - name: Commit outputs
         run: |
+          set -e
           git config --global user.email "actions@github.com"
           git config --global user.name  "GitHub Actions"
-          git add outputs/*.json inputs/*.json
+          
+          # Fájlok hozzáadása (ha léteznek)
+          git add outputs/*.json inputs/*.json || true
+          
+          # Van-e változás?
           if ! git diff --cached --quiet; then
             git commit -m "[CI] autoupdate $(date -u +'%Y-%m-%dT%H:%MZ')"
             git push
           else
             echo "No changes to commit."
+          fi
