@@ -1,0 +1,17 @@
+{
+  "Buy&Hold": {
+    "CAGR": 40.76,
+    "MaxDD": -27.49,
+    "Sharpe": 1.45
+  },
+  "Rebalance": {
+    "CAGR": 21.57,
+    "MaxDD": -21.9,
+    "Sharpe": 1.12
+  },
+  "Benchmark": {
+    "CAGR": 22.11,
+    "MaxDD": -18.76,
+    "Sharpe": 1.32
+  }
+}

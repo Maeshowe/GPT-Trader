@@ -1,0 +1,58 @@
+[
+  {
+    "ticker": "NVDA",
+    "avg_sent": 0.57
+  },
+  {
+    "ticker": "JPM",
+    "avg_sent": 0.471
+  },
+  {
+    "ticker": "GS",
+    "avg_sent": 0.5
+  },
+  {
+    "ticker": "SLB",
+    "avg_sent": 1.0
+  },
+  {
+    "ticker": "XOM",
+    "avg_sent": 0.611
+  },
+  {
+    "ticker": "BAC",
+    "avg_sent": 0.714
+  },
+  {
+    "ticker": "CVX",
+    "avg_sent": 0.235
+  },
+  {
+    "ticker": "AAPL",
+    "avg_sent": -0.11
+  },
+  {
+    "ticker": "XLK",
+    "avg_sent": 0.5
+  },
+  {
+    "ticker": "XLF",
+    "avg_sent": 0.5
+  },
+  {
+    "ticker": "XLE",
+    "avg_sent": 0.0
+  },
+  {
+    "ticker": "AMZN",
+    "avg_sent": 0.558
+  },
+  {
+    "ticker": "TSLA",
+    "avg_sent": -0.18
+  },
+  {
+    "ticker": "META",
+    "avg_sent": 0.613
+  }
+]
