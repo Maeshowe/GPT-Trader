@@ -1,0 +1,56 @@
+name: GPT Portfolio Pipeline
+
+on:
+  push:
+    branches: [ main ]            # vagy amit használsz
+  workflow_dispatch:              # kézi indítás gombbal
+
+jobs:
+  run-pipeline:
+    runs-on: ubuntu-latest
+
+    steps:
+      # 1) Kód checkout
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      # 2) Python 3.11-es környezet
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      # 3) Függőségek telepítése
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+          # plusz: yfinance lxml fredapi pyyaml (ha nincs a requirements-ben)
+          pip install yfinance lxml fredapi pyyaml
+
+      # 4) Secretek env-ként
+      - name: Export secrets
+        run: |
+          echo "OPENAI_API_KEY=${{ secrets.OPENAI_API_KEY }}"  >> $GITHUB_ENV
+          echo "FRED_API_KEY=${{ secrets.FRED_API_KEY }}"      >> $GITHUB_ENV
+          echo "STOCKNEWS_API_KEY=${{ secrets.STOCKNEWS_API_KEY }}" >> $GITHUB_ENV
+
+      # 5) Pipeline futtatása
+      - name: Run full pipeline script
+        run: |
+          python data_fetch/fetch_data.py
+          python run_prompts.py
+          python generator_runner.py
+
+      # 6) Ha változott bármi az outputs/ vagy inputs/ alatt, commit & push
+      - name: Commit outputs
+        run: |
+          git config --global user.email "actions@github.com"
+          git config --global user.name  "GitHub Actions"
+          git add outputs/*.json inputs/*.json
+          if ! git diff --cached --quiet; then
+            git commit -m "[CI] autoupdate $(date -u +'%Y-%m-%dT%H:%MZ')"
+            git push
+          else
+            echo "No changes to commit."
+          fi
