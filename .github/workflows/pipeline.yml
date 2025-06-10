@@ -28,7 +28,16 @@ jobs:
     - name: Install TA‑Lib system dependencies
       run: |
         sudo apt-get update
-        sudo apt-get install -y libta-lib0 libta-lib0-dev
+        # TA-Lib 0.4.x packages were renamed on Ubuntu 22.04+
+        sudo apt-get install -y ta-lib ta-lib-dev || {
+          echo "⚠️  distro repo lacks ta-lib; building from source…";
+          sudo apt-get install -y build-essential wget;
+          wget -q http://prdownloads.sourceforge.net/ta-lib/ta-lib-0.4.0-src.tar.gz;
+          tar -xzf ta-lib-0.4.0-src.tar.gz;
+          cd ta-lib && ./configure --prefix=/usr && make -j$(nproc) && sudo make install;
+          cd ..;
+          sudo ldconfig;
+        }
 
     # ── 4) Python dependencies ────────────────────────────────────────
     - name: Install Python dependencies
