@@ -16,10 +16,10 @@ load_dotenv(override=True)
 client = AsyncOpenAI(api_key=os.getenv("OPENAI_API_KEY"))
 MODEL  = os.getenv("OPENAI_MODEL","gpt-4o")
 
-MAX_CONCURRENCY = 5
-REQ_TIMEOUT     = 30        # mp
-RETRY_LIMIT     = 3
-RETRY_BACKOFF   = 5         # mp
+MAX_CONCURRENCY = 2
+REQ_TIMEOUT     = 60        # mp
+RETRY_LIMIT     = 4
+RETRY_BACKOFF   = 8         # mp
 
 # ── GPT hívás retry-val, timeout-tal ----------------------------------------
 async def gpt_call(prompt, temperature=0):
@@ -87,8 +87,19 @@ async def run_firms_async():
     print("✅ Firm-scores + SHAP frissítve.")
 
 # ════════════════════════════════════════════════════════════════════════════
-if __name__ == "__main__":
-    t0=time.time()
-    asyncio.run(run_sectors_async())
-    asyncio.run(run_firms_async())
+# Main async függvény - EZ A KULCS!
+# ════════════════════════════════════════════════════════════════════════════
+async def main():
+    """Főprogram - egyetlen event loop-ban futtatja mindkét batch-et"""
+    t0 = time.time()
+    
+    # Szekvenciálisan futtatjuk őket ugyanabban az event loop-ban
+    await run_sectors_async()
+    await run_firms_async()
+    
     print(f"⏱️  Összidő: {round(time.time()-t0,1)} mp")
+
+# ════════════════════════════════════════════════════════════════════════════
+if __name__ == "__main__":
+    # Csak egyetlen asyncio.run() hívás!
+    asyncio.run(main())
