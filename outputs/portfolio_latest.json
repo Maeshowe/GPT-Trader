@@ -2,109 +2,109 @@
   "date": "2025-06-10",
   "table": [
     {
-      "Asset": "AMZN ",
+      "Asset": "MSFT ",
       "Weight (%)": " 10 ",
       "Thesis": " Top-ranked firm ",
-      "Edge": " E-commerce growth ",
+      "Edge": " Strong tech sector ",
       "Risk": " Market volatility"
-    },
-    {
-      "Asset": "JNJ ",
-      "Weight (%)": " 10 ",
-      "Thesis": " Top-ranked firm ",
-      "Edge": " Healthcare stability ",
-      "Risk": " Regulatory changes"
     },
     {
       "Asset": "AAPL ",
       "Weight (%)": " 10 ",
       "Thesis": " Top-ranked firm ",
-      "Edge": " Innovation leadership ",
+      "Edge": " Innovation leader ",
       "Risk": " Supply chain disruptions"
     },
     {
-      "Asset": "MSFT ",
+      "Asset": "BAC ",
       "Weight (%)": " 10 ",
       "Thesis": " Top-ranked firm ",
-      "Edge": " Cloud dominance ",
-      "Risk": " Competitive pressure"
+      "Edge": " Financial sector strength ",
+      "Risk": " Interest rate changes"
     },
     {
-      "Asset": "GOOGL ",
+      "Asset": "PFE ",
       "Weight (%)": " 10 ",
       "Thesis": " Top-ranked firm ",
-      "Edge": " Digital advertising ",
-      "Risk": " Antitrust issues"
+      "Edge": " Healthcare demand ",
+      "Risk": " Regulatory challenges"
     },
     {
-      "Asset": "XOM ",
-      "Weight (%)": " 10 ",
-      "Thesis": " Top-ranked firm ",
-      "Edge": " Energy sector strength ",
-      "Risk": " Oil price fluctuations"
+      "Asset": "XLE ",
+      "Weight (%)": " 8 ",
+      "Thesis": " Energy sector ETF ",
+      "Edge": " Rising energy prices ",
+      "Risk": " Geopolitical tensions"
     },
     {
-      "Asset": "SLB ",
-      "Weight (%)": " 10 ",
-      "Thesis": " Top-ranked firm ",
-      "Edge": " Oilfield services demand ",
-      "Risk": " Commodity price risk"
+      "Asset": "XLB ",
+      "Weight (%)": " 8 ",
+      "Thesis": " Materials sector ETF ",
+      "Edge": " Infrastructure spending ",
+      "Risk": " Commodity price fluctuations"
     },
     {
-      "Asset": "NEM ",
-      "Weight (%)": " 10 ",
-      "Thesis": " Top-ranked firm ",
-      "Edge": " Gold as a hedge ",
-      "Risk": " Gold price volatility"
+      "Asset": "XLI ",
+      "Weight (%)": " 8 ",
+      "Thesis": " Industrial sector ETF ",
+      "Edge": " Economic recovery ",
+      "Risk": " Supply chain issues"
     },
     {
-      "Asset": "BA ",
-      "Weight (%)": " 10 ",
-      "Thesis": " Top-ranked firm ",
-      "Edge": " Aerospace recovery ",
-      "Risk": " Production delays"
+      "Asset": "XLY ",
+      "Weight (%)": " 8 ",
+      "Thesis": " Consumer discretionary ETF ",
+      "Edge": " Consumer spending ",
+      "Risk": " Inflation pressures"
     },
     {
-      "Asset": "HON ",
-      "Weight (%)": " 10 ",
-      "Thesis": " Top-ranked firm ",
-      "Edge": " Industrial innovation ",
-      "Risk": " Economic slowdown"
+      "Asset": "XLP ",
+      "Weight (%)": " 8 ",
+      "Thesis": " Consumer staples ETF ",
+      "Edge": " Defensive play ",
+      "Risk": " Price competition"
     },
     {
-      "Asset": "NKE ",
-      "Weight (%)": " 10 ",
-      "Thesis": " Top-ranked firm ",
-      "Edge": " Brand strength ",
-      "Risk": " Consumer spending shifts"
+      "Asset": "XLV ",
+      "Weight (%)": " 8 ",
+      "Thesis": " Healthcare sector ETF ",
+      "Edge": " Aging population ",
+      "Risk": " Policy changes"
     },
     {
-      "Asset": "PG ",
-      "Weight (%)": " 7 ",
-      "Thesis": " Top-ranked firm ",
-      "Edge": " Consumer staples demand ",
-      "Risk": " Sentiment risk"
-    },
-    {
-      "Asset": "KO ",
-      "Weight (%)": " 10 ",
-      "Thesis": " Top-ranked firm ",
-      "Edge": " Beverage market leader ",
-      "Risk": " Health trends"
-    },
-    {
-      "Asset": "MRK ",
-      "Weight (%)": " 10 ",
-      "Thesis": " Top-ranked firm ",
-      "Edge": " Pharmaceutical innovation ",
-      "Risk": " Patent expirations"
+      "Asset": "XLF ",
+      "Weight (%)": " 8 ",
+      "Thesis": " Financial sector ETF ",
+      "Edge": " Interest rate environment ",
+      "Risk": " Credit risk"
     },
     {
       "Asset": "XLK ",
-      "Weight (%)": " 3 ",
-      "Thesis": " Tech sector ETF ",
-      "Edge": " Tech sector growth ",
-      "Risk": " Sector concentration"
+      "Weight (%)": " 8 ",
+      "Thesis": " Technology sector ETF ",
+      "Edge": " Tech innovation ",
+      "Risk": " Tech regulation"
+    },
+    {
+      "Asset": "XLC ",
+      "Weight (%)": " 8 ",
+      "Thesis": " Communication services ETF ",
+      "Edge": " Digital transformation ",
+      "Risk": " Competitive landscape"
+    },
+    {
+      "Asset": "XLU ",
+      "Weight (%)": " 8 ",
+      "Thesis": " Utilities sector ETF ",
+      "Edge": " Stable cash flows ",
+      "Risk": " Regulatory environment"
+    },
+    {
+      "Asset": "XLRE ",
+      "Weight (%)": " 8 ",
+      "Thesis": " Real estate sector ETF ",
+      "Edge": " Real estate demand ",
+      "Risk": " Interest rate sensitivity"
     }
   ]
 }

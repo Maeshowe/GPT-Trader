@@ -1,8 +1,8 @@
 {
   "Portfolio": {
-    "CAGR": 1.86,
-    "MaxDD": -13.69,
-    "Sharpe": -0.06
+    "CAGR": 7.43,
+    "MaxDD": -25.03,
+    "Sharpe": -0.45
   },
   "Benchmark": {
     "CAGR": 22.07,
