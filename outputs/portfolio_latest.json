@@ -5,7 +5,7 @@
       "Asset": "MSFT ",
       "Weight (%)": " 10 ",
       "Thesis": " Top-ranked firm ",
-      "Edge": " Strong tech sector ",
+      "Edge": " Strong tech sector performance ",
       "Risk": " Market volatility"
     },
     {
@@ -20,7 +20,7 @@
       "Weight (%)": " 10 ",
       "Thesis": " Top-ranked firm ",
       "Edge": " Healthcare stability ",
-      "Risk": " Drug pricing pressures"
+      "Risk": " Patent expirations"
     },
     {
       "Asset": "AAPL ",
@@ -33,78 +33,78 @@
       "Asset": "GOOGL ",
       "Weight (%)": " 10 ",
       "Thesis": " Top-ranked firm ",
-      "Edge": " Digital ad dominance ",
+      "Edge": " Digital advertising strength ",
       "Risk": " Antitrust scrutiny"
     },
     {
       "Asset": "XOM ",
-      "Weight (%)": " 10 ",
+      "Weight (%)": " 8 ",
       "Thesis": " Top-ranked firm ",
-      "Edge": " Energy sector strength ",
+      "Edge": " Energy sector resilience ",
       "Risk": " Oil price fluctuations"
     },
     {
       "Asset": "SLB ",
-      "Weight (%)": " 10 ",
+      "Weight (%)": " 8 ",
       "Thesis": " Top-ranked firm ",
       "Edge": " Oilfield services demand ",
       "Risk": " Commodity price risk"
     },
     {
       "Asset": "BA ",
-      "Weight (%)": " 10 ",
+      "Weight (%)": " 8 ",
       "Thesis": " Top-ranked firm ",
       "Edge": " Aerospace recovery ",
       "Risk": " Production delays"
     },
     {
       "Asset": "HON ",
-      "Weight (%)": " 10 ",
+      "Weight (%)": " 8 ",
       "Thesis": " Top-ranked firm ",
-      "Edge": " Industrial innovation ",
-      "Risk": " Economic cycles"
+      "Edge": " Industrial diversification ",
+      "Risk": " Economic slowdown"
     },
     {
       "Asset": "NKE ",
-      "Weight (%)": " 10 ",
+      "Weight (%)": " 8 ",
       "Thesis": " Top-ranked firm ",
       "Edge": " Brand strength ",
       "Risk": " Consumer spending shifts"
     },
     {
-      "Asset": "KO ",
-      "Weight (%)": " 10 ",
+      "Asset": "PG ",
+      "Weight (%)": " 8 ",
       "Thesis": " Top-ranked firm ",
-      "Edge": " Consumer staples resilience ",
-      "Risk": " Health trends"
+      "Edge": " Consumer staples demand ",
+      "Risk": " Input cost pressures"
+    },
+    {
+      "Asset": "KO ",
+      "Weight (%)": " 8 ",
+      "Thesis": " Top-ranked firm ",
+      "Edge": " Beverage market dominance ",
+      "Risk": " Health trend impacts"
+    },
+    {
+      "Asset": "MRK ",
+      "Weight (%)": " 8 ",
+      "Thesis": " Top-ranked firm ",
+      "Edge": " Pharmaceutical innovation ",
+      "Risk": " Drug pricing pressures"
     },
     {
       "Asset": "JPM ",
-      "Weight (%)": " 10 ",
+      "Weight (%)": " 8 ",
       "Thesis": " Top-ranked firm ",
-      "Edge": " Financial sector stability ",
+      "Edge": " Financial sector strength ",
       "Risk": " Interest rate changes"
     },
     {
-      "Asset": "NFLX ",
-      "Weight (%)": " 10 ",
-      "Thesis": " Top-ranked firm ",
-      "Edge": " Streaming growth ",
-      "Risk": " Content costs"
-    },
-    {
-      "Asset": "XLY ",
-      "Weight (%)": " 5 ",
-      "Thesis": " Consumer Discretionary ETF ",
-      "Edge": " Economic recovery ",
-      "Risk": " Consumer confidence"
-    },
-    {
-      "Asset": "XLV ",
-      "Weight (%)": " 5 ",
-      "Thesis": " Health Care ETF ",
-      "Edge": " Defensive sector ",
-      "Risk": " Policy changes"
+      "Asset": "XLK ",
+      "Weight (%)": " 8 ",
+      "Thesis": " Tech sector ETF ",
+      "Edge": " Tech sector growth ",
+      "Risk": " Sector concentration risk"
     }
   ]
 }

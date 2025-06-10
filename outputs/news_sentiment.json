@@ -6,14 +6,26 @@
     "weight_adjustment": 0
   },
   {
-    "ticker": "GOOGL",
-    "avg_sent": 0.397,
+    "ticker": "AMZN",
+    "avg_sent": 0.561,
     "is_negative": false,
     "weight_adjustment": 0
   },
   {
-    "ticker": "KO",
-    "avg_sent": 0.636,
+    "ticker": "JNJ",
+    "avg_sent": 0.714,
+    "is_negative": false,
+    "weight_adjustment": 0
+  },
+  {
+    "ticker": "AAPL",
+    "avg_sent": 0.14,
+    "is_negative": false,
+    "weight_adjustment": 0
+  },
+  {
+    "ticker": "GOOGL",
+    "avg_sent": 0.406,
     "is_negative": false,
     "weight_adjustment": 0
   },
@@ -30,8 +42,8 @@
     "weight_adjustment": 0
   },
   {
-    "ticker": "NEM",
-    "avg_sent": 0.692,
+    "ticker": "BA",
+    "avg_sent": 0.31,
     "is_negative": false,
     "weight_adjustment": 0
   },
@@ -42,43 +54,25 @@
     "weight_adjustment": 0
   },
   {
-    "ticker": "AMZN",
-    "avg_sent": 0.561,
-    "is_negative": false,
-    "weight_adjustment": 0
-  },
-  {
     "ticker": "NKE",
     "avg_sent": 0.556,
     "is_negative": false,
     "weight_adjustment": 0
   },
   {
-    "ticker": "PG",
-    "avg_sent": -0.696,
-    "is_negative": true,
-    "weight_adjustment": 0.3
-  },
-  {
-    "ticker": "WMT",
-    "avg_sent": 0.7,
-    "is_negative": false,
-    "weight_adjustment": 0
-  },
-  {
-    "ticker": "JNJ",
-    "avg_sent": 0.714,
-    "is_negative": false,
-    "weight_adjustment": 0
-  },
-  {
-    "ticker": "MRK",
-    "avg_sent": 0.579,
+    "ticker": "KO",
+    "avg_sent": 0.636,
     "is_negative": false,
     "weight_adjustment": 0
   },
   {
     "ticker": "JPM",
+    "avg_sent": 0.667,
+    "is_negative": false,
+    "weight_adjustment": 0
+  },
+  {
+    "ticker": "NFLX",
     "avg_sent": 0.667,
     "is_negative": false,
     "weight_adjustment": 0

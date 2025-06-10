@@ -1,6 +1,6 @@
 # Portfolio Risk Assessment Summary
 
-Generated: 2025-06-10T20:07:04.958456
+Generated: 2025-06-10T18:21:22.696341
 
 ## Executive Summary
 
@@ -9,10 +9,10 @@ Generated: 2025-06-10T20:07:04.958456
 **Compliance Status:** ✅ COMPLIANT
 
 ### Key Metrics
-- **Sharpe Ratio:** 0.571
-- **Max Drawdown:** -14.2%
-- **Portfolio Volatility:** 16.0%
-- **VaR (95%):** -1.3%
+- **Sharpe Ratio:** 0.560
+- **Max Drawdown:** -17.4%
+- **Portfolio Volatility:** 18.4%
+- **VaR (95%):** -1.6%
 
 ### Risk Overview
 - **Total Alerts:** 0
@@ -22,5 +22,9 @@ Generated: 2025-06-10T20:07:04.958456
 ## Top Concerns
 
 ## Recommendations
+### 🔴 Risk Management - Implement downside protection
+**Priority:** HIGH | **Timeline:** Immediate
+Consider adding defensive assets or implementing stop-loss mechanisms
+
 
 ## Compliance Score: 100%

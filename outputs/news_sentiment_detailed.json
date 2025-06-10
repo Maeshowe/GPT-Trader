@@ -1,0 +1,106 @@
+{
+  "generated_at": "2025-06-10T18:21:05.519772",
+  "processing_time_seconds": 4.1,
+  "statistics": {
+    "requests_made": 15,
+    "requests_successful": 15,
+    "requests_failed": 0,
+    "total_retry_time": 4.121981143951416,
+    "cache_hits": 0,
+    "success_rate": 100.0,
+    "avg_retry_time": 0.27
+  },
+  "sentiment_data": [
+    {
+      "ticker": "MSFT",
+      "avg_sent": 0.49,
+      "is_negative": false,
+      "weight_adjustment": 0
+    },
+    {
+      "ticker": "AMZN",
+      "avg_sent": 0.561,
+      "is_negative": false,
+      "weight_adjustment": 0
+    },
+    {
+      "ticker": "JNJ",
+      "avg_sent": 0.714,
+      "is_negative": false,
+      "weight_adjustment": 0
+    },
+    {
+      "ticker": "AAPL",
+      "avg_sent": 0.14,
+      "is_negative": false,
+      "weight_adjustment": 0
+    },
+    {
+      "ticker": "GOOGL",
+      "avg_sent": 0.406,
+      "is_negative": false,
+      "weight_adjustment": 0
+    },
+    {
+      "ticker": "XOM",
+      "avg_sent": 0.529,
+      "is_negative": false,
+      "weight_adjustment": 0
+    },
+    {
+      "ticker": "SLB",
+      "avg_sent": 1.0,
+      "is_negative": false,
+      "weight_adjustment": 0
+    },
+    {
+      "ticker": "BA",
+      "avg_sent": 0.31,
+      "is_negative": false,
+      "weight_adjustment": 0
+    },
+    {
+      "ticker": "HON",
+      "avg_sent": 0.571,
+      "is_negative": false,
+      "weight_adjustment": 0
+    },
+    {
+      "ticker": "NKE",
+      "avg_sent": 0.556,
+      "is_negative": false,
+      "weight_adjustment": 0
+    },
+    {
+      "ticker": "KO",
+      "avg_sent": 0.636,
+      "is_negative": false,
+      "weight_adjustment": 0
+    },
+    {
+      "ticker": "JPM",
+      "avg_sent": 0.667,
+      "is_negative": false,
+      "weight_adjustment": 0
+    },
+    {
+      "ticker": "NFLX",
+      "avg_sent": 0.667,
+      "is_negative": false,
+      "weight_adjustment": 0
+    },
+    {
+      "ticker": "XLV",
+      "avg_sent": 0.667,
+      "is_negative": false,
+      "weight_adjustment": 0
+    }
+  ],
+  "failed_tickers": [
+    "XLY"
+  ],
+  "threshold_config": {
+    "negative_threshold": -0.05,
+    "weight_cut_percentage": 0.3
+  }
+}

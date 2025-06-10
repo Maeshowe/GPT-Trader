@@ -112,3 +112,159 @@
 2025-06-10 19:47:01,876 - __main__ - INFO - ⏳ Total retry time: 0s
 2025-06-10 19:47:01,876 - __main__ - INFO - ============================================================
 2025-06-10 19:47:01,877 - __main__ - INFO - 🎉 Pipeline completed successfully!
+2025-06-10 18:20:19,638 - __main__ - INFO - ============================================================
+2025-06-10 18:20:19,639 - __main__ - INFO - 🚀 Starting GPT Portfolio Scoring Pipeline
+2025-06-10 18:20:19,639 - __main__ - INFO - ============================================================
+2025-06-10 18:20:19,639 - __main__ - INFO - 📋 Configuration:
+2025-06-10 18:20:19,639 - __main__ - INFO -    Model: gpt-4o
+2025-06-10 18:20:19,639 - __main__ - INFO -    Max Concurrency: 8
+2025-06-10 18:20:19,639 - __main__ - INFO -    Request Timeout: 90s
+2025-06-10 18:20:19,639 - __main__ - INFO -    Retry Limit: 5
+2025-06-10 18:20:19,639 - __main__ - INFO - Starting sector scoring batch...
+2025-06-10 18:20:19,641 - __main__ - INFO - → Processing sector: Energy
+2025-06-10 18:20:19,776 - __main__ - INFO - → Processing sector: Materials
+2025-06-10 18:20:19,777 - __main__ - INFO - → Processing sector: Industrials
+2025-06-10 18:20:19,777 - __main__ - INFO - → Processing sector: Consumer Discretionary
+2025-06-10 18:20:19,778 - __main__ - INFO - → Processing sector: Consumer Staples
+2025-06-10 18:20:19,780 - __main__ - INFO - → Processing sector: Healthcare
+2025-06-10 18:20:19,781 - __main__ - INFO - → Processing sector: Financials
+2025-06-10 18:20:19,781 - __main__ - INFO - → Processing sector: Information Technology
+2025-06-10 18:20:19,782 - __main__ - INFO - → Processing sector: Communication Services
+2025-06-10 18:20:19,783 - __main__ - INFO - → Processing sector: Utilities
+2025-06-10 18:20:19,783 - __main__ - INFO - → Processing sector: Real Estate
+2025-06-10 18:20:27,757 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-10 18:20:27,763 - __main__ - INFO - ✓ Consumer Staples score = 78 (took 7.99s)
+2025-06-10 18:20:28,044 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-10 18:20:28,051 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-10 18:20:28,053 - __main__ - INFO - ✓ Communication Services score = 78 (took 8.27s)
+2025-06-10 18:20:28,054 - __main__ - INFO - ✓ Consumer Discretionary score = 78 (took 8.28s)
+2025-06-10 18:20:28,068 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-10 18:20:28,071 - __main__ - INFO - ✓ Materials score = 78 (took 8.30s)
+2025-06-10 18:20:28,550 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-10 18:20:28,555 - __main__ - INFO - ✓ Utilities score = 78 (took 8.77s)
+2025-06-10 18:20:28,638 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-10 18:20:28,642 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-10 18:20:28,643 - __main__ - INFO - ✓ Information Technology score = 78 (took 8.86s)
+2025-06-10 18:20:28,649 - __main__ - INFO - ✓ Healthcare score = 78 (took 8.87s)
+2025-06-10 18:20:29,869 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-10 18:20:29,877 - __main__ - INFO - ✓ Industrials score = 75 (took 10.10s)
+2025-06-10 18:20:30,618 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-10 18:20:30,620 - __main__ - INFO - ✓ Real Estate score = 78 (took 10.84s)
+2025-06-10 18:20:31,254 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-10 18:20:31,260 - __main__ - INFO - ✓ Energy score = 78 (took 11.62s)
+2025-06-10 18:20:31,635 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-10 18:20:31,636 - __main__ - INFO - ✓ Financials score = 78 (took 11.86s)
+2025-06-10 18:20:31,636 - __main__ - INFO - ✅ Sector scoring completed: 11/11 successful in 12.0s
+2025-06-10 18:20:31,637 - __main__ - INFO - Starting firm scoring batch...
+2025-06-10 18:20:31,637 - __main__ - INFO - → Processing firm: XOM
+2025-06-10 18:20:31,638 - __main__ - INFO - → Processing firm: CVX
+2025-06-10 18:20:31,639 - __main__ - INFO - → Processing firm: SLB
+2025-06-10 18:20:31,641 - __main__ - INFO - → Processing firm: DD
+2025-06-10 18:20:31,642 - __main__ - INFO - → Processing firm: NEM
+2025-06-10 18:20:31,643 - __main__ - INFO - → Processing firm: FCX
+2025-06-10 18:20:31,644 - __main__ - INFO - → Processing firm: BA
+2025-06-10 18:20:31,645 - __main__ - INFO - → Processing firm: CAT
+2025-06-10 18:20:35,877 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-10 18:20:35,881 - __main__ - INFO - ✓ CVX score = 75 (took 4.24s)
+2025-06-10 18:20:35,882 - __main__ - INFO - → Processing firm: HON
+2025-06-10 18:20:36,268 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-10 18:20:36,274 - __main__ - INFO - ✓ FCX score = 65 (took 4.63s)
+2025-06-10 18:20:36,274 - __main__ - INFO - → Processing firm: AMZN
+2025-06-10 18:20:36,598 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-10 18:20:36,603 - __main__ - INFO - ✓ BA score = 78 (took 4.96s)
+2025-06-10 18:20:36,603 - __main__ - INFO - → Processing firm: TSLA
+2025-06-10 18:20:36,827 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-10 18:20:36,838 - __main__ - INFO - ✓ DD score = 45 (took 5.20s)
+2025-06-10 18:20:36,838 - __main__ - INFO - → Processing firm: NKE
+2025-06-10 18:20:37,477 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-10 18:20:37,478 - __main__ - INFO - ✓ CAT score = 65 (took 5.83s)
+2025-06-10 18:20:37,478 - __main__ - INFO - → Processing firm: PG
+2025-06-10 18:20:37,974 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-10 18:20:37,977 - __main__ - INFO - ✓ SLB score = 78 (took 6.34s)
+2025-06-10 18:20:37,977 - __main__ - INFO - → Processing firm: KO
+2025-06-10 18:20:38,575 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-10 18:20:38,578 - __main__ - INFO - ✓ XOM score = 78 (took 6.94s)
+2025-06-10 18:20:38,578 - __main__ - INFO - → Processing firm: WMT
+2025-06-10 18:20:40,246 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-10 18:20:40,249 - __main__ - INFO - ✓ NEM score = 75 (took 8.61s)
+2025-06-10 18:20:40,250 - __main__ - INFO - → Processing firm: JNJ
+2025-06-10 18:20:41,527 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-10 18:20:41,532 - __main__ - INFO - ✓ AMZN score = 85 (took 9.89s)
+2025-06-10 18:20:41,532 - __main__ - INFO - → Processing firm: PFE
+2025-06-10 18:20:42,254 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-10 18:20:42,262 - __main__ - INFO - ✓ TSLA score = 65 (took 10.62s)
+2025-06-10 18:20:42,262 - __main__ - INFO - → Processing firm: MRK
+2025-06-10 18:20:43,021 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-10 18:20:43,024 - __main__ - INFO - ✓ KO score = 78 (took 11.38s)
+2025-06-10 18:20:43,025 - __main__ - INFO - → Processing firm: JPM
+2025-06-10 18:20:43,134 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-10 18:20:43,136 - __main__ - INFO - ✓ PG score = 78 (took 11.49s)
+2025-06-10 18:20:43,136 - __main__ - INFO - → Processing firm: BAC
+2025-06-10 18:20:43,543 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-10 18:20:43,544 - __main__ - INFO - ✓ JNJ score = 85 (took 11.90s)
+2025-06-10 18:20:43,544 - __main__ - INFO - → Processing firm: WFC
+2025-06-10 18:20:44,288 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-10 18:20:44,291 - __main__ - INFO - ✓ WMT score = 75 (took 12.64s)
+2025-06-10 18:20:44,291 - __main__ - INFO - → Processing firm: AAPL
+2025-06-10 18:20:45,058 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-10 18:20:45,062 - __main__ - INFO - ✓ NKE score = 78 (took 13.42s)
+2025-06-10 18:20:45,062 - __main__ - INFO - → Processing firm: MSFT
+2025-06-10 18:20:46,385 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-10 18:20:46,392 - __main__ - INFO - ✓ HON score = 78 (took 14.75s)
+2025-06-10 18:20:46,392 - __main__ - INFO - → Processing firm: GOOGL
+2025-06-10 18:20:47,033 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-10 18:20:47,038 - __main__ - INFO - ✓ PFE score = 75 (took 15.39s)
+2025-06-10 18:20:47,038 - __main__ - INFO - → Processing firm: FB
+2025-06-10 18:20:47,310 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-10 18:20:47,320 - __main__ - INFO - ✓ JPM score = 78 (took 15.67s)
+2025-06-10 18:20:47,320 - __main__ - INFO - → Processing firm: GOOGL
+2025-06-10 18:20:47,874 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-10 18:20:47,879 - __main__ - INFO - ✓ WFC score = 68 (took 16.23s)
+2025-06-10 18:20:47,879 - __main__ - INFO - → Processing firm: NFLX
+2025-06-10 18:20:49,133 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-10 18:20:49,136 - __main__ - INFO - ✓ BAC score = 72 (took 17.49s)
+2025-06-10 18:20:49,136 - __main__ - INFO - → Processing firm: DUK
+2025-06-10 18:20:49,455 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-10 18:20:49,459 - __main__ - INFO - ✓ MRK score = 78 (took 17.81s)
+2025-06-10 18:20:49,459 - __main__ - INFO - → Processing firm: SO
+2025-06-10 18:20:50,018 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-10 18:20:50,020 - __main__ - INFO - ✓ AAPL score = 85 (took 18.37s)
+2025-06-10 18:20:50,020 - __main__ - INFO - → Processing firm: NEE
+2025-06-10 18:20:51,924 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-10 18:20:51,926 - __main__ - INFO - ✓ MSFT score = 88 (took 20.28s)
+2025-06-10 18:20:51,926 - __main__ - INFO - → Processing firm: AMT
+2025-06-10 18:20:52,077 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-10 18:20:52,091 - __main__ - INFO - ✓ GOOGL score = 85 (took 20.44s)
+2025-06-10 18:20:52,091 - __main__ - INFO - → Processing firm: PLD
+2025-06-10 18:20:52,318 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-10 18:20:52,332 - __main__ - INFO - ✓ GOOGL score = 85 (took 20.69s)
+2025-06-10 18:20:52,332 - __main__ - INFO - → Processing firm: SPG
+2025-06-10 18:20:52,926 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-10 18:20:52,928 - __main__ - INFO - ✓ FB score = 78 (took 21.28s)
+2025-06-10 18:20:53,352 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-10 18:20:53,356 - __main__ - INFO - ✓ NFLX score = 78 (took 21.71s)
+2025-06-10 18:20:53,735 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-10 18:20:53,744 - __main__ - INFO - ✓ DUK score = 72 (took 22.10s)
+2025-06-10 18:20:54,784 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-10 18:20:54,785 - __main__ - INFO - ✓ SO score = 68 (took 23.14s)
+2025-06-10 18:20:54,842 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-10 18:20:54,878 - __main__ - INFO - ✓ NEE score = 72 (took 23.23s)
+2025-06-10 18:20:57,923 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-10 18:20:57,928 - __main__ - INFO - ✓ SPG score = 62 (took 26.28s)
+2025-06-10 18:20:58,274 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-10 18:20:58,298 - __main__ - INFO - ✓ PLD score = 62 (took 26.65s)
+2025-06-10 18:21:01,094 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-10 18:21:01,099 - __main__ - INFO - ✓ AMT score = 65 (took 29.45s)
+2025-06-10 18:21:01,100 - __main__ - INFO - ✅ Firm scoring completed: 33/33 successful in 29.5s
+2025-06-10 18:21:01,100 - __main__ - INFO - ============================================================
+2025-06-10 18:21:01,100 - __main__ - INFO - 📊 PIPELINE PERFORMANCE SUMMARY:
+2025-06-10 18:21:01,100 - __main__ - INFO - ============================================================
+2025-06-10 18:21:01,100 - __main__ - INFO - ⏱️  Total execution time: 41.5 seconds
+2025-06-10 18:21:01,100 - __main__ - INFO - 🔢 Total API requests: 44
+2025-06-10 18:21:01,100 - __main__ - INFO - ❌ Failed requests: 0
+2025-06-10 18:21:01,100 - __main__ - INFO - ✅ Success rate: 100.0%
+2025-06-10 18:21:01,100 - __main__ - INFO - 📈 Average sector processing time: 9.43s
+2025-06-10 18:21:01,100 - __main__ - INFO - 🏢 Average firm processing time: 15.12s
+2025-06-10 18:21:01,101 - __main__ - INFO - ⏳ Total retry time: 0s
+2025-06-10 18:21:01,101 - __main__ - INFO - ============================================================
+2025-06-10 18:21:01,101 - __main__ - INFO - 🎉 Pipeline completed successfully!
