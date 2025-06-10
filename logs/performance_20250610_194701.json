@@ -1,0 +1,9 @@
+{
+  "total_time": 10.2,
+  "requests_made": 11,
+  "requests_failed": 0,
+  "success_rate": 100.0,
+  "avg_sector_time": 7.06,
+  "avg_firm_time": 0,
+  "total_retry_time": 0
+}

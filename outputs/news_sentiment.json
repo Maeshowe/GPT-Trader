@@ -1,58 +1,92 @@
 [
   {
-    "ticker": "AAPL",
-    "avg_sent": 0.07
-  },
-  {
     "ticker": "MSFT",
-    "avg_sent": 0.393
+    "avg_sent": 0.5,
+    "is_negative": false,
+    "weight_adjustment": 0
   },
   {
-    "ticker": "NVDA",
-    "avg_sent": 0.61
+    "ticker": "GOOGL",
+    "avg_sent": 0.4,
+    "is_negative": false,
+    "weight_adjustment": 0
   },
   {
-    "ticker": "JPM",
-    "avg_sent": 0.571
-  },
-  {
-    "ticker": "GS",
-    "avg_sent": 0.5
-  },
-  {
-    "ticker": "SLB",
-    "avg_sent": 1.0
+    "ticker": "KO",
+    "avg_sent": 0.636,
+    "is_negative": false,
+    "weight_adjustment": 0
   },
   {
     "ticker": "XOM",
-    "avg_sent": 0.562
+    "avg_sent": 0.529,
+    "is_negative": false,
+    "weight_adjustment": 0
   },
   {
-    "ticker": "BAC",
-    "avg_sent": 0.667
+    "ticker": "SLB",
+    "avg_sent": 1.0,
+    "is_negative": false,
+    "weight_adjustment": 0
   },
   {
-    "ticker": "CVX",
-    "avg_sent": 0.2
+    "ticker": "NEM",
+    "avg_sent": 0.692,
+    "is_negative": false,
+    "weight_adjustment": 0
   },
   {
-    "ticker": "XLK",
-    "avg_sent": 0.5
+    "ticker": "HON",
+    "avg_sent": 0.571,
+    "is_negative": false,
+    "weight_adjustment": 0
   },
   {
-    "ticker": "XLF",
-    "avg_sent": 0.333
+    "ticker": "AMZN",
+    "avg_sent": 0.567,
+    "is_negative": false,
+    "weight_adjustment": 0
   },
   {
-    "ticker": "XLI",
-    "avg_sent": 1.0
+    "ticker": "NKE",
+    "avg_sent": 0.556,
+    "is_negative": false,
+    "weight_adjustment": 0
   },
   {
-    "ticker": "XLP",
-    "avg_sent": 0.0
+    "ticker": "PG",
+    "avg_sent": -0.696,
+    "is_negative": true,
+    "weight_adjustment": 0.3
+  },
+  {
+    "ticker": "WMT",
+    "avg_sent": 0.75,
+    "is_negative": false,
+    "weight_adjustment": 0
+  },
+  {
+    "ticker": "JNJ",
+    "avg_sent": 0.714,
+    "is_negative": false,
+    "weight_adjustment": 0
+  },
+  {
+    "ticker": "MRK",
+    "avg_sent": 0.611,
+    "is_negative": false,
+    "weight_adjustment": 0
+  },
+  {
+    "ticker": "JPM",
+    "avg_sent": 0.667,
+    "is_negative": false,
+    "weight_adjustment": 0
   },
   {
     "ticker": "XLV",
-    "avg_sent": 0.667
+    "avg_sent": 0.667,
+    "is_negative": false,
+    "weight_adjustment": 0
   }
 ]

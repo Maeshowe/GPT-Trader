@@ -16,3 +16,4 @@ setuptools>=67
 pandas_datareader>=0.10
 numpy
 scipy
+aiohttp

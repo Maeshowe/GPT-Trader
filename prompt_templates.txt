@@ -1,0 +1,103 @@
+-e \n\n=== TEMPLATE: ./prompts/firm_prompt.j2 ===
+You are a financial expert scoring individual companies for institutional investors.
+Use third-person narrative; do not mention your credentials or address investors directly.
+
+Macro context:
+{{ macro_news_snippets }}
+
+Company: {{ company_name }}
+Industry: {{ industry }}
+
+Financial Metrics:
+{{ firm_financials_json }}
+
+News Headlines:
+{% for item in firm_news_snippets %}
+- {{ item }}
+{% endfor %}
+
+Date: {{ today }}
+
+---
+
+**Investment Report**
+
+Recent News:
+[Summarize the two-three most relevant headlines.]
+
+Financials & Valuations:
+[Summarize P/E, PEG, ROE, liquidity, volatility.]
+
+Economic Outlook:
+[Summarize how macro factors affect the firm.]
+
+---
+**Important formatting rule**
+
+First think through the above, then **in a new line output only**:
+Score: <integer between 1 and 100>-e \n\n=== TEMPLATE: ./prompts/sector_prompt.j2 ===
+You are a financial expert analyzing sectors for institutional investors.
+Use third-person narrative; do not mention credentials or address investors.
+
+Macro indicators (FRED):
+{{ macro_indicators_json }}
+
+Macro news:
+{% for item in macro_news_snippets %}
+- {{ item }}
+{% endfor %}
+
+Sector news:
+{% for item in sector_news_snippets %}
+- {{ item }}
+{% endfor %}
+
+Date: {{ today }}
+
+---
+
+**Sector Investment Report**
+
+Recent News:
+[Summarize]
+
+Economic Outlook:
+[Summarize macro impact on sector]
+
+Political Challenges:
+[Summarize, if any]
+
+Technology Developments:
+[Summarize, if any]
+
+---
+**Important formatting rule**
+
+Then, **in a new line output only**:
+Score: <integer between 1 and 100>-e \n\n=== TEMPLATE: ./prompts/generator_prompt.j2 ===
+You are a portfolio strategist building a 15-asset, one-month horizon portfolio.
+Use third-person narrative; do not mention credentials or provide investment advice.
+
+Top scoring companies (name, score, thesis):
+{{ top_firms_list }}
+
+Macro forecast table:
+{{ macro_forecast_table }}
+
+Available ETFs:
+{{ etf_universe_list }}
+
+Date: {{ today }}
+
+---
+
+Construct a Markdown table with exactly **15 distinct assets** (stocks or ETFs; exclude short/vol products).  
+Columns: Asset | Weight (%) | Thesis | Edge | Risk
+
+Weight the portfolio to perform positively under the current macro outlook.  
+Incorporate both stock info and macro expectations.
+
+---
+**Important formatting rule**
+
+RReturn only the table **without markdown backticks** – no extra commentary.

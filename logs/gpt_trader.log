@@ -1,0 +1,114 @@
+2025-06-10 19:45:29,975 - __main__ - INFO - ============================================================
+2025-06-10 19:45:29,975 - __main__ - INFO - 🚀 Starting GPT Portfolio Scoring Pipeline
+2025-06-10 19:45:29,975 - __main__ - INFO - ============================================================
+2025-06-10 19:45:29,975 - __main__ - INFO - 📋 Configuration:
+2025-06-10 19:45:29,975 - __main__ - INFO -    Model: gpt-4o
+2025-06-10 19:45:29,975 - __main__ - INFO -    Max Concurrency: 8
+2025-06-10 19:45:29,975 - __main__ - INFO -    Request Timeout: 90s
+2025-06-10 19:45:29,975 - __main__ - INFO -    Retry Limit: 5
+2025-06-10 19:45:29,975 - __main__ - INFO - Starting sector scoring batch...
+2025-06-10 19:45:29,976 - __main__ - INFO - → Processing sector: Energy
+2025-06-10 19:45:30,059 - __main__ - INFO - → Processing sector: Materials
+2025-06-10 19:45:30,059 - __main__ - INFO - → Processing sector: Industrials
+2025-06-10 19:45:30,061 - __main__ - INFO - → Processing sector: Consumer Discretionary
+2025-06-10 19:45:30,064 - __main__ - INFO - → Processing sector: Consumer Staples
+2025-06-10 19:45:30,069 - __main__ - INFO - → Processing sector: Health Care
+2025-06-10 19:45:30,072 - __main__ - INFO - → Processing sector: Financials
+2025-06-10 19:45:30,074 - __main__ - INFO - → Processing sector: Information Technology
+2025-06-10 19:45:30,074 - __main__ - INFO - → Processing sector: Communication Services
+2025-06-10 19:45:30,075 - __main__ - INFO - → Processing sector: Utilities
+2025-06-10 19:45:30,075 - __main__ - INFO - → Processing sector: Real Estate
+2025-06-10 19:45:36,392 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-10 19:45:36,404 - __main__ - INFO - ✓ Consumer Discretionary score = 72 (took 6.34s)
+2025-06-10 19:45:36,945 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-10 19:45:36,949 - __main__ - INFO - ✓ Information Technology score = 75 (took 6.87s)
+2025-06-10 19:45:37,282 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-10 19:45:37,284 - __main__ - INFO - ✓ Materials score = 75 (took 7.23s)
+2025-06-10 19:45:37,689 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-10 19:45:37,691 - __main__ - INFO - ✓ Health Care score = 78 (took 7.62s)
+2025-06-10 19:45:37,757 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-10 19:45:37,761 - __main__ - INFO - ✓ Industrials score = 75 (took 7.70s)
+2025-06-10 19:45:37,778 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-10 19:45:37,780 - __main__ - INFO - ✓ Communication Services score = 72 (took 7.71s)
+2025-06-10 19:45:38,441 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-10 19:45:38,445 - __main__ - INFO - ✓ Energy score = 75 (took 8.47s)
+2025-06-10 19:45:38,874 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-10 19:45:38,878 - __main__ - INFO - ✓ Consumer Staples score = 75 (took 8.81s)
+2025-06-10 19:45:38,879 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-10 19:45:38,887 - __main__ - INFO - ✓ Real Estate score = 78 (took 8.81s)
+2025-06-10 19:45:39,505 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-10 19:45:39,509 - __main__ - INFO - ✓ Utilities score = 78 (took 9.43s)
+2025-06-10 19:45:42,933 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-10 19:45:42,945 - __main__ - INFO - ✓ Financials score = 78 (took 12.87s)
+2025-06-10 19:45:42,947 - __main__ - INFO - ✅ Sector scoring completed: 11/11 successful in 13.0s
+2025-06-10 19:45:42,947 - __main__ - INFO - Starting firm scoring batch...
+2025-06-10 19:45:42,952 - __main__ - INFO - ✅ Firm scoring completed: 33/33 successful in 0.0s
+2025-06-10 19:45:42,952 - __main__ - INFO - ============================================================
+2025-06-10 19:45:42,952 - __main__ - INFO - 📊 PIPELINE PERFORMANCE SUMMARY:
+2025-06-10 19:45:42,952 - __main__ - INFO - ============================================================
+2025-06-10 19:45:42,952 - __main__ - INFO - ⏱️  Total execution time: 13.0 seconds
+2025-06-10 19:45:42,952 - __main__ - INFO - 🔢 Total API requests: 11
+2025-06-10 19:45:42,952 - __main__ - INFO - ❌ Failed requests: 0
+2025-06-10 19:45:42,952 - __main__ - INFO - ✅ Success rate: 100.0%
+2025-06-10 19:45:42,952 - __main__ - INFO - 📈 Average sector processing time: 8.35s
+2025-06-10 19:45:42,952 - __main__ - INFO - 🏢 Average firm processing time: 0s
+2025-06-10 19:45:42,952 - __main__ - INFO - ⏳ Total retry time: 0s
+2025-06-10 19:45:42,952 - __main__ - INFO - ============================================================
+2025-06-10 19:45:42,953 - __main__ - INFO - 🎉 Pipeline completed successfully!
+2025-06-10 19:46:51,645 - __main__ - INFO - ============================================================
+2025-06-10 19:46:51,645 - __main__ - INFO - 🚀 Starting GPT Portfolio Scoring Pipeline
+2025-06-10 19:46:51,645 - __main__ - INFO - ============================================================
+2025-06-10 19:46:51,645 - __main__ - INFO - 📋 Configuration:
+2025-06-10 19:46:51,645 - __main__ - INFO -    Model: gpt-4o
+2025-06-10 19:46:51,645 - __main__ - INFO -    Max Concurrency: 8
+2025-06-10 19:46:51,645 - __main__ - INFO -    Request Timeout: 90s
+2025-06-10 19:46:51,645 - __main__ - INFO -    Retry Limit: 5
+2025-06-10 19:46:51,645 - __main__ - INFO - Starting sector scoring batch...
+2025-06-10 19:46:51,646 - __main__ - INFO - → Processing sector: Energy
+2025-06-10 19:46:51,721 - __main__ - INFO - → Processing sector: Materials
+2025-06-10 19:46:51,724 - __main__ - INFO - → Processing sector: Industrials
+2025-06-10 19:46:51,725 - __main__ - INFO - → Processing sector: Consumer Discretionary
+2025-06-10 19:46:51,726 - __main__ - INFO - → Processing sector: Consumer Staples
+2025-06-10 19:46:51,726 - __main__ - INFO - → Processing sector: Health Care
+2025-06-10 19:46:51,727 - __main__ - INFO - → Processing sector: Financials
+2025-06-10 19:46:51,727 - __main__ - INFO - → Processing sector: Information Technology
+2025-06-10 19:46:51,728 - __main__ - INFO - → Processing sector: Communication Services
+2025-06-10 19:46:51,728 - __main__ - INFO - → Processing sector: Utilities
+2025-06-10 19:46:51,729 - __main__ - INFO - → Processing sector: Real Estate
+2025-06-10 19:46:57,282 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-10 19:46:57,299 - __main__ - INFO - ✓ Information Technology score = 75 (took 5.57s)
+2025-06-10 19:46:57,365 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-10 19:46:57,367 - __main__ - INFO - ✓ Health Care score = 75 (took 5.64s)
+2025-06-10 19:46:57,506 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-10 19:46:57,508 - __main__ - INFO - ✓ Energy score = 75 (took 5.86s)
+2025-06-10 19:46:58,382 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-10 19:46:58,388 - __main__ - INFO - ✓ Communication Services score = 78 (took 6.66s)
+2025-06-10 19:46:58,768 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-10 19:46:58,772 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-10 19:46:58,774 - __main__ - INFO - ✓ Industrials score = 78 (took 7.05s)
+2025-06-10 19:46:58,777 - __main__ - INFO - ✓ Consumer Discretionary score = 78 (took 7.05s)
+2025-06-10 19:46:58,798 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-10 19:46:58,799 - __main__ - INFO - ✓ Consumer Staples score = 75 (took 7.07s)
+2025-06-10 19:46:58,932 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-10 19:46:58,934 - __main__ - INFO - ✓ Utilities score = 78 (took 7.21s)
+2025-06-10 19:46:58,990 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-10 19:46:58,995 - __main__ - INFO - ✓ Real Estate score = 75 (took 7.27s)
+2025-06-10 19:46:59,800 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-10 19:46:59,803 - __main__ - INFO - ✓ Financials score = 78 (took 8.08s)
+2025-06-10 19:47:01,868 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-10 19:47:01,871 - __main__ - INFO - ✓ Materials score = 75 (took 10.15s)
+2025-06-10 19:47:01,873 - __main__ - INFO - ✅ Sector scoring completed: 11/11 successful in 10.2s
+2025-06-10 19:47:01,873 - __main__ - INFO - Starting firm scoring batch...
+2025-06-10 19:47:01,876 - __main__ - INFO - ✅ Firm scoring completed: 33/33 successful in 0.0s
+2025-06-10 19:47:01,876 - __main__ - INFO - ============================================================
+2025-06-10 19:47:01,876 - __main__ - INFO - 📊 PIPELINE PERFORMANCE SUMMARY:
+2025-06-10 19:47:01,876 - __main__ - INFO - ============================================================
+2025-06-10 19:47:01,876 - __main__ - INFO - ⏱️  Total execution time: 10.2 seconds
+2025-06-10 19:47:01,876 - __main__ - INFO - 🔢 Total API requests: 11
+2025-06-10 19:47:01,876 - __main__ - INFO - ❌ Failed requests: 0
+2025-06-10 19:47:01,876 - __main__ - INFO - ✅ Success rate: 100.0%
+2025-06-10 19:47:01,876 - __main__ - INFO - 📈 Average sector processing time: 7.06s
+2025-06-10 19:47:01,876 - __main__ - INFO - 🏢 Average firm processing time: 0s
+2025-06-10 19:47:01,876 - __main__ - INFO - ⏳ Total retry time: 0s
+2025-06-10 19:47:01,876 - __main__ - INFO - ============================================================
+2025-06-10 19:47:01,877 - __main__ - INFO - 🎉 Pipeline completed successfully!

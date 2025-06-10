@@ -1,6 +1,6 @@
 sectors:
   - name: Energy
-    etf: XLK
+    etf: XLE
     keyword: Energy
     override_tickers: ["XOM", "CVX", "SLB"]
 
@@ -24,7 +24,7 @@ sectors:
     keyword: Consumer Staples
     override_tickers: ["PG", "KO", "WMT"]
   
-  - name: Health Care
+  - name: Healthcare
     etf: XLV
     keyword: Health Care
     override_tickers: ["JNJ", "PFE", "MRK"]
@@ -50,7 +50,7 @@ sectors:
     override_tickers: ["DUK", "SO", "NEE"]
 
   - name: Real Estate 
-    etf: XLF
+    etf: XLRE
     keyword: Real Estate
     override_tickers: ["AMT", "PLD", "SPG"]
     

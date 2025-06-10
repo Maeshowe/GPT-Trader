@@ -1,0 +1,928 @@
+-e \n\n=== FILE: ./sector_runner.py ===
+#!/usr/bin/env python3
+"""
+Sector prompt futtatása, Score kinyerése és visszaírása inputs/sector_input.json-be
+"""
+
+import os, json, re
+from pathlib import Path
+from dotenv import load_dotenv
+from jinja2 import Template
+from openai import OpenAI
+
+BASE_DIR = Path(__file__).resolve().parent
+load_dotenv(override=True)
+
+client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
+model  = os.getenv("OPENAI_MODEL", "gpt-4o")
+
+# ── 1) Input JSON betöltés
+sector_path = BASE_DIR / "inputs/sector_input.json"
+with open(sector_path) as f:
+    data = json.load(f)
+
+# ── 2) Prompt renderelés
+with open(BASE_DIR / "prompts/sector_prompt.j2") as f:
+    prompt = Template(f.read()).render(**data)
+
+# ── 3) GPT-hívás
+response = client.chat.completions.create(
+    model=model,
+    messages=[{"role": "user", "content": prompt}],
+    temperature=0,
+    max_tokens=600,
+)
+output = response.choices[0].message.content.strip()
+print("🧾 GPT-válasz (Sector):\n", output)
+
+# ── 4) Score kinyerése regex-szel
+m = re.search(r"Score:\s*(\d+)", output)
+if m:
+    data["sector_score"] = int(m.group(1))
+    with open(sector_path, "w") as f:
+        json.dump(data, f, indent=2)
+    print(f"✅ sector_score ({data['sector_score']}) mentve a {sector_path} fájlba")
+else:
+    print("⚠️  Nem találtam Score-t a válaszban.")-e \n\n=== FILE: ./prompt_runner.py ===
+#!/usr/bin/env python3
+"""
+Firm prompt futtatása:
+• GPT-score kinyerése
+• SHAP-szerű feature-hatások kiszámítása (fix lineáris súlyokkal)
+• Eredmény visszaírása inputs/firm_inputs.json-be
+"""
+
+import os, json, re
+from pathlib import Path
+from dotenv import load_dotenv
+from jinja2 import Template
+from openai import OpenAI
+
+# ── Beállítások --------------------------------------------------------------
+BASE = Path(__file__).resolve().parent
+load_dotenv(override=True)
+client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
+MODEL  = os.getenv("OPENAI_MODEL", "gpt-4o")
+
+# ── 1) Bemenet ---------------------------------------------------------------
+firm_path = BASE / "inputs/firm_inputs.json"
+firm_records = json.load(open(firm_path))
+
+# Itt példaként csak a legfrissebb 1. rekordot dolgozzuk fel; végig is iterálhatnál.
+rec = firm_records[0]
+
+# ── 2) Prompt renderelés -----------------------------------------------------
+prompt = Template(open(BASE / "prompts/firm_prompt.j2").read()).render(**rec)
+
+resp = client.chat.completions.create(
+    model=MODEL,
+    messages=[{"role": "user", "content": prompt}],
+    temperature=0,
+    max_tokens=700
+).choices[0].message.content.strip()
+
+print("🧾 GPT-válasz (Firm):\n", resp)
+
+# ── 3) Score kinyerése -------------------------------------------------------
+m = re.search(r"Score:\s*(\d+)", resp)
+rec["firm_score"] = int(m.group(1)) if m else None
+
+# ── 4) SHAP-szerű magyarázat (fix súlyok) ------------------------------------
+feature_weights = {
+    "P/E": 0.20,
+    "PEG": -0.10,
+    "Beta": -0.10,
+    "ROE": 0.40,
+    "Quick Ratio": 0.30
+}
+fin = rec["firm_financials_json"]
+rec["firm_shap"] = {
+    k: round(feature_weights[k] * fin.get(k, 0), 2) for k in feature_weights
+}
+
+# ── 5) Visszaírás a JSON-listába -------------------------------------------
+firm_records[0] = rec
+json.dump(firm_records, open(firm_path, "w"), indent=2)
+print(f"✅ firm_score ({rec['firm_score']}), SHAP-értékek mentve a {firm_path} fájlba")-e \n\n=== FILE: ./run_prompts.py ===
+#!/usr/bin/env python3
+"""
+Aszinkron batch futtató:
+• Sector-score  (3 rekord)    – async, timeout+retry
+• Firm-score + SHAP (9 rekord)– async, timeout+retry, max 5 párhuzamos
+"""
+
+import os, json, re, asyncio, time
+from pathlib import Path
+from dotenv import load_dotenv
+from jinja2 import Template
+from openai import AsyncOpenAI, APITimeoutError, RateLimitError
+
+BASE = Path(__file__).resolve().parent
+load_dotenv(override=True)
+client = AsyncOpenAI(api_key=os.getenv("OPENAI_API_KEY"))
+MODEL  = os.getenv("OPENAI_MODEL","gpt-4o")
+
+MAX_CONCURRENCY = 2
+REQ_TIMEOUT     = 60        # mp
+RETRY_LIMIT     = 4
+RETRY_BACKOFF   = 8         # mp
+
+# ── GPT hívás retry-val, timeout-tal ----------------------------------------
+async def gpt_call(prompt, temperature=0):
+    for attempt in range(1, RETRY_LIMIT+1):
+        try:
+            resp = await client.chat.completions.create(
+                model=MODEL,
+                messages=[{"role":"user","content":prompt}],
+                temperature=temperature,
+                max_tokens=700,
+                timeout=REQ_TIMEOUT            # 1.3.x paraméter
+            )
+            return resp.choices[0].message.content
+        except (APITimeoutError, RateLimitError) as e:
+            wait = RETRY_BACKOFF * attempt
+            print(f"⚠️  Retry {attempt}/{RETRY_LIMIT} in {wait}s – {e}")
+            await asyncio.sleep(wait)
+    raise RuntimeError("GPT call failed after retries")
+
+# ════════════════════════════════════════════════════════════════════════════
+# 1) Sector batch (async)                                                     -
+# ════════════════════════════════════════════════════════════════════════════
+async def run_sectors_async():
+    path = BASE/"inputs/sector_inputs.json"
+    sectors = json.load(open(path))
+    tpl = Template(open(BASE/"prompts/sector_prompt.j2").read())
+
+    async def job(s):
+        print(f"→ Sector: {s['name']}")
+        out = await gpt_call(tpl.render(**s))
+        m = re.search(r"Score:\s*(\d+)", out)
+        s["sector_score"] = int(m.group(1)) if m else None
+        print(f"✓ {s['name']} score = {s['sector_score']}")
+
+    await asyncio.gather(*[job(s) for s in sectors])
+    json.dump(sectors, open(path,"w"), indent=2)
+    print("✅ Sector-scores frissítve.")
+
+# ════════════════════════════════════════════════════════════════════════════
+# 2) Firm batch (async)                                                       -
+# ════════════════════════════════════════════════════════════════════════════
+FIRM_W = {"P/E":0.2,"PEG":-0.1,"Beta":-0.1,"ROE":0.4,"Quick Ratio":0.3}
+firm_tpl = Template(open(BASE/"prompts/firm_prompt.j2").read())
+
+async def run_firms_async():
+    path = BASE/"inputs/firm_inputs.json"
+    firms = json.load(open(path))
+    sem = asyncio.Semaphore(MAX_CONCURRENCY)
+
+    async def job(f):
+        if f.get("firm_score") and f.get("firm_shap"):
+            print(f"⌛ Skip {f['ticker']} – already done")
+            return
+        async with sem:
+            print(f"→ GPT {f['ticker']}")
+            out = await gpt_call(firm_tpl.render(**f))
+            m = re.search(r"Score:\s*(\d+)", out)
+            f["firm_score"] = int(m.group(1)) if m else None
+            fin = f["firm_financials_json"]
+            f["firm_shap"] = {k: round(FIRM_W[k]*fin.get(k,0),2) for k in FIRM_W}
+            print(f"✓ {f['ticker']} score = {f['firm_score']}")
+
+    await asyncio.gather(*[job(f) for f in firms])
+    json.dump(firms, open(path,"w"), indent=2)
+    print("✅ Firm-scores + SHAP frissítve.")
+
+# ════════════════════════════════════════════════════════════════════════════
+# Main async függvény - EZ A KULCS!
+# ════════════════════════════════════════════════════════════════════════════
+async def main():
+    """Főprogram - egyetlen event loop-ban futtatja mindkét batch-et"""
+    t0 = time.time()
+    
+    # Szekvenciálisan futtatjuk őket ugyanabban az event loop-ban
+    await run_sectors_async()
+    await run_firms_async()
+    
+    print(f"⏱️  Összidő: {round(time.time()-t0,1)} mp")
+
+# ════════════════════════════════════════════════════════════════════════════
+if __name__ == "__main__":
+    # Csak egyetlen asyncio.run() hívás!
+    asyncio.run(main())-e \n\n=== FILE: ./backtest_rebal.py ===
+#!/usr/bin/env python3
+"""
+Back-test két stratégiára ugyanazzal a Stooq-price feed-del
+(1) Buy-&-hold   (BH)
+(2) Havi rebalansz hónap-utolsó kereskedési napján   (REB)
+
+• Bemenet : outputs/portfolio_latest.json   (Weight %)
+• Kimenet : outputs/backtest_rebal_equity.json
+            outputs/backtest_rebal_stats.json
+"""
+import warnings, pandas as pd
+warnings.simplefilter("ignore", FutureWarning)
+
+import json, datetime, pandas as pd
+from pathlib import Path
+from pandas_datareader import data as pdr
+
+BASE   = Path(__file__).resolve().parent
+PORT   = json.load(open(BASE/"outputs/portfolio_latest.json"))["table"]
+
+# ── Paraméterek ─────────────────────────────────────────────────────────────
+START = "2023-01-01"
+END   = datetime.date.today().isoformat()
+BENCH = "SPY"
+UNIT  = 1_000_000                    # induló portfólió USD
+
+# ── Ticker & Weight tisztítás ───────────────────────────────────────────────
+clean  = lambda s: s.replace("\xa0", "").strip().upper()
+weights0 = {clean(r["Asset"]): float(r["Weight (%)"])/100 for r in PORT}
+tickers  = list(weights0) + [BENCH]
+
+# ── Árfolyamok Stooq-ról ────────────────────────────────────────────────────
+def stooq(tks):
+    df = pdr.DataReader([t + ".US" for t in tks], "stooq", START, END)["Close"]
+    df.columns = [c.split(".")[0] for c in df.columns]
+    return df.sort_index()
+
+px = stooq(tickers).dropna(how="all")
+missing = [t for t in weights0 if t not in px.columns]
+for t in missing: weights0.pop(t)
+if not weights0:
+    raise RuntimeError("No valid price data for portfolio tickers")
+
+# ── Helper: equity-curve számítása súlysorozatból ───────────────────────────
+def equity_from_weights(price_df: pd.DataFrame, weight_df: pd.DataFrame):
+    """price_df: daily Close; weight_df: daily weights (sorösszeg =1)"""
+    w_aligned = weight_df.reindex(price_df.index).fillna(method="ffill")
+    daily_ret = price_df.pct_change().fillna(0)
+    port_ret  = (w_aligned * daily_ret).sum(axis=1)
+    equity    = (1 + port_ret).cumprod() * UNIT
+    return equity
+
+# ── (1) Buy-&-hold (BH) ────────────────────────────────────────────────────
+alloc_qty = {t: weights0[t] * UNIT / px[t].iloc[0] for t in weights0}
+bh_equity = (px[list(weights0)] * pd.Series(alloc_qty)).sum(axis=1)
+
+# ── (2) Havi rebalansz (REB) ───────────────────────────────────────────────
+#   • minden hónap utolsó valid kereskedési napján weights0 szerint újrasúlyoz
+month_ends = px.index.to_series().groupby(px.index.to_period("M")).last()
+w_rebal = pd.DataFrame(index=month_ends, columns=weights0.keys()).fillna(0.0)
+for t in weights0: w_rebal[t] = weights0[t]          # fix súly-profil
+reb_equity = equity_from_weights(px[list(weights0)], w_rebal)
+
+# ── Benchmark (BH-stílusú SPY) ─────────────────────────────────────────────
+bench = px[BENCH] / px[BENCH].iloc[0] * UNIT
+
+# ── Metrikák ────────────────────────────────────────────────────────────────
+def stats(ts):
+    yrs = (ts.index[-1] - ts.index[0]).days / 365.25
+    cagr   = (ts.iloc[-1]/ts.iloc[0])**(1/yrs) - 1
+    dd     = (ts/ts.cummax() - 1).min()
+    sharpe = ((ts.pct_change().dropna()).agg(["mean","std"])).pipe(
+        lambda s: (s["mean"]/s["std"])*252**0.5 if s["std"] else 0
+    )
+    return {"CAGR": round(cagr*100,2), "MaxDD": round(dd*100,2), "Sharpe": round(sharpe,2)}
+
+stats_out = {
+    "Buy&Hold":  stats(bh_equity),
+    "Rebalance": stats(reb_equity),
+    "Benchmark": stats(bench)
+}
+
+# ── Mentés ──────────────────────────────────────────────────────────────────
+out_dir = BASE/"outputs"; out_dir.mkdir(exist_ok=True)
+pd.DataFrame({
+    "BH":  bh_equity,
+    "REB": reb_equity,
+    "SPY": bench
+}).to_json(out_dir/"backtest_rebal_equity.json", orient="split", date_format="iso")
+
+json.dump(stats_out, open(out_dir/"backtest_rebal_stats.json","w"), indent=2)
+print("✅ Rebalansz back-test elkészült • outputs/backtest_rebal_*")-e \n\n=== FILE: ./dashboard/app.py ===
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+GPT Portfolio Dashboard – minden modul + rugalmas Sector Score forrás
+"""
+import json, datetime, pandas as pd
+from pathlib import Path
+import streamlit as st
+import plotly.graph_objects as go
+import plotly.express as px
+
+# ────────────────────────── Path setup ────────────────────────────────────
+ROOT = Path(__file__).resolve().parent.parent
+OUT  = ROOT / "outputs"
+INP  = ROOT / "inputs"
+
+SECTOR_SCORES = OUT / "sector_scores.json"      # új
+SECTOR_INPUT  = INP / "sector_inputs.json"      # régi
+
+FIRM_FILE   = INP / "firm_inputs.json"
+PORT_FILE   = OUT / "portfolio_latest.json"
+SENT_FILE   = OUT / "news_sentiment.json"
+BH_EQ_FILE  = OUT / "backtest_equity.json"
+BH_ST_FILE  = OUT / "backtest_stats.json"
+REB_EQ_FILE = OUT / "backtest_rebal_equity.json"
+REB_ST_FILE = OUT / "backtest_rebal_stats.json"
+RISK_FILE   = OUT / "portfolio_risk_budget.json"
+
+# ────────────────────────── Streamlit   ───────────────────────────────────
+st.set_page_config(page_title="GPT Portfolio Dashboard", layout="wide")
+st.sidebar.header("📊 GPT Portfolio Dashboard")
+st.sidebar.markdown(f"**Dátum:** {datetime.date.today()}")
+
+# ---------- helper --------------------------------------------------------
+def read_json(path: Path, orient_split_ok: bool = True) -> pd.DataFrame:
+    if not path.exists() or path.stat().st_size < 3:
+        return pd.DataFrame()
+    try:
+        return pd.read_json(path)
+    except ValueError:
+        if orient_split_ok:
+            try:
+                return pd.read_json(path, orient="split")
+            except Exception:
+                return pd.DataFrame()
+        return pd.DataFrame()
+
+# ╔═════════  Sector Scores  ═══════════════════════════════════════════════╗
+df_sector = read_json(SECTOR_SCORES)
+if df_sector.empty:                         # fallback régi forrásra
+    df_sector = pd.DataFrame([
+        {"Sector": s["name"].title(), "Score": s.get("sector_score", 0)}
+        for s in read_json(SECTOR_INPUT, orient_split_ok=False).to_dict(orient="records")
+    ])
+
+if not df_sector.empty:
+    st.subheader("Sector Scores")
+    st.dataframe(df_sector, use_container_width=True)
+    st.plotly_chart(px.bar(df_sector, x="Sector", y="Score",
+                           title="Sector Score Comparison"),
+                    use_container_width=True)
+else:
+    st.info("Nincs sector score – futtasd a sector_runner promptot.")
+
+# ╔═════════  Top 20 Firm Scores  ═══════════════════════════════════════════╗
+df_firm = read_json(FIRM_FILE, orient_split_ok=False)
+if not df_firm.empty:
+    top20 = df_firm.nlargest(20, "firm_score")
+    st.subheader("Top 20 Firm Scores")
+    st.dataframe(top20[["ticker", "sector", "firm_score"]],
+                 use_container_width=True)
+
+    st.plotly_chart(
+        px.bar(top20.sort_values("firm_score"),
+               x="firm_score", y="ticker", orientation="h",
+               title="Top 20 Firm Scores"),
+        use_container_width=True
+    )
+
+# ╔═════════  News Sentiment  ═══════════════════════════════════════════════╗
+df_sent = read_json(SENT_FILE)
+if {"ticker", "avg_sent"}.issubset(df_sent.columns) and not df_sent.empty:
+    st.subheader("7-day Average News Sentiment")
+    st.bar_chart(df_sent.set_index("ticker")["avg_sent"],
+                 height=250, use_container_width=True)
+    st.caption("Cut-off < −0.05 → −30 % weight (Edge-jelzés)")
+else:
+    st.info("Nincs hír-szentiment – futtasd a news_sentiment.py-t.")
+
+# ╔═════════  SHAP-szerű Feature Hatások  ══════════════════════════════════╗
+if not df_firm.empty:
+    top_firm = df_firm.nlargest(1, "firm_score").iloc[0]
+    shap_vals = next(
+        (f.get("firm_shap") for f in df_firm.to_dict("records")
+         if f["ticker"] == top_firm["ticker"] and f.get("firm_shap")),
+        None
+    )
+
+    if shap_vals:
+        st.subheader(f"SHAP-szerű Feature Hatások – {top_firm['ticker']}")
+        shap_df = (pd.DataFrame(
+            [{"Feature": k, "SHAP": v} for k, v in shap_vals.items()])
+            .sort_values("SHAP")
+        )
+        st.plotly_chart(
+            px.bar(shap_df, x="SHAP", y="Feature", orientation="h",
+                   title=f"{top_firm['ticker']} – Feature Contributions"),
+            use_container_width=True
+        )
+    else:
+        st.info(
+            f"Nincs SHAP-adata a(z) {top_firm['ticker']} számára – "
+            "futtasd újra a firm-promptot."
+        )
+
+# ╔═════════  15-Asset Allocation  ══════════════════════════════════════════╗
+if PORT_FILE.exists():
+    port = json.load(open(PORT_FILE))
+    st.subheader("Current 15-asset Allocation")
+    alloc_df = pd.DataFrame(port["table"])
+    st.dataframe(alloc_df, use_container_width=True)
+
+    if not alloc_df.empty:
+        st.plotly_chart(
+            px.bar(alloc_df.sort_values("Weight (%)"),
+                   x="Weight (%)", y="Asset", orientation="h",
+                   title="Portfolio Allocation Weights"),
+            use_container_width=True
+        )
+
+# ╔═════════  Buy & Hold Back-test  ════════════════════════════════════════╗
+df_bh_eq = read_json(BH_EQ_FILE)
+df_bh_st = read_json(BH_ST_FILE)
+if not df_bh_eq.empty and not df_bh_st.empty:
+    st.header("Performance Back-test – Buy & Hold")
+    fig_bh = go.Figure()
+    for col in df_bh_eq.columns:
+        fig_bh.add_scatter(x=df_bh_eq.index, y=df_bh_eq[col], name=col)
+    fig_bh.update_layout(xaxis_title="Date", yaxis_title="Value (USD)")
+    st.plotly_chart(fig_bh, use_container_width=True)
+    st.table(df_bh_st.T)
+
+# ╔═════════  Monthly Rebalance Back-test  ══════════════════════════════════╗
+df_reb_eq = read_json(REB_EQ_FILE)
+df_reb_st = read_json(REB_ST_FILE)
+if not df_reb_eq.empty and not df_reb_st.empty:
+    st.subheader("Monthly Rebalance Back-test")
+    fig_reb = go.Figure()
+    for col in df_reb_eq.columns:
+        style = dict(dash="dot") if col.upper() == "SPY" else {}
+        fig_reb.add_scatter(x=df_reb_eq.index, y=df_reb_eq[col],
+                            name=col, line=style)
+    fig_reb.update_layout(xaxis_title="Date", yaxis_title="Value (USD)")
+    st.plotly_chart(fig_reb, use_container_width=True)
+    st.table(df_reb_st.T)
+
+# ╔═════════  Risk-Budget vs. LLM Weights  ══════════════════════════════════╗
+df_rb = read_json(RISK_FILE)
+if not df_rb.empty and PORT_FILE.exists():
+    df_rb["ticker"] = df_rb["ticker"].str.strip()
+    df_llm = (
+        pd.DataFrame(port["table"])
+        [["Asset", "Weight (%)"]]
+        .rename(columns={"Asset": "ticker", "Weight (%)": "llm_w"})
+        .assign(ticker=lambda d: d["ticker"].str.strip())
+    )
+    merged = df_llm.merge(df_rb, on="ticker", how="inner")
+    if not merged.empty:
+        st.subheader("LLM vs. Risk-Budget Weights")
+        st.dataframe(merged.set_index("ticker"))
+        fig_cmp = go.Figure()
+        fig_cmp.add_bar(x=merged["ticker"], y=merged["llm_w"], name="LLM")
+        fig_cmp.add_bar(x=merged["ticker"], y=merged["weight"], name="Risk-Budget")
+        fig_cmp.update_layout(barmode="group",
+                              xaxis_title="Ticker",
+                              yaxis_title="Weight (%)")
+        st.plotly_chart(fig_cmp, use_container_width=True)
+    else:
+        st.info("Ticker-mezők nem egyeznek – ellenőrizd a JSON-ok formátumát.")
+else:
+    st.info("Risk-budget fájl hiányzik – futtasd a risk_budget.py-t.")-e \n\n=== FILE: ./news_sentiment.py ===
+#!/usr/bin/env python3
+"""
+StockNews: 7-napos átlagolt hír-szentiment
+Positive = +1 · Neutral = 0 · Negative = –1
+Cut-off: avg < –0.05 → súly –30 %
+"""
+import os, json, requests, time
+from pathlib import Path
+from dotenv import load_dotenv
+
+load_dotenv() 
+
+BASE  = Path(__file__).resolve().parent
+PORT  = json.load(open(BASE/"outputs/portfolio_latest.json"))["table"]
+API   = os.getenv("STOCKNEWS_API_KEY")
+
+LABEL2SCORE = {"Positive": 1.0, "Neutral": 0.0, "Negative": -1.0}
+
+# news_sentiment.py – csak a URL és a DEBUG módosul
+def avg_sentiment(tkr):
+    url = (
+        "https://stocknewsapi.com/api/v1"
+        f"?tickers={tkr}&items=100&date=last7days&token={API}"
+    )
+    js = requests.get(url, timeout=30).json()
+    if not js.get("data"):        # DEBUG
+        print("⚠️", tkr, "→", js.get("message") or "0 articles")
+        return None
+    scores = [
+        {"Positive": 1, "Neutral": 0, "Negative": -1}.get(a["sentiment"], 0)
+        for a in js["data"] if a.get("sentiment")
+    ]
+    return sum(scores)/len(scores) if scores else None
+
+out = []
+for row in PORT:
+    tkr = row["Asset"].strip().upper()
+    s   = avg_sentiment(tkr)
+    if s is not None:
+        out.append({"ticker": tkr, "avg_sent": round(s, 3)})
+    time.sleep(0.2)         # 5 req/sec limit
+
+Path(BASE/"outputs").mkdir(exist_ok=True)
+json.dump(out, open(BASE/"outputs/news_sentiment.json","w"), indent=2)
+print(f"✅ {len(out)} sentiment-sor mentve • outputs/news_sentiment.json")-e \n\n=== FILE: ./risk_budget.py ===
+#!/usr/bin/env python3
+"""
+Risk-budget + Black-Litterman overlay
+
+1. 60-napos rolling volatilitás alapján inverse-vol súlyok (defenzív)
+2. BL-modell: egyensúlyi súly = inv-vol, „vélemény” = firm_score-ből származó
+   relatív hozamelvárás (0–3% skálázva)
+3. 50-50 blend → végső risk-budget súlyok
+
+Kimenet: outputs/portfolio_risk_budget.json   [{ticker, weight %}, …]
+"""
+
+import json, datetime, numpy as np, pandas as pd
+from pathlib import Path
+from pandas_datareader import data as pdr
+
+# ── Fájl-útvonalak ──────────────────────────────────────────────────────────
+BASE = Path(__file__).resolve().parent
+PORT_FILE  = BASE / "outputs/portfolio_latest.json"
+FIRM_FILE  = BASE / "inputs/firm_inputs.json"
+OUT_FILE   = BASE / "outputs/portfolio_risk_budget.json"
+
+# ── Beállítások ─────────────────────────────────────────────────────────────
+START  = "2024-01-01"
+END    = datetime.date.today().isoformat()
+VOL_WIN = 60          # nap
+BL_TAU  = 0.05
+VIEW_SCALE = 0.03     # max 3% excess return
+BL_BLEND   = 0.5      # 0=csak inv-vol, 1=csak BL
+
+# ── Adatok beolvasása ───────────────────────────────────────────────────────
+PORT = json.load(open(PORT_FILE))["table"]
+FIRMS = json.load(open(FIRM_FILE))
+
+tickers = [row["Asset"].strip().upper() for row in PORT]
+score_map = {f["ticker"].upper(): f["firm_score"] or 0 for f in FIRMS}
+
+# ── Árfolyamok Stooq-ról ────────────────────────────────────────────────────
+px = pdr.DataReader([t + ".US" for t in tickers], "stooq", START, END)["Close"]
+px.columns = [c.split(".")[0] for c in px.columns]
+px = px.dropna(how="all")
+
+# Hiányzó árak – töröljük a tickert és a score-t is
+missing = [t for t in tickers if t not in px.columns]
+if missing:
+    print("⚠️  Hiányzó árfolyam:", missing)
+    px = px.drop(columns=missing, errors="ignore")
+    tickers = [t for t in tickers if t not in missing]
+
+# ── 1) Inverse-vol súlyok ───────────────────────────────────────────────────
+vol = px.pct_change().rolling(VOL_WIN).std().iloc[-1]
+inv_vol_w = (1 / vol) / (1 / vol).sum()
+
+# ── 2) Black-Litterman számítás ────────────────────────────────────────────
+#   — Egyensúlyi súly (m): inv-vol
+#   — Nézetek: firm_score → 0-1 skála → *VIEW_SCALE hozamelvárás
+raw_scores = np.array([score_map.get(t, 0) for t in tickers])
+min_s, max_s = raw_scores.min(), raw_scores.max()
+views = (raw_scores - min_s) / (max_s - min_s) if max_s > min_s else raw_scores
+Q = views * VIEW_SCALE                # várt excess return
+
+# Szórás-mátrix évesítve
+cov = px.pct_change().cov().values * 252
+P   = np.eye(len(tickers))
+tau = BL_TAU
+eq_w = inv_vol_w.values
+Pi = cov @ eq_w                       # piaci risk premium (proxy)
+
+# BL zárt formula
+M = np.linalg.inv(np.linalg.inv(tau * cov) + P.T @ P / 0.25)
+adj_ret = M @ (np.linalg.inv(tau * cov) @ Pi + P.T @ Q / 0.25)
+
+# Max-Sharpe portfólió (risk-aversion = 1)
+w_bl = np.linalg.inv(cov) @ adj_ret
+w_bl = w_bl / w_bl.sum()              # normálás 1-re
+
+# ── 3) Végső blend ─────────────────────────────────────────────────────────
+w_final = BL_BLEND * w_bl + (1 - BL_BLEND) * inv_vol_w
+w_final = w_final / w_final.sum()
+
+# ── Mentés ──────────────────────────────────────────────────────────────────
+out = [
+    {"ticker": t, "weight": round(float(w) * 100, 2)}
+    for t, w in zip(tickers, w_final)
+]
+
+Path(OUT_FILE).parent.mkdir(exist_ok=True)
+json.dump(out, open(OUT_FILE, "w"), indent=2)
+print("✅ Risk-budget súlyok mentve →", OUT_FILE.relative_to(BASE))-e \n\n=== FILE: ./data_fetch/fetch_data.py ===
+#!/usr/bin/env python3
+"""
+Egyszerűsített input-generálás:
+  • sector_inputs.json  – minden szektor (config.yaml)
+  • firm_inputs.json    – csak override_tickers alapján
+Nem hív Yahoo holdings-API-t / scrape-et!
+"""
+
+import os, json, datetime, requests, yfinance as yf
+from pathlib import Path
+import yaml
+from dotenv import load_dotenv
+from fredapi import Fred
+
+BASE = Path(__file__).resolve().parent.parent   # projekt gyökere
+load_dotenv(override=True)
+
+# --- API-kulcsok
+FRED_KEY      = os.getenv("FRED_API_KEY")
+STOCKNEWS_KEY = os.getenv("STOCKNEWS_API_KEY")
+fred = Fred(api_key=FRED_KEY)
+
+CFG   = yaml.safe_load(open(BASE / "config.yaml"))
+TODAY = datetime.date.today().isoformat()
+
+# ---------- Helper függvények -----------------------------------------------
+def fred_latest(series_id):
+    return float(fred.get_series_latest_release(series_id).dropna().iloc[-1])
+
+def macro_indicators():
+    return {
+        "GDP": round(fred_latest("GDP") / 1_000, 2),   # USD-billion
+        "CPI": round(fred_latest("CPIAUCSL"), 2),
+        "Unemployment": round(fred_latest("UNRATE"), 2),
+        "InterestRate": round(fred_latest("FEDFUNDS"), 2),
+    }
+
+def stocknews(ticker_or_kw, items=3):
+    url = "https://stocknewsapi.com/api/v1"
+    params = {"tickers": ticker_or_kw, "items": items, "token": STOCKNEWS_KEY}
+    resp = requests.get(url, params=params, timeout=30)
+    return [a["title"] for a in resp.json().get("data", [])] if resp.ok else []
+
+def firm_fundamentals(ticker):
+    info = yf.Ticker(ticker).info
+    mapping = {
+        "trailingPE": "P/E",
+        "pegRatio": "PEG",
+        "beta": "Beta",
+        "returnOnEquity": "ROE",
+        "quickRatio": "Quick Ratio",
+    }
+    out = {}
+    for k, new in mapping.items():
+        v = info.get(k)
+        if v is not None:
+            out[new] = round(v, 2)
+    return out
+
+# ---------- Main ------------------------------------------------------------
+def main():
+    sector_inputs, firm_inputs = [], []
+    macro_json = macro_indicators()
+
+    for s in CFG["sectors"]:
+        # --- Sector record ------------------------------
+        sector_inputs.append({
+            "name": s["name"],
+            "macro_indicators_json": macro_json,
+            "sector_news_snippets": stocknews(s["keyword"]),
+            "today": TODAY,
+            "sector_score": ""
+        })
+
+        # --- Firm records (csak override_tickers) -------
+        tickers = s.get("override_tickers", [])
+        for tkr in tickers:
+            firm_inputs.append({
+                "sector": s["name"],
+                "ticker": tkr,
+                "company_name": tkr,
+                "industry": s["name"].title(),
+                "firm_financials_json": firm_fundamentals(tkr),
+                "firm_news_snippets": stocknews(tkr),
+                "today": TODAY,
+                "firm_score": ""
+            })
+
+    Path(BASE / "inputs").mkdir(exist_ok=True)
+    json.dump(sector_inputs, open(BASE / "inputs/sector_inputs.json", "w"), indent=2)
+    json.dump(firm_inputs,   open(BASE / "inputs/firm_inputs.json",   "w"), indent=2)
+    print(f"✅ {len(sector_inputs)} sector, {len(firm_inputs)} firm input mentve.")
+
+if __name__ == "__main__":
+    main()-e \n\n=== FILE: ./data_fetch/helpers.py ===
+-e \n\n=== FILE: ./backtest.py ===
+#!/usr/bin/env python3
+"""
+Backtest Stooq EOD árak alapján (nincs API-kulcs, nincs rate-limit)
+
+Kimenet:
+    outputs/backtest_equity.json
+    outputs/backtest_stats.json
+"""
+import importlib, types
+try:
+    import distutils
+except ModuleNotFoundError:
+    import types, sys
+    import setuptools._distutils as _d
+    sys.modules['distutils'] = _d
+    sys.modules['distutils.version'] = _d.version
+    
+import json, datetime, pandas as pd
+from pathlib import Path
+from pandas_datareader import data as pdr   # ← Stooq forrás
+
+BASE = Path(__file__).resolve().parent
+PORT = json.load(open(BASE / "outputs/portfolio_latest.json"))["table"]
+
+# ---- Paraméterek -----------------------------------------------------------
+START = "2023-01-01"
+END   = datetime.date.today().isoformat()
+BENCH = "SPY"
+UNIT  = 1_000_000        # induló portfólió USD
+
+# ---- Ticker & Weight tisztítás ---------------------------------------------
+def clean(t): return t.replace("\xa0", "").strip().upper()
+weights = {clean(r["Asset"]): float(r["Weight (%)"])/100 for r in PORT}
+tickers = list(weights) + [BENCH]
+
+# Stooq ticker formátum: "AAPL.US"
+stooq_syms = [t + ".US" for t in tickers]
+
+print("→ Letöltés Stooq-ról …")
+px = (
+    pdr.DataReader(stooq_syms, "stooq", START, END)["Close"]
+    .rename(columns=lambda c: c.split(".")[0])   # "AAPL.US" → "AAPL"
+    .dropna(how="all")
+)
+
+# ---- Hiányzó ticker(ek) kezelése -------------------------------------------
+missing = [t for t in weights if t not in px.columns]
+if missing:
+    print(f"⚠️  Hiányzó árfolyam: {missing} – súlyok törlése")
+    for t in missing: weights.pop(t)
+if not weights:
+    raise RuntimeError("Nincs érvényes árfolyam – backtest megszakítva.")
+
+# ---- Portfolio equity -------------------------------------------------------
+alloc_qty = {t: weights[t] * UNIT / px[t].iloc[0] for t in weights}
+equity = (px[list(weights)] * pd.Series(alloc_qty)).sum(axis=1)
+bench  = px[BENCH] / px[BENCH].iloc[0] * UNIT
+
+# ---- Statisztikák -----------------------------------------------------------
+def cagr(ts):
+    yrs = (ts.index[-1] - ts.index[0]).days / 365.25
+    return (ts.iloc[-1] / ts.iloc[0]) ** (1 / yrs) - 1
+
+def max_dd(ts):
+    roll = ts.cummax()
+    return (ts / roll - 1).min()
+
+def sharpe(ts):
+    ret = ts.pct_change().dropna()
+    return (ret.mean() / ret.std()) * (252 ** 0.5)
+
+stats = {
+    "Portfolio": {
+        "CAGR":   round(cagr(equity) * 100, 2),
+        "MaxDD":  round(max_dd(equity) * 100, 2),
+        "Sharpe": round(sharpe(equity), 2),
+    },
+    "Benchmark": {
+        "CAGR":   round(cagr(bench) * 100, 2),
+        "MaxDD":  round(max_dd(bench) * 100, 2),
+        "Sharpe": round(sharpe(bench), 2),
+    },
+}
+
+# ---- Mentés -----------------------------------------------------------------
+out_dir = BASE / "outputs"; out_dir.mkdir(exist_ok=True)
+pd.DataFrame({"Portfolio": equity, BENCH: bench}).to_json(
+    out_dir / "backtest_equity.json",
+    orient="split",
+    date_format="iso",
+)
+json.dump(stats, open(out_dir / "backtest_stats.json", "w"), indent=2)
+
+print("✅ Backtest kész • files in outputs/")-e \n\n=== FILE: ./generator_runner.py ===
+#!/usr/bin/env python3
+"""
+Portfólió-generátor
+• Beolvassa az aktuális firm-score listát (inputs/firm_inputs.json)
+• Top 15 alapján promptot futtat a Generator LLM-mel
+• Súlyokat hír-szentimenttel korrigálja (StockNews 7-napos átlag)
+• Kimenet: outputs/portfolio_latest.json
+"""
+
+import os, json, re
+from pathlib import Path
+from io import StringIO
+
+import yaml
+import pandas as pd
+from dotenv import load_dotenv
+from jinja2 import Template
+from openai import OpenAI
+
+# ── Konstansok / fájl-útvonalak ─────────────────────────────────────────────
+BASE  = Path(__file__).resolve().parent
+INPUT = BASE / "inputs"
+OUT   = BASE / "outputs"
+PROMPT_DIR = BASE / "prompts"
+
+load_dotenv(override=True)
+client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
+MODEL  = os.getenv("OPENAI_MODEL", "gpt-4o")
+
+# ────────────────────────────────────────────────────────────────────────────
+# 1. Top 15 firm kiválasztása
+# ────────────────────────────────────────────────────────────────────────────
+firm_records = json.load(open(INPUT / "firm_inputs.json"))
+top_firms = sorted(
+    firm_records,
+    key=lambda x: x["firm_score"] or 0,
+    reverse=True
+)[:15]
+
+# ────────────────────────────────────────────────────────────────────────────
+# 2. ETF-univerzum (config.yaml)
+# ────────────────────────────────────────────────────────────────────────────
+cfg_sectors = yaml.safe_load(open(BASE / "config.yaml"))["sectors"]
+etf_list = [s["etf"] for s in cfg_sectors if "etf" in s]
+
+# ────────────────────────────────────────────────────────────────────────────
+# 3. Hír-szentiment beolvasása és súlykorrekció
+#    −30 % vágás, ha 7-napos átlag < –0.05
+# ────────────────────────────────────────────────────────────────────────────
+sentiment_path = OUT / "news_sentiment.json"
+sent_map = {}
+if sentiment_path.exists():
+    sent_map = {d["ticker"].upper(): d["avg_sent"] for d in json.load(open(sentiment_path))}
+
+NEG_TH = -0.05     # küszöb
+CUT    = 0.30      # 30 % súlycsökkentés
+
+for row in top_firms:
+    tkr = row["ticker"].upper()
+    s   = sent_map.get(tkr)
+    if s is not None and s < NEG_TH:
+        # eredeti súly a Generator promptban szereplő "Weight (%)" kulcsszóval
+        row["Weight (%)"] = round(row.get("Weight (%)", 10) * (1 - CUT), 2)
+        # “Edge” oszlop kiegészítése jelzéssel
+        row["Edge"] = row.get("Edge", "") + f" | SENTIMENT↓{s}"
+
+# ────────────────────────────────────────────────────────────────────────────
+# 4. Prompt-input összeállítása
+# ────────────────────────────────────────────────────────────────────────────
+generator_input = {
+    "top_firms_list": [
+        {
+            "name":  f["ticker"],
+            "score": f["firm_score"],
+            "thesis": f.get("Edge", "Top-ranked firm"),
+            "weight": f.get("Weight (%)", 10)
+        }
+        for f in top_firms
+    ],
+    "macro_forecast_table": {"Note": "Auto-generated run"},
+    "etf_universe_list": etf_list,
+    "today": top_firms[0]["today"]
+}
+
+# ────────────────────────────────────────────────────────────────────────────
+# 5. Prompt futtatás OpenAI-val
+# ────────────────────────────────────────────────────────────────────────────
+prompt_tpl = Template(open(PROMPT_DIR / "generator_prompt.j2").read())
+prompt = prompt_tpl.render(**generator_input)
+
+response = client.chat.completions.create(
+    model=MODEL,
+    messages=[{"role": "user", "content": prompt}],
+    temperature=0,
+    max_tokens=900
+).choices[0].message.content.strip()
+
+# ────────────────────────────────────────────────────────────────────────────
+# 6. Markdown→DataFrame konvertálás
+# ────────────────────────────────────────────────────────────────────────────
+clean_lines = [
+    ln for ln in response.splitlines()
+    if "|" in ln and not re.match(r"^\s*\|[-:]+\|", ln)
+]
+md = "\n".join(clean_lines)
+df = pd.read_csv(StringIO(md), sep="\\|", engine="python").dropna(axis=1, how="all").iloc[1:]
+df.columns = [c.strip() for c in df.columns]
+
+# ────────────────────────────────────────────────────────────────────────────
+# 7. Kimenet JSON-fájlba
+# ────────────────────────────────────────────────────────────────────────────
+portfolio_json = {
+    "date": generator_input["today"],
+    "table": df.to_dict(orient="records")
+}
+
+OUT.mkdir(exist_ok=True)
+json.dump(portfolio_json, open(OUT / "portfolio_latest.json", "w"), indent=2)
+
+print("✅ Portfólió mentve: outputs/portfolio_latest.json")

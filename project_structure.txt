@@ -1,0 +1,35 @@
+.
+├── .DS_Store
+├── .github
+│   └── workflows
+│       └── pipeline.yml
+├── .gitignore
+├── backtest_rebal.py
+├── backtest.py
+├── config.yaml
+├── dashboard
+│   └── app.py
+├── data_fetch
+│   ├── fetch_data.py
+│   └── helpers.py
+├── generator_runner.py
+├── inputs
+│   ├── firm_input.json
+│   ├── firm_inputs.json
+│   ├── generator_input.json
+│   ├── sector_input.json
+│   └── sector_inputs.json
+├── news_sentiment.py
+├── project_structure.txt
+├── prompt_runner.py
+├── prompts
+│   ├── firm_prompt.j2
+│   ├── generator_prompt.j2
+│   └── sector_prompt.j2
+├── requirements.txt
+├── restlee.md
+├── risk_budget.py
+├── run_prompts.py
+└── sector_runner.py
+
+7 directories, 26 files
