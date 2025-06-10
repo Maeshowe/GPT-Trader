@@ -1,109 +1,109 @@
 {
-  "date": "2025-06-09",
+  "date": "2025-06-10",
   "table": [
-    {
-      "Asset": "AAPL ",
-      "Weight (%)": " 10 ",
-      "Thesis": " Top-ranked firm ",
-      "Edge": " Innovation leadership ",
-      "Risk": " Market volatility"
-    },
     {
       "Asset": "MSFT ",
       "Weight (%)": " 10 ",
       "Thesis": " Top-ranked firm ",
-      "Edge": " Cloud dominance ",
-      "Risk": " Regulatory scrutiny"
+      "Edge": " Strong tech sector performance ",
+      "Risk": " Market volatility"
     },
     {
-      "Asset": "NVDA ",
+      "Asset": "GOOGL ",
       "Weight (%)": " 10 ",
       "Thesis": " Top-ranked firm ",
-      "Edge": " AI and GPU leadership ",
-      "Risk": " High valuation"
+      "Edge": " Digital ad growth ",
+      "Risk": " Regulatory challenges"
     },
     {
-      "Asset": "JPM ",
-      "Weight (%)": " 10 ",
+      "Asset": "KO ",
+      "Weight (%)": " 8 ",
       "Thesis": " Top-ranked firm ",
-      "Edge": " Financial stability ",
-      "Risk": " Interest rate sensitivity"
-    },
-    {
-      "Asset": "GS ",
-      "Weight (%)": " 10 ",
-      "Thesis": " Top-ranked firm ",
-      "Edge": " Investment banking strength ",
-      "Risk": " Economic downturns"
-    },
-    {
-      "Asset": "SLB ",
-      "Weight (%)": " 10 ",
-      "Thesis": " Top-ranked firm ",
-      "Edge": " Energy sector growth ",
+      "Edge": " Consumer staples stability ",
       "Risk": " Commodity price fluctuations"
     },
     {
       "Asset": "XOM ",
-      "Weight (%)": " 10 ",
+      "Weight (%)": " 8 ",
       "Thesis": " Top-ranked firm ",
-      "Edge": " Energy sector resilience ",
-      "Risk": " Environmental regulations"
+      "Edge": " Energy sector strength ",
+      "Risk": " Oil price volatility"
     },
     {
-      "Asset": "BAC ",
-      "Weight (%)": " 5 ",
+      "Asset": "SLB ",
+      "Weight (%)": " 8 ",
       "Thesis": " Top-ranked firm ",
-      "Edge": " Retail banking strength ",
-      "Risk": " Interest rate changes"
-    },
-    {
-      "Asset": "CVX ",
-      "Weight (%)": " 5 ",
-      "Thesis": " Top-ranked firm ",
-      "Edge": " Energy sector stability ",
+      "Edge": " Oilfield services demand ",
       "Risk": " Geopolitical risks"
     },
     {
-      "Asset": "XLK ",
-      "Weight (%)": " 5 ",
-      "Thesis": " Technology sector ETF ",
-      "Edge": " Tech sector growth ",
-      "Risk": " Sector concentration"
+      "Asset": "NEM ",
+      "Weight (%)": " 8 ",
+      "Thesis": " Top-ranked firm ",
+      "Edge": " Gold as a hedge ",
+      "Risk": " Gold price volatility"
     },
     {
-      "Asset": "XLF ",
-      "Weight (%)": " 5 ",
-      "Thesis": " Financial sector ETF ",
-      "Edge": " Financial sector recovery ",
-      "Risk": " Economic cycles"
+      "Asset": "HON ",
+      "Weight (%)": " 8 ",
+      "Thesis": " Top-ranked firm ",
+      "Edge": " Industrial innovation ",
+      "Risk": " Economic slowdown"
     },
     {
-      "Asset": "XLY ",
-      "Weight (%)": " 3 ",
-      "Thesis": " Consumer discretionary ETF ",
-      "Edge": " Consumer spending rebound ",
-      "Risk": " Consumer confidence"
+      "Asset": "AMZN ",
+      "Weight (%)": " 8 ",
+      "Thesis": " Top-ranked firm ",
+      "Edge": " E-commerce growth ",
+      "Risk": " Competitive pressures"
     },
     {
-      "Asset": "XLI ",
-      "Weight (%)": " 3 ",
-      "Thesis": " Industrial sector ETF ",
-      "Edge": " Industrial growth ",
-      "Risk": " Supply chain disruptions"
+      "Asset": "NKE ",
+      "Weight (%)": " 8 ",
+      "Thesis": " Top-ranked firm ",
+      "Edge": " Brand strength ",
+      "Risk": " Supply chain issues"
     },
     {
-      "Asset": "XLP ",
-      "Weight (%)": " 2 ",
-      "Thesis": " Consumer staples ETF ",
-      "Edge": " Defensive sector ",
-      "Risk": " Low growth potential"
+      "Asset": "PG ",
+      "Weight (%)": " 8 ",
+      "Thesis": " Top-ranked firm ",
+      "Edge": " Consumer goods demand ",
+      "Risk": " Currency fluctuations"
+    },
+    {
+      "Asset": "WMT ",
+      "Weight (%)": " 8 ",
+      "Thesis": " Top-ranked firm ",
+      "Edge": " Retail dominance ",
+      "Risk": " Margin pressures"
+    },
+    {
+      "Asset": "JNJ ",
+      "Weight (%)": " 8 ",
+      "Thesis": " Top-ranked firm ",
+      "Edge": " Healthcare stability ",
+      "Risk": " Legal risks"
+    },
+    {
+      "Asset": "MRK ",
+      "Weight (%)": " 8 ",
+      "Thesis": " Top-ranked firm ",
+      "Edge": " Pharmaceutical innovation ",
+      "Risk": " Patent expirations"
+    },
+    {
+      "Asset": "JPM ",
+      "Weight (%)": " 8 ",
+      "Thesis": " Top-ranked firm ",
+      "Edge": " Financial sector resilience ",
+      "Risk": " Interest rate changes"
     },
     {
       "Asset": "XLV ",
-      "Weight (%)": " 2 ",
-      "Thesis": " Healthcare sector ETF ",
-      "Edge": " Healthcare innovation ",
+      "Weight (%)": " 8 ",
+      "Thesis": " Healthcare ETF ",
+      "Edge": " Sector diversification ",
       "Risk": " Regulatory changes"
     }
   ]

@@ -17,7 +17,7 @@
   },
   {
     "ticker": "GS",
-    "avg_sent": 0.6
+    "avg_sent": 0.5
   },
   {
     "ticker": "SLB",
@@ -41,11 +41,15 @@
   },
   {
     "ticker": "XLF",
-    "avg_sent": 0.5
+    "avg_sent": 0.333
   },
   {
     "ticker": "XLI",
     "avg_sent": 1.0
+  },
+  {
+    "ticker": "XLP",
+    "avg_sent": 0.0
   },
   {
     "ticker": "XLV",
