@@ -1,57 +1,46 @@
 sectors:
-  - name: Energy
-    etf: XLE
-    keyword: Energy
-    override_tickers: ["XOM", "CVX", "SLB"]
-
-  - name: Materials
-    etf: XLB
-    keyword: Materials
-    override_tickers: ["DD", "NEM", "FCX"]
-
-  - name: Industrials
-    etf: XLI
-    keyword: Industrials
-    override_tickers: ["BA", "CAT", "HON"]
-
-  - name: Consumer Discretionary
-    etf: XLY
-    keyword: Consumer Discretionary
-    override_tickers: ["AMZN", "TSLA", "NKE"]
-
-  - name: Consumer Staples
-    etf: XLP
-    keyword: Consumer Staples
-    override_tickers: ["PG", "KO", "WMT"]
-  
-  - name: Healthcare
-    etf: XLV
-    keyword: Health Care
-    override_tickers: ["JNJ", "PFE", "MRK"]
-
-  - name: Financials
-    etf: XLF
-    keyword: Financials
-    override_tickers: ["JPM", "BAC", "WFC"]
-
-  - name: Information Technology
-    etf: XLK
-    keyword: Information Technology
-    override_tickers: ["AAPL", "MSFT", "GOOGL"]
-
-  - name: Communication Services
-    etf: XLC
-    keyword: Communication Services
-    override_tickers: ["FB", "GOOGL", "NFLX"]
-  
-  - name: Utilities
-    etf: XLU
-    keyword: Utilities
-    override_tickers: ["DUK", "SO", "NEE"]
-
-  - name: Real Estate 
-    etf: XLRE
-    keyword: Real Estate
-    override_tickers: ["AMT", "PLD", "SPG"]
-    
+- name: Energy
+  etf: XLE
+  keyword: Energy
+  override_tickers: []
+- name: Materials
+  etf: XLB
+  keyword: Materials
+  override_tickers: []
+- name: Industrials
+  etf: XLI
+  keyword: Sector
+  override_tickers: []
+- name: Consumer Discretionary
+  etf: XLY
+  keyword: Consumer
+  override_tickers: []
+- name: Consumer Staples
+  etf: XLP
+  keyword: Consumer
+  override_tickers: []
+- name: Healthcare
+  etf: XLV
+  keyword: Sector
+  override_tickers: []
+- name: Financials
+  etf: XLF
+  keyword: Sector
+  override_tickers: []
+- name: Information Technology
+  etf: XLK
+  keyword: Tech
+  override_tickers: []
+- name: Communication Services
+  etf: XLC
+  keyword: Sector
+  override_tickers: []
+- name: Utilities
+  etf: XLU
+  keyword: Utilities
+  override_tickers: []
+- name: Real Estate
+  etf: XLRE
+  keyword: Reits
+  override_tickers: []
 max_firms_per_sector: 3

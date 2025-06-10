@@ -1,13 +1,11 @@
 openai>=1.3.9
 jinja2
-python-dotenv
 yfinance
 requests
 pandas
 fredapi
 streamlit
 plotly
-pyyaml
 lxml
 plotly
 alpha_vantage
@@ -21,3 +19,5 @@ aiohttp
 scikit-learn>=1.0.0
 matplotlib
 seaborn
+pyyaml>=6.0
+python-dotenv>=1.0

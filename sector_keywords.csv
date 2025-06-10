@@ -1,0 +1,12 @@
+Sector,Keyword 1,Keyword 2,Keyword 3,Avg Sentiment
+Energy,energy,market,stocks,N/A
+Materials,materials,sector,etfs,N/A
+Industrials,sector,economic,stocks,N/A
+Utilities,utilities,market,stocks,N/A
+Healthcare,sector,healthcare,stocks,N/A
+Financials,sector,financial,etfs,N/A
+Consumer Discretionary,consumer,economic,etfs,N/A
+Consumer Staples,consumer,staples,market,N/A
+Information Technology,tech,etfs,tariffs,N/A
+Communication Services,sector,etfs,services,N/A
+Real Estate,reits,real,estate,N/A
