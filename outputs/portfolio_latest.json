@@ -12,7 +12,7 @@
       "Asset": "AAPL ",
       "Weight (%)": " 10 ",
       "Thesis": " Top-ranked firm ",
-      "Edge": " Innovation leader ",
+      "Edge": " Innovation leadership ",
       "Risk": " Supply chain disruptions"
     },
     {
@@ -20,7 +20,7 @@
       "Weight (%)": " 10 ",
       "Thesis": " Top-ranked firm ",
       "Edge": " Financial sector strength ",
-      "Risk": " Interest rate changes"
+      "Risk": " Interest rate fluctuations"
     },
     {
       "Asset": "PFE ",
@@ -41,7 +41,7 @@
       "Weight (%)": " 8 ",
       "Thesis": " Materials sector ETF ",
       "Edge": " Infrastructure spending ",
-      "Risk": " Commodity price fluctuations"
+      "Risk": " Commodity price swings"
     },
     {
       "Asset": "XLI ",
@@ -54,7 +54,7 @@
       "Asset": "XLY ",
       "Weight (%)": " 8 ",
       "Thesis": " Consumer discretionary ETF ",
-      "Edge": " Consumer spending ",
+      "Edge": " Consumer spending rebound ",
       "Risk": " Inflation pressures"
     },
     {
@@ -62,7 +62,7 @@
       "Weight (%)": " 8 ",
       "Thesis": " Consumer staples ETF ",
       "Edge": " Defensive play ",
-      "Risk": " Price competition"
+      "Risk": " Price sensitivity"
     },
     {
       "Asset": "XLV ",
@@ -83,27 +83,27 @@
       "Weight (%)": " 8 ",
       "Thesis": " Technology sector ETF ",
       "Edge": " Tech innovation ",
-      "Risk": " Tech regulation"
+      "Risk": " Valuation concerns"
     },
     {
       "Asset": "XLC ",
       "Weight (%)": " 8 ",
       "Thesis": " Communication services ETF ",
       "Edge": " Digital transformation ",
-      "Risk": " Competitive landscape"
+      "Risk": " Competitive pressures"
     },
     {
       "Asset": "XLU ",
       "Weight (%)": " 8 ",
       "Thesis": " Utilities sector ETF ",
       "Edge": " Stable cash flows ",
-      "Risk": " Regulatory environment"
+      "Risk": " Regulatory risks"
     },
     {
       "Asset": "XLRE ",
       "Weight (%)": " 8 ",
       "Thesis": " Real estate sector ETF ",
-      "Edge": " Real estate demand ",
+      "Edge": " Real estate recovery ",
       "Risk": " Interest rate sensitivity"
     }
   ]

@@ -9,11 +9,11 @@
   },
   {
     "ticker": "BAC",
-    "weight": 4.85
+    "weight": 4.86
   },
   {
     "ticker": "PFE",
-    "weight": 4.45
+    "weight": 4.46
   },
   {
     "ticker": "XLE",
@@ -21,7 +21,7 @@
   },
   {
     "ticker": "XLB",
-    "weight": 7.07
+    "weight": 7.06
   },
   {
     "ticker": "XLI",
@@ -37,7 +37,7 @@
   },
   {
     "ticker": "XLV",
-    "weight": 11.33
+    "weight": 11.32
   },
   {
     "ticker": "XLF",
