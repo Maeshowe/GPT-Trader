@@ -19,7 +19,14 @@
 │   ├── generator_input.json
 │   ├── sector_input.json
 │   └── sector_inputs.json
+├── integrate_risk_management.py
+├── logs
+│   ├── gpt_trader.log
+│   ├── performance_20250610_182101.json
+│   ├── performance_20250610_194542.json
+│   └── performance_20250610_194701.json
 ├── news_sentiment.py
+├── pipeline_summary.md
 ├── project_structure.txt
 ├── prompt_runner.py
 ├── prompts
@@ -29,7 +36,8 @@
 ├── requirements.txt
 ├── restlee.md
 ├── risk_budget.py
+├── risk_management.py
 ├── run_prompts.py
 └── sector_runner.py
 
-7 directories, 26 files
+8 directories, 33 files

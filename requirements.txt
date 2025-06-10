@@ -17,3 +17,8 @@ pandas_datareader>=0.10
 numpy
 scipy
 aiohttp
+# New dependencies for quantitative screening
+ta-lib
+scikit-learn>=1.0.0
+matplotlib
+seaborn

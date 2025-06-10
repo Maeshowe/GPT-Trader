@@ -2,225 +2,225 @@
   "date": "2025-06-10",
   "table": [
     {
-      "Asset": "MSFT ",
-      "Weight (%)": 7.69,
+      "Asset": "AMZN ",
+      "Weight (%)": 7.14,
       "Thesis": " Top-ranked firm ",
-      "Edge": " Strong tech sector performance ",
+      "Edge": " E-commerce growth ",
       "Risk": " Market volatility"
     },
     {
-      "Asset": "AMZN ",
-      "Weight (%)": 7.69,
-      "Thesis": " Top-ranked firm ",
-      "Edge": " E-commerce growth ",
-      "Risk": " Regulatory challenges"
-    },
-    {
       "Asset": "JNJ ",
-      "Weight (%)": 7.69,
+      "Weight (%)": 7.14,
       "Thesis": " Top-ranked firm ",
       "Edge": " Healthcare stability ",
-      "Risk": " Patent expirations"
+      "Risk": " Regulatory changes"
     },
     {
       "Asset": "AAPL ",
-      "Weight (%)": 7.69,
+      "Weight (%)": 7.14,
       "Thesis": " Top-ranked firm ",
       "Edge": " Innovation leadership ",
-      "Risk": " Supply chain issues"
+      "Risk": " Supply chain disruptions"
+    },
+    {
+      "Asset": "MSFT ",
+      "Weight (%)": 7.14,
+      "Thesis": " Top-ranked firm ",
+      "Edge": " Cloud dominance ",
+      "Risk": " Competitive pressure"
     },
     {
       "Asset": "GOOGL ",
-      "Weight (%)": 7.69,
+      "Weight (%)": 7.14,
       "Thesis": " Top-ranked firm ",
-      "Edge": " Digital advertising strength ",
-      "Risk": " Antitrust scrutiny"
+      "Edge": " Digital advertising ",
+      "Risk": " Antitrust issues"
     },
     {
       "Asset": "XOM ",
-      "Weight (%)": 6.15,
+      "Weight (%)": 7.14,
       "Thesis": " Top-ranked firm ",
-      "Edge": " Energy sector resilience ",
+      "Edge": " Energy sector strength ",
       "Risk": " Oil price fluctuations"
     },
     {
       "Asset": "SLB ",
-      "Weight (%)": 6.15,
+      "Weight (%)": 7.14,
       "Thesis": " Top-ranked firm ",
       "Edge": " Oilfield services demand ",
       "Risk": " Commodity price risk"
     },
     {
+      "Asset": "NEM ",
+      "Weight (%)": 7.14,
+      "Thesis": " Top-ranked firm ",
+      "Edge": " Gold as a hedge ",
+      "Risk": " Gold price volatility"
+    },
+    {
       "Asset": "BA ",
-      "Weight (%)": 6.15,
+      "Weight (%)": 7.14,
       "Thesis": " Top-ranked firm ",
       "Edge": " Aerospace recovery ",
       "Risk": " Production delays"
     },
     {
       "Asset": "HON ",
-      "Weight (%)": 6.15,
+      "Weight (%)": 7.14,
       "Thesis": " Top-ranked firm ",
-      "Edge": " Industrial diversification ",
+      "Edge": " Industrial innovation ",
       "Risk": " Economic slowdown"
     },
     {
       "Asset": "NKE ",
-      "Weight (%)": 6.15,
+      "Weight (%)": 7.14,
       "Thesis": " Top-ranked firm ",
       "Edge": " Brand strength ",
       "Risk": " Consumer spending shifts"
     },
     {
       "Asset": "PG ",
-      "Weight (%)": 6.15,
+      "Weight (%)": 5.0,
       "Thesis": " Top-ranked firm ",
       "Edge": " Consumer staples demand ",
-      "Risk": " Input cost pressures"
+      "Risk": " Sentiment risk"
     },
     {
       "Asset": "KO ",
-      "Weight (%)": 6.15,
+      "Weight (%)": 7.14,
       "Thesis": " Top-ranked firm ",
-      "Edge": " Beverage market dominance ",
-      "Risk": " Health trend impacts"
+      "Edge": " Beverage market leader ",
+      "Risk": " Health trends"
     },
     {
       "Asset": "MRK ",
-      "Weight (%)": 6.15,
+      "Weight (%)": 7.14,
       "Thesis": " Top-ranked firm ",
       "Edge": " Pharmaceutical innovation ",
-      "Risk": " Drug pricing pressures"
-    },
-    {
-      "Asset": "JPM ",
-      "Weight (%)": 6.15,
-      "Thesis": " Top-ranked firm ",
-      "Edge": " Financial sector strength ",
-      "Risk": " Interest rate changes"
+      "Risk": " Patent expirations"
     },
     {
       "Asset": "XLK ",
-      "Weight (%)": 6.15,
+      "Weight (%)": 2.14,
       "Thesis": " Tech sector ETF ",
       "Edge": " Tech sector growth ",
-      "Risk": " Sector concentration risk"
+      "Risk": " Sector concentration"
     }
   ],
   "risk_assessment": {
-    "assessment_timestamp": "2025-06-10T18:21:12.812765",
+    "assessment_timestamp": "2025-06-10T20:38:08.542162",
     "overall_summary": {
       "high_governance_risk_assets": [],
       "total_alerts": 0,
-      "portfolio_risk_level": "LOW",
+      "portfolio_risk_level": "MEDIUM",
       "requires_attention": false
     },
     "adjustments_applied": true,
     "original_weights_backup": [
       {
-        "Asset": "MSFT ",
-        "Weight (%)": " 10 ",
-        "Thesis": " Top-ranked firm ",
-        "Edge": " Strong tech sector performance ",
-        "Risk": " Market volatility"
-      },
-      {
         "Asset": "AMZN ",
         "Weight (%)": " 10 ",
         "Thesis": " Top-ranked firm ",
         "Edge": " E-commerce growth ",
-        "Risk": " Regulatory challenges"
+        "Risk": " Market volatility"
       },
       {
         "Asset": "JNJ ",
         "Weight (%)": " 10 ",
         "Thesis": " Top-ranked firm ",
         "Edge": " Healthcare stability ",
-        "Risk": " Patent expirations"
+        "Risk": " Regulatory changes"
       },
       {
         "Asset": "AAPL ",
         "Weight (%)": " 10 ",
         "Thesis": " Top-ranked firm ",
         "Edge": " Innovation leadership ",
-        "Risk": " Supply chain issues"
+        "Risk": " Supply chain disruptions"
+      },
+      {
+        "Asset": "MSFT ",
+        "Weight (%)": " 10 ",
+        "Thesis": " Top-ranked firm ",
+        "Edge": " Cloud dominance ",
+        "Risk": " Competitive pressure"
       },
       {
         "Asset": "GOOGL ",
         "Weight (%)": " 10 ",
         "Thesis": " Top-ranked firm ",
-        "Edge": " Digital advertising strength ",
-        "Risk": " Antitrust scrutiny"
+        "Edge": " Digital advertising ",
+        "Risk": " Antitrust issues"
       },
       {
         "Asset": "XOM ",
-        "Weight (%)": " 8 ",
+        "Weight (%)": " 10 ",
         "Thesis": " Top-ranked firm ",
-        "Edge": " Energy sector resilience ",
+        "Edge": " Energy sector strength ",
         "Risk": " Oil price fluctuations"
       },
       {
         "Asset": "SLB ",
-        "Weight (%)": " 8 ",
+        "Weight (%)": " 10 ",
         "Thesis": " Top-ranked firm ",
         "Edge": " Oilfield services demand ",
         "Risk": " Commodity price risk"
       },
       {
+        "Asset": "NEM ",
+        "Weight (%)": " 10 ",
+        "Thesis": " Top-ranked firm ",
+        "Edge": " Gold as a hedge ",
+        "Risk": " Gold price volatility"
+      },
+      {
         "Asset": "BA ",
-        "Weight (%)": " 8 ",
+        "Weight (%)": " 10 ",
         "Thesis": " Top-ranked firm ",
         "Edge": " Aerospace recovery ",
         "Risk": " Production delays"
       },
       {
         "Asset": "HON ",
-        "Weight (%)": " 8 ",
+        "Weight (%)": " 10 ",
         "Thesis": " Top-ranked firm ",
-        "Edge": " Industrial diversification ",
+        "Edge": " Industrial innovation ",
         "Risk": " Economic slowdown"
       },
       {
         "Asset": "NKE ",
-        "Weight (%)": " 8 ",
+        "Weight (%)": " 10 ",
         "Thesis": " Top-ranked firm ",
         "Edge": " Brand strength ",
         "Risk": " Consumer spending shifts"
       },
       {
         "Asset": "PG ",
-        "Weight (%)": " 8 ",
+        "Weight (%)": " 7 ",
         "Thesis": " Top-ranked firm ",
         "Edge": " Consumer staples demand ",
-        "Risk": " Input cost pressures"
+        "Risk": " Sentiment risk"
       },
       {
         "Asset": "KO ",
-        "Weight (%)": " 8 ",
+        "Weight (%)": " 10 ",
         "Thesis": " Top-ranked firm ",
-        "Edge": " Beverage market dominance ",
-        "Risk": " Health trend impacts"
+        "Edge": " Beverage market leader ",
+        "Risk": " Health trends"
       },
       {
         "Asset": "MRK ",
-        "Weight (%)": " 8 ",
+        "Weight (%)": " 10 ",
         "Thesis": " Top-ranked firm ",
         "Edge": " Pharmaceutical innovation ",
-        "Risk": " Drug pricing pressures"
-      },
-      {
-        "Asset": "JPM ",
-        "Weight (%)": " 8 ",
-        "Thesis": " Top-ranked firm ",
-        "Edge": " Financial sector strength ",
-        "Risk": " Interest rate changes"
+        "Risk": " Patent expirations"
       },
       {
         "Asset": "XLK ",
-        "Weight (%)": " 8 ",
+        "Weight (%)": " 3 ",
         "Thesis": " Tech sector ETF ",
         "Edge": " Tech sector growth ",
-        "Risk": " Sector concentration risk"
+        "Risk": " Sector concentration"
       }
     ]
   }

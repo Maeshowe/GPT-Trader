@@ -1,27 +1,123 @@
 {
   "executive_summary": {
-    "overall_risk_level": "LOW",
+    "overall_risk_level": "MEDIUM",
     "requires_immediate_attention": false,
     "key_metrics": {
-      "sharpe_ratio": 0.5602,
-      "max_drawdown": -0.1739,
-      "portfolio_volatility": 0.1838,
-      "var_95": -0.0156
+      "sharpe_ratio": 0.3835,
+      "max_drawdown": -0.1612,
+      "portfolio_volatility": 0.178,
+      "var_95": -0.0154
     },
     "risk_counts": {
       "total_alerts": 0,
       "high_governance_risk_assets": 0,
       "critical_alerts": 0
     },
-    "top_concerns": []
+    "top_concerns": [
+      "Low risk-adjusted returns (Sharpe ratio < 0.5)"
+    ]
   },
   "detailed_analysis": {
     "governance_risks": {
-      "MSFT": {
+      "AMZN": {
+        "audit_score": 0.5,
+        "board_score": 4.3,
+        "compensation_score": 3.3,
+        "overall_score": 2.48,
+        "risk_level": "RiskLevel.MEDIUM",
+        "details": {
+          "audit": {
+            "base_score": 1.0,
+            "sector_adjustment": -0.5,
+            "risk_indicators": {
+              "recent_restatements": false,
+              "auditor_changes": false,
+              "sec_investigations": false,
+              "internal_control_deficiencies": false,
+              "going_concern_opinions": false
+            },
+            "market_cap": 2294947250176,
+            "sector": "Consumer Cyclical"
+          },
+          "board": {
+            "board_metrics": {
+              "independence_ratio": 0.4231467402679662,
+              "board_size": 13,
+              "avg_tenure": 6.646070825610984,
+              "diversity_score": 0.24865821293957083,
+              "ceo_chairman_separation": "False"
+            },
+            "independence_score": 0.7000000000000002,
+            "key_concerns": [
+              "Low board independence"
+            ]
+          },
+          "compensation": {
+            "compensation_metrics": {
+              "ceo_pay_ratio": 331.3815469790475,
+              "pay_for_performance_correlation": 0.37675456437882315,
+              "ltip_percentage": 0.7000238098766546,
+              "say_on_pay_support": 0.707285166972581,
+              "clawback_policy": "True"
+            },
+            "pay_ratio_risk": "MEDIUM",
+            "key_concerns": []
+          },
+          "assessment_date": "2025-06-10T20:38:09.019454"
+        }
+      },
+      "JNJ": {
+        "audit_score": 0.5,
+        "board_score": 3.8,
+        "compensation_score": 1.5,
+        "overall_score": 1.79,
+        "risk_level": "RiskLevel.MEDIUM",
+        "details": {
+          "audit": {
+            "base_score": 1.0,
+            "sector_adjustment": -0.5,
+            "risk_indicators": {
+              "recent_restatements": false,
+              "auditor_changes": false,
+              "sec_investigations": false,
+              "internal_control_deficiencies": false,
+              "going_concern_opinions": false
+            },
+            "market_cap": 377115377664,
+            "sector": "Healthcare"
+          },
+          "board": {
+            "board_metrics": {
+              "independence_ratio": 0.458114024852406,
+              "board_size": 13,
+              "avg_tenure": 4.474393638267165,
+              "diversity_score": 0.696235489974021,
+              "ceo_chairman_separation": "False"
+            },
+            "independence_score": 1.2000000000000002,
+            "key_concerns": [
+              "Low board independence"
+            ]
+          },
+          "compensation": {
+            "compensation_metrics": {
+              "ceo_pay_ratio": 155.73224761098137,
+              "pay_for_performance_correlation": 0.6323602054965378,
+              "ltip_percentage": 0.7516459391932002,
+              "say_on_pay_support": 0.8131315301624543,
+              "clawback_policy": "True"
+            },
+            "pay_ratio_risk": "LOW",
+            "key_concerns": []
+          },
+          "assessment_date": "2025-06-10T20:38:09.250074"
+        }
+      },
+      "AAPL": {
         "audit_score": 0.8,
         "board_score": 2.3,
-        "compensation_score": 3.3,
-        "overall_score": 2.0,
+        "compensation_score": 2.3,
+        "overall_score": 1.7,
         "risk_level": "RiskLevel.MEDIUM",
         "details": {
           "audit": {
@@ -34,15 +130,15 @@
               "internal_control_deficiencies": false,
               "going_concern_opinions": false
             },
-            "market_cap": 3480700846080,
+            "market_cap": 3016133967872,
             "sector": "Technology"
           },
           "board": {
             "board_metrics": {
-              "independence_ratio": 0.624605305611275,
-              "board_size": 10,
-              "avg_tenure": 8.237272605354768,
-              "diversity_score": 0.36127936004335304,
+              "independence_ratio": 0.8936336015396169,
+              "board_size": 9,
+              "avg_tenure": 8.166141294188595,
+              "diversity_score": 0.21075676322980136,
               "ceo_chairman_separation": "False"
             },
             "independence_score": 2.7,
@@ -50,25 +146,307 @@
           },
           "compensation": {
             "compensation_metrics": {
-              "ceo_pay_ratio": 505.60646064399947,
-              "pay_for_performance_correlation": 0.6034886735451074,
-              "ltip_percentage": 0.5427029372584304,
-              "say_on_pay_support": 0.7654884939973393,
-              "clawback_policy": "False"
+              "ceo_pay_ratio": 367.31255215521594,
+              "pay_for_performance_correlation": 0.6219556995383728,
+              "ltip_percentage": 0.7656553966905022,
+              "say_on_pay_support": 0.8557631736456385,
+              "clawback_policy": "True"
+            },
+            "pay_ratio_risk": "MEDIUM",
+            "key_concerns": []
+          },
+          "assessment_date": "2025-06-10T20:38:09.570721"
+        }
+      },
+      "MSFT": {
+        "audit_score": 0.8,
+        "board_score": 3.8,
+        "compensation_score": 2.0,
+        "overall_score": 2.06,
+        "risk_level": "RiskLevel.MEDIUM",
+        "details": {
+          "audit": {
+            "base_score": 1.0,
+            "sector_adjustment": -0.19999999999999996,
+            "risk_indicators": {
+              "recent_restatements": false,
+              "auditor_changes": false,
+              "sec_investigations": false,
+              "internal_control_deficiencies": false,
+              "going_concern_opinions": false
+            },
+            "market_cap": 3484059697152,
+            "sector": "Technology"
+          },
+          "board": {
+            "board_metrics": {
+              "independence_ratio": 0.4715478203142667,
+              "board_size": 12,
+              "avg_tenure": 4.363675231484437,
+              "diversity_score": 0.4073735288037739,
+              "ceo_chairman_separation": "False"
+            },
+            "independence_score": 1.2000000000000002,
+            "key_concerns": [
+              "Low board independence"
+            ]
+          },
+          "compensation": {
+            "compensation_metrics": {
+              "ceo_pay_ratio": 277.93941145139365,
+              "pay_for_performance_correlation": 0.8578977913037128,
+              "ltip_percentage": 0.6747724961213195,
+              "say_on_pay_support": 0.6703526917449999,
+              "clawback_policy": "True"
+            },
+            "pay_ratio_risk": "LOW",
+            "key_concerns": []
+          },
+          "assessment_date": "2025-06-10T20:38:09.813838"
+        }
+      },
+      "GOOGL": {
+        "audit_score": 0.5,
+        "board_score": 3.5,
+        "compensation_score": 2.5,
+        "overall_score": 2.0,
+        "risk_level": "RiskLevel.MEDIUM",
+        "details": {
+          "audit": {
+            "base_score": 1.0,
+            "sector_adjustment": -0.5,
+            "risk_indicators": {
+              "recent_restatements": false,
+              "auditor_changes": false,
+              "sec_investigations": false,
+              "internal_control_deficiencies": false,
+              "going_concern_opinions": false
+            },
+            "market_cap": 2177134755840,
+            "sector": "Communication Services"
+          },
+          "board": {
+            "board_metrics": {
+              "independence_ratio": 0.4415151779006911,
+              "board_size": 11,
+              "avg_tenure": 9.539854802415553,
+              "diversity_score": 0.36132861804373545,
+              "ceo_chairman_separation": "True"
+            },
+            "independence_score": 1.5,
+            "key_concerns": [
+              "Low board independence"
+            ]
+          },
+          "compensation": {
+            "compensation_metrics": {
+              "ceo_pay_ratio": 190.34440578317185,
+              "pay_for_performance_correlation": 0.4458410425742163,
+              "ltip_percentage": 0.6322326489653193,
+              "say_on_pay_support": 0.9240235493025802,
+              "clawback_policy": "True"
+            },
+            "pay_ratio_risk": "LOW",
+            "key_concerns": []
+          },
+          "assessment_date": "2025-06-10T20:38:10.057139"
+        }
+      },
+      "XOM": {
+        "audit_score": 0.5,
+        "board_score": 3.8,
+        "compensation_score": 3.3,
+        "overall_score": 2.33,
+        "risk_level": "RiskLevel.MEDIUM",
+        "details": {
+          "audit": {
+            "base_score": 1.0,
+            "sector_adjustment": -0.5,
+            "risk_indicators": {
+              "recent_restatements": false,
+              "auditor_changes": false,
+              "sec_investigations": false,
+              "internal_control_deficiencies": false,
+              "going_concern_opinions": false
+            },
+            "market_cap": 461497827328,
+            "sector": "Energy"
+          },
+          "board": {
+            "board_metrics": {
+              "independence_ratio": 0.4895904672803746,
+              "board_size": 14,
+              "avg_tenure": 5.207136846392579,
+              "diversity_score": 0.6574089268992191,
+              "ceo_chairman_separation": "False"
+            },
+            "independence_score": 1.2000000000000002,
+            "key_concerns": [
+              "Low board independence"
+            ]
+          },
+          "compensation": {
+            "compensation_metrics": {
+              "ceo_pay_ratio": 373.10485557735626,
+              "pay_for_performance_correlation": 0.31150951000519583,
+              "ltip_percentage": 0.7108537167849258,
+              "say_on_pay_support": 0.8575654438966053,
+              "clawback_policy": "True"
+            },
+            "pay_ratio_risk": "MEDIUM",
+            "key_concerns": []
+          },
+          "assessment_date": "2025-06-10T20:38:10.409463"
+        }
+      },
+      "SLB": {
+        "audit_score": 1.0,
+        "board_score": 3.5,
+        "compensation_score": 5.0,
+        "overall_score": 2.95,
+        "risk_level": "RiskLevel.HIGH",
+        "details": {
+          "audit": {
+            "base_score": 1.0,
+            "sector_adjustment": 0.0,
+            "risk_indicators": {
+              "recent_restatements": false,
+              "auditor_changes": false,
+              "sec_investigations": false,
+              "internal_control_deficiencies": false,
+              "going_concern_opinions": false
+            },
+            "market_cap": 47736168448,
+            "sector": "Energy"
+          },
+          "board": {
+            "board_metrics": {
+              "independence_ratio": 0.47356960722235625,
+              "board_size": 7,
+              "avg_tenure": 5.679979998177243,
+              "diversity_score": 0.4678332157104473,
+              "ceo_chairman_separation": "True"
+            },
+            "independence_score": 1.5,
+            "key_concerns": [
+              "Low board independence"
+            ]
+          },
+          "compensation": {
+            "compensation_metrics": {
+              "ceo_pay_ratio": 522.6975609047934,
+              "pay_for_performance_correlation": 0.41850893431536873,
+              "ltip_percentage": 0.4454880784762739,
+              "say_on_pay_support": 0.6309400697549918,
+              "clawback_policy": "True"
             },
             "pay_ratio_risk": "HIGH",
             "key_concerns": [
-              "High CEO pay ratio: 506"
+              "High CEO pay ratio: 523"
             ]
           },
-          "assessment_date": "2025-06-10T18:21:13.506949"
+          "assessment_date": "2025-06-10T20:38:10.729816"
         }
       },
-      "AMZN": {
+      "NEM": {
+        "audit_score": 1.0,
+        "board_score": 2.0,
+        "compensation_score": 2.3,
+        "overall_score": 1.69,
+        "risk_level": "RiskLevel.MEDIUM",
+        "details": {
+          "audit": {
+            "base_score": 1.0,
+            "sector_adjustment": 0.0,
+            "risk_indicators": {
+              "recent_restatements": false,
+              "auditor_changes": false,
+              "sec_investigations": false,
+              "internal_control_deficiencies": false,
+              "going_concern_opinions": false
+            },
+            "market_cap": 58493710336,
+            "sector": "Basic Materials"
+          },
+          "board": {
+            "board_metrics": {
+              "independence_ratio": 0.6230222428620128,
+              "board_size": 12,
+              "avg_tenure": 4.286082075726172,
+              "diversity_score": 0.7844572776230853,
+              "ceo_chairman_separation": "True"
+            },
+            "independence_score": 3.0,
+            "key_concerns": []
+          },
+          "compensation": {
+            "compensation_metrics": {
+              "ceo_pay_ratio": 429.91341329310063,
+              "pay_for_performance_correlation": 0.6134173066031106,
+              "ltip_percentage": 0.474777920978399,
+              "say_on_pay_support": 0.8508937151622749,
+              "clawback_policy": "True"
+            },
+            "pay_ratio_risk": "MEDIUM",
+            "key_concerns": []
+          },
+          "assessment_date": "2025-06-10T20:38:10.958566"
+        }
+      },
+      "BA": {
+        "audit_score": 0.5,
+        "board_score": 3.8,
+        "compensation_score": 4.0,
+        "overall_score": 2.54,
+        "risk_level": "RiskLevel.HIGH",
+        "details": {
+          "audit": {
+            "base_score": 1.0,
+            "sector_adjustment": -0.5,
+            "risk_indicators": {
+              "recent_restatements": false,
+              "auditor_changes": false,
+              "sec_investigations": false,
+              "internal_control_deficiencies": false,
+              "going_concern_opinions": false
+            },
+            "market_cap": 162231943168,
+            "sector": "Industrials"
+          },
+          "board": {
+            "board_metrics": {
+              "independence_ratio": 0.4356558607575435,
+              "board_size": 10,
+              "avg_tenure": 4.697575990143725,
+              "diversity_score": 0.7554763172882785,
+              "ceo_chairman_separation": "False"
+            },
+            "independence_score": 1.2000000000000002,
+            "key_concerns": [
+              "Low board independence"
+            ]
+          },
+          "compensation": {
+            "compensation_metrics": {
+              "ceo_pay_ratio": 534.2023448645292,
+              "pay_for_performance_correlation": 0.5667213013419707,
+              "ltip_percentage": 0.6800077938018869,
+              "say_on_pay_support": 0.6905673953198747,
+              "clawback_policy": "True"
+            },
+            "pay_ratio_risk": "HIGH",
+            "key_concerns": [
+              "High CEO pay ratio: 534"
+            ]
+          },
+          "assessment_date": "2025-06-10T20:38:11.189872"
+        }
+      },
+      "HON": {
         "audit_score": 0.5,
         "board_score": 2.3,
-        "compensation_score": 1.5,
-        "overall_score": 1.34,
+        "compensation_score": 1.0,
+        "overall_score": 1.19,
         "risk_level": "RiskLevel.LOW",
         "details": {
           "audit": {
@@ -81,15 +459,15 @@
               "internal_control_deficiencies": false,
               "going_concern_opinions": false
             },
-            "market_cap": 2293036220416,
-            "sector": "Consumer Cyclical"
+            "market_cap": 145578721280,
+            "sector": "Industrials"
           },
           "board": {
             "board_metrics": {
-              "independence_ratio": 0.686404476416318,
-              "board_size": 12,
-              "avg_tenure": 5.270660725720795,
-              "diversity_score": 0.30453655596087703,
+              "independence_ratio": 0.7101008791679895,
+              "board_size": 9,
+              "avg_tenure": 9.961303472000974,
+              "diversity_score": 0.4658079045196563,
               "ceo_chairman_separation": "False"
             },
             "independence_score": 2.7,
@@ -97,23 +475,68 @@
           },
           "compensation": {
             "compensation_metrics": {
-              "ceo_pay_ratio": 208.79444867599477,
-              "pay_for_performance_correlation": 0.5555174259228708,
-              "ltip_percentage": 0.46259762842697405,
-              "say_on_pay_support": 0.7837361286931424,
+              "ceo_pay_ratio": 260.45345202626015,
+              "pay_for_performance_correlation": 0.8752655128995842,
+              "ltip_percentage": 0.7520930658302166,
+              "say_on_pay_support": 0.9082039234827122,
               "clawback_policy": "True"
             },
             "pay_ratio_risk": "LOW",
             "key_concerns": []
           },
-          "assessment_date": "2025-06-10T18:21:13.720569"
+          "assessment_date": "2025-06-10T20:38:11.505248"
         }
       },
-      "JNJ": {
+      "NKE": {
+        "audit_score": 1.0,
+        "board_score": 2.8,
+        "compensation_score": 1.7999999999999998,
+        "overall_score": 1.78,
+        "risk_level": "RiskLevel.MEDIUM",
+        "details": {
+          "audit": {
+            "base_score": 1.0,
+            "sector_adjustment": 0.0,
+            "risk_indicators": {
+              "recent_restatements": false,
+              "auditor_changes": false,
+              "sec_investigations": false,
+              "internal_control_deficiencies": false,
+              "going_concern_opinions": false
+            },
+            "market_cap": 94013186048,
+            "sector": "Consumer Cyclical"
+          },
+          "board": {
+            "board_metrics": {
+              "independence_ratio": 0.7758339631873787,
+              "board_size": 11,
+              "avg_tenure": 10.692891905666913,
+              "diversity_score": 0.7038412041942324,
+              "ceo_chairman_separation": "True"
+            },
+            "independence_score": 2.2,
+            "key_concerns": []
+          },
+          "compensation": {
+            "compensation_metrics": {
+              "ceo_pay_ratio": 308.62353883192077,
+              "pay_for_performance_correlation": 0.801536188062979,
+              "ltip_percentage": 0.7960195515592685,
+              "say_on_pay_support": 0.8499422653177975,
+              "clawback_policy": "True"
+            },
+            "pay_ratio_risk": "MEDIUM",
+            "key_concerns": []
+          },
+          "assessment_date": "2025-06-10T20:38:11.758352"
+        }
+      },
+      "PG": {
         "audit_score": 0.5,
-        "board_score": 1.8,
-        "compensation_score": 3.3,
-        "overall_score": 1.73,
+        "board_score": 2.3,
+        "compensation_score": 3.0,
+        "overall_score": 1.79,
         "risk_level": "RiskLevel.MEDIUM",
         "details": {
           "audit": {
@@ -126,44 +549,46 @@
               "internal_control_deficiencies": false,
               "going_concern_opinions": false
             },
-            "market_cap": 376983027712,
-            "sector": "Healthcare"
+            "market_cap": 382019338240,
+            "sector": "Consumer Defensive"
           },
           "board": {
             "board_metrics": {
-              "independence_ratio": 0.8884102773396443,
-              "board_size": 14,
-              "avg_tenure": 4.87339825620463,
-              "diversity_score": 0.4888129459241587,
-              "ceo_chairman_separation": "False"
+              "independence_ratio": 0.8713093806765982,
+              "board_size": 9,
+              "avg_tenure": 10.009663128695673,
+              "diversity_score": 0.32794231144943625,
+              "ceo_chairman_separation": "True"
             },
-            "independence_score": 3.2,
+            "independence_score": 2.7,
             "key_concerns": []
           },
           "compensation": {
             "compensation_metrics": {
-              "ceo_pay_ratio": 432.2057107225463,
-              "pay_for_performance_correlation": 0.7499214850238298,
-              "ltip_percentage": 0.5806283964783574,
-              "say_on_pay_support": 0.6578811208568818,
+              "ceo_pay_ratio": 696.1142905822097,
+              "pay_for_performance_correlation": 0.5872790753429561,
+              "ltip_percentage": 0.688717115788385,
+              "say_on_pay_support": 0.8134093259671296,
               "clawback_policy": "True"
             },
-            "pay_ratio_risk": "MEDIUM",
-            "key_concerns": []
+            "pay_ratio_risk": "HIGH",
+            "key_concerns": [
+              "High CEO pay ratio: 696"
+            ]
           },
-          "assessment_date": "2025-06-10T18:21:13.944991"
+          "assessment_date": "2025-06-10T20:38:12.011331"
         }
       },
-      "AAPL": {
-        "audit_score": 0.8,
-        "board_score": 3.8,
-        "compensation_score": 4.3,
-        "overall_score": 2.75,
-        "risk_level": "RiskLevel.HIGH",
+      "KO": {
+        "audit_score": 0.5,
+        "board_score": 3.0999999999999996,
+        "compensation_score": 2.3,
+        "overall_score": 1.82,
+        "risk_level": "RiskLevel.MEDIUM",
         "details": {
           "audit": {
             "base_score": 1.0,
-            "sector_adjustment": -0.19999999999999996,
+            "sector_adjustment": -0.5,
             "risk_indicators": {
               "recent_restatements": false,
               "auditor_changes": false,
@@ -171,87 +596,40 @@
               "internal_control_deficiencies": false,
               "going_concern_opinions": false
             },
-            "market_cap": 3015388692480,
-            "sector": "Technology"
+            "market_cap": 311478484992,
+            "sector": "Consumer Defensive"
           },
           "board": {
             "board_metrics": {
-              "independence_ratio": 0.41093546814102183,
-              "board_size": 13,
-              "avg_tenure": 4.801415028585755,
-              "diversity_score": 0.37209053713723617,
+              "independence_ratio": 0.5298090443376473,
+              "board_size": 12,
+              "avg_tenure": 11.738829495914771,
+              "diversity_score": 0.6932696106341687,
               "ceo_chairman_separation": "False"
             },
-            "independence_score": 1.2000000000000002,
+            "independence_score": 1.9000000000000004,
             "key_concerns": [
               "Low board independence"
             ]
           },
           "compensation": {
             "compensation_metrics": {
-              "ceo_pay_ratio": 442.44252989278505,
-              "pay_for_performance_correlation": 0.40972346106084867,
-              "ltip_percentage": 0.5155115657075111,
-              "say_on_pay_support": 0.6206565588583871,
+              "ceo_pay_ratio": 343.10272490320654,
+              "pay_for_performance_correlation": 0.6572397878695445,
+              "ltip_percentage": 0.5932495553668291,
+              "say_on_pay_support": 0.8808960107796456,
               "clawback_policy": "True"
             },
             "pay_ratio_risk": "MEDIUM",
             "key_concerns": []
           },
-          "assessment_date": "2025-06-10T18:21:14.179719"
+          "assessment_date": "2025-06-10T20:38:12.304530"
         }
       },
-      "GOOGL": {
+      "MRK": {
         "audit_score": 0.5,
         "board_score": 2.0,
-        "compensation_score": 5,
-        "overall_score": 2.3,
-        "risk_level": "RiskLevel.MEDIUM",
-        "details": {
-          "audit": {
-            "base_score": 1.0,
-            "sector_adjustment": -0.5,
-            "risk_indicators": {
-              "recent_restatements": false,
-              "auditor_changes": false,
-              "sec_investigations": false,
-              "internal_control_deficiencies": false,
-              "going_concern_opinions": false
-            },
-            "market_cap": 2175063556096,
-            "sector": "Communication Services"
-          },
-          "board": {
-            "board_metrics": {
-              "independence_ratio": 0.7132638254128797,
-              "board_size": 7,
-              "avg_tenure": 9.24218763440707,
-              "diversity_score": 0.37159261112420805,
-              "ceo_chairman_separation": "True"
-            },
-            "independence_score": 3.0,
-            "key_concerns": []
-          },
-          "compensation": {
-            "compensation_metrics": {
-              "ceo_pay_ratio": 749.126362380628,
-              "pay_for_performance_correlation": 0.35162314251781795,
-              "ltip_percentage": 0.5641132385456504,
-              "say_on_pay_support": 0.6433072248516206,
-              "clawback_policy": "False"
-            },
-            "pay_ratio_risk": "HIGH",
-            "key_concerns": [
-              "High CEO pay ratio: 749"
-            ]
-          },
-          "assessment_date": "2025-06-10T18:21:14.400165"
-        }
-      },
-      "XOM": {
-        "audit_score": 0.5,
-        "board_score": 1.5,
-        "compensation_score": 2.0,
+        "compensation_score": 1.5,
         "overall_score": 1.25,
         "risk_level": "RiskLevel.LOW",
         "details": {
@@ -265,336 +643,15 @@
               "internal_control_deficiencies": false,
               "going_concern_opinions": false
             },
-            "market_cap": 461950353408,
-            "sector": "Energy"
-          },
-          "board": {
-            "board_metrics": {
-              "independence_ratio": 0.8237704802787893,
-              "board_size": 11,
-              "avg_tenure": 6.595362818167697,
-              "diversity_score": 0.6210068583334707,
-              "ceo_chairman_separation": "True"
-            },
-            "independence_score": 3.5,
-            "key_concerns": []
-          },
-          "compensation": {
-            "compensation_metrics": {
-              "ceo_pay_ratio": 113.63289764476082,
-              "pay_for_performance_correlation": 0.8582640897535307,
-              "ltip_percentage": 0.515369367425801,
-              "say_on_pay_support": 0.6280153087122983,
-              "clawback_policy": "True"
-            },
-            "pay_ratio_risk": "LOW",
-            "key_concerns": []
-          },
-          "assessment_date": "2025-06-10T18:21:14.656222"
-        }
-      },
-      "SLB": {
-        "audit_score": 1.0,
-        "board_score": 2.3,
-        "compensation_score": 3.0,
-        "overall_score": 1.99,
-        "risk_level": "RiskLevel.MEDIUM",
-        "details": {
-          "audit": {
-            "base_score": 1.0,
-            "sector_adjustment": 0.0,
-            "risk_indicators": {
-              "recent_restatements": false,
-              "auditor_changes": false,
-              "sec_investigations": false,
-              "internal_control_deficiencies": false,
-              "going_concern_opinions": false
-            },
-            "market_cap": 47790211072,
-            "sector": "Energy"
-          },
-          "board": {
-            "board_metrics": {
-              "independence_ratio": 0.6405674580523546,
-              "board_size": 9,
-              "avg_tenure": 9.844824156234704,
-              "diversity_score": 0.7485325512733041,
-              "ceo_chairman_separation": "False"
-            },
-            "independence_score": 2.7,
-            "key_concerns": []
-          },
-          "compensation": {
-            "compensation_metrics": {
-              "ceo_pay_ratio": 682.2013885792899,
-              "pay_for_performance_correlation": 0.5578589900673787,
-              "ltip_percentage": 0.6333566066493479,
-              "say_on_pay_support": 0.8607651786883161,
-              "clawback_policy": "True"
-            },
-            "pay_ratio_risk": "HIGH",
-            "key_concerns": [
-              "High CEO pay ratio: 682"
-            ]
-          },
-          "assessment_date": "2025-06-10T18:21:14.836871"
-        }
-      },
-      "BA": {
-        "audit_score": 0.5,
-        "board_score": 2.3,
-        "compensation_score": 4.6,
-        "overall_score": 2.27,
-        "risk_level": "RiskLevel.MEDIUM",
-        "details": {
-          "audit": {
-            "base_score": 1.0,
-            "sector_adjustment": -0.5,
-            "risk_indicators": {
-              "recent_restatements": false,
-              "auditor_changes": false,
-              "sec_investigations": false,
-              "internal_control_deficiencies": false,
-              "going_concern_opinions": false
-            },
-            "market_cap": 161832321024,
-            "sector": "Industrials"
-          },
-          "board": {
-            "board_metrics": {
-              "independence_ratio": 0.7902156543736979,
-              "board_size": 12,
-              "avg_tenure": 6.400422104738212,
-              "diversity_score": 0.3809097572790222,
-              "ceo_chairman_separation": "False"
-            },
-            "independence_score": 2.7,
-            "key_concerns": []
-          },
-          "compensation": {
-            "compensation_metrics": {
-              "ceo_pay_ratio": 345.35279413104416,
-              "pay_for_performance_correlation": 0.36046896291243147,
-              "ltip_percentage": 0.5196110965565186,
-              "say_on_pay_support": 0.6885032304480158,
-              "clawback_policy": "False"
-            },
-            "pay_ratio_risk": "MEDIUM",
-            "key_concerns": []
-          },
-          "assessment_date": "2025-06-10T18:21:15.059247"
-        }
-      },
-      "HON": {
-        "audit_score": 0.5,
-        "board_score": 2.0,
-        "compensation_score": 2.5,
-        "overall_score": 1.55,
-        "risk_level": "RiskLevel.MEDIUM",
-        "details": {
-          "audit": {
-            "base_score": 1.0,
-            "sector_adjustment": -0.5,
-            "risk_indicators": {
-              "recent_restatements": false,
-              "auditor_changes": false,
-              "sec_investigations": false,
-              "internal_control_deficiencies": false,
-              "going_concern_opinions": false
-            },
-            "market_cap": 145321410560,
-            "sector": "Industrials"
-          },
-          "board": {
-            "board_metrics": {
-              "independence_ratio": 0.7029639223813369,
-              "board_size": 7,
-              "avg_tenure": 3.065712948918955,
-              "diversity_score": 0.6877262193015945,
-              "ceo_chairman_separation": "True"
-            },
-            "independence_score": 3.0,
-            "key_concerns": []
-          },
-          "compensation": {
-            "compensation_metrics": {
-              "ceo_pay_ratio": 194.47812275972456,
-              "pay_for_performance_correlation": 0.3869801554417811,
-              "ltip_percentage": 0.6388993637248275,
-              "say_on_pay_support": 0.8974277521385648,
-              "clawback_policy": "True"
-            },
-            "pay_ratio_risk": "LOW",
-            "key_concerns": []
-          },
-          "assessment_date": "2025-06-10T18:21:15.270511"
-        }
-      },
-      "NKE": {
-        "audit_score": 1.0,
-        "board_score": 2.3,
-        "compensation_score": 3.0,
-        "overall_score": 1.99,
-        "risk_level": "RiskLevel.MEDIUM",
-        "details": {
-          "audit": {
-            "base_score": 1.0,
-            "sector_adjustment": 0.0,
-            "risk_indicators": {
-              "recent_restatements": false,
-              "auditor_changes": false,
-              "sec_investigations": false,
-              "internal_control_deficiencies": false,
-              "going_concern_opinions": false
-            },
-            "market_cap": 93940269056,
-            "sector": "Consumer Cyclical"
-          },
-          "board": {
-            "board_metrics": {
-              "independence_ratio": 0.7915035424135639,
-              "board_size": 11,
-              "avg_tenure": 5.745852022605632,
-              "diversity_score": 0.7461083696222564,
-              "ceo_chairman_separation": "False"
-            },
-            "independence_score": 2.7,
-            "key_concerns": []
-          },
-          "compensation": {
-            "compensation_metrics": {
-              "ceo_pay_ratio": 559.9498185747202,
-              "pay_for_performance_correlation": 0.5139396415943365,
-              "ltip_percentage": 0.7803720010392033,
-              "say_on_pay_support": 0.8997643504216382,
-              "clawback_policy": "True"
-            },
-            "pay_ratio_risk": "HIGH",
-            "key_concerns": [
-              "High CEO pay ratio: 560"
-            ]
-          },
-          "assessment_date": "2025-06-10T18:21:15.507464"
-        }
-      },
-      "PG": {
-        "audit_score": 0.5,
-        "board_score": 2.3,
-        "compensation_score": 1.8,
-        "overall_score": 1.43,
-        "risk_level": "RiskLevel.LOW",
-        "details": {
-          "audit": {
-            "base_score": 1.0,
-            "sector_adjustment": -0.5,
-            "risk_indicators": {
-              "recent_restatements": false,
-              "auditor_changes": false,
-              "sec_investigations": false,
-              "internal_control_deficiencies": false,
-              "going_concern_opinions": false
-            },
-            "market_cap": 381456646144,
-            "sector": "Consumer Defensive"
-          },
-          "board": {
-            "board_metrics": {
-              "independence_ratio": 0.8090937964198065,
-              "board_size": 9,
-              "avg_tenure": 10.31235202713558,
-              "diversity_score": 0.6480959316446131,
-              "ceo_chairman_separation": "True"
-            },
-            "independence_score": 2.7,
-            "key_concerns": []
-          },
-          "compensation": {
-            "compensation_metrics": {
-              "ceo_pay_ratio": 213.56234767746088,
-              "pay_for_performance_correlation": 0.7584720537264664,
-              "ltip_percentage": 0.5076742031052461,
-              "say_on_pay_support": 0.7128103765600593,
-              "clawback_policy": "False"
-            },
-            "pay_ratio_risk": "LOW",
-            "key_concerns": []
-          },
-          "assessment_date": "2025-06-10T18:21:15.695304"
-        }
-      },
-      "KO": {
-        "audit_score": 0.5,
-        "board_score": 2.0,
-        "compensation_score": 3.0,
-        "overall_score": 1.7,
-        "risk_level": "RiskLevel.MEDIUM",
-        "details": {
-          "audit": {
-            "base_score": 1.0,
-            "sector_adjustment": -0.5,
-            "risk_indicators": {
-              "recent_restatements": false,
-              "auditor_changes": false,
-              "sec_investigations": false,
-              "internal_control_deficiencies": false,
-              "going_concern_opinions": false
-            },
-            "market_cap": 311370874880,
-            "sector": "Consumer Defensive"
-          },
-          "board": {
-            "board_metrics": {
-              "independence_ratio": 0.7472374547072177,
-              "board_size": 12,
-              "avg_tenure": 3.8183155062005167,
-              "diversity_score": 0.3939572961727553,
-              "ceo_chairman_separation": "True"
-            },
-            "independence_score": 3.0,
-            "key_concerns": []
-          },
-          "compensation": {
-            "compensation_metrics": {
-              "ceo_pay_ratio": 702.1286596672726,
-              "pay_for_performance_correlation": 0.5607734586302626,
-              "ltip_percentage": 0.5766166126986809,
-              "say_on_pay_support": 0.7674000402092784,
-              "clawback_policy": "True"
-            },
-            "pay_ratio_risk": "HIGH",
-            "key_concerns": [
-              "High CEO pay ratio: 702"
-            ]
-          },
-          "assessment_date": "2025-06-10T18:21:15.890864"
-        }
-      },
-      "MRK": {
-        "audit_score": 0.5,
-        "board_score": 2.0,
-        "compensation_score": 1.7999999999999998,
-        "overall_score": 1.34,
-        "risk_level": "RiskLevel.LOW",
-        "details": {
-          "audit": {
-            "base_score": 1.0,
-            "sector_adjustment": -0.5,
-            "risk_indicators": {
-              "recent_restatements": false,
-              "auditor_changes": false,
-              "sec_investigations": false,
-              "internal_control_deficiencies": false,
-              "going_concern_opinions": false
-            },
-            "market_cap": 204021186560,
+            "market_cap": 204221825024,
             "sector": "Healthcare"
           },
           "board": {
             "board_metrics": {
-              "independence_ratio": 0.7097459283964063,
-              "board_size": 13,
-              "avg_tenure": 6.600498200573867,
-              "diversity_score": 0.40085712082279834,
+              "independence_ratio": 0.7247825959329004,
+              "board_size": 10,
+              "avg_tenure": 4.038857108111511,
+              "diversity_score": 0.6487943380585004,
               "ceo_chairman_separation": "True"
             },
             "independence_score": 3.0,
@@ -602,70 +659,23 @@
           },
           "compensation": {
             "compensation_metrics": {
-              "ceo_pay_ratio": 453.3471586823108,
-              "pay_for_performance_correlation": 0.829781090563871,
-              "ltip_percentage": 0.7740915428098443,
-              "say_on_pay_support": 0.7816437339278175,
+              "ceo_pay_ratio": 153.95051706110146,
+              "pay_for_performance_correlation": 0.5269012579850962,
+              "ltip_percentage": 0.6584646014202543,
+              "say_on_pay_support": 0.7353212974983151,
               "clawback_policy": "True"
             },
-            "pay_ratio_risk": "MEDIUM",
+            "pay_ratio_risk": "LOW",
             "key_concerns": []
           },
-          "assessment_date": "2025-06-10T18:21:16.078841"
-        }
-      },
-      "JPM": {
-        "audit_score": 0.5,
-        "board_score": 2.3,
-        "compensation_score": 4.0,
-        "overall_score": 2.09,
-        "risk_level": "RiskLevel.MEDIUM",
-        "details": {
-          "audit": {
-            "base_score": 1.0,
-            "sector_adjustment": -0.5,
-            "risk_indicators": {
-              "recent_restatements": false,
-              "auditor_changes": false,
-              "sec_investigations": false,
-              "internal_control_deficiencies": false,
-              "going_concern_opinions": false
-            },
-            "market_cap": 744295890944,
-            "sector": "Financial Services"
-          },
-          "board": {
-            "board_metrics": {
-              "independence_ratio": 0.6577445665996111,
-              "board_size": 12,
-              "avg_tenure": 8.896762886741351,
-              "diversity_score": 0.5068658351691193,
-              "ceo_chairman_separation": "False"
-            },
-            "independence_score": 2.7,
-            "key_concerns": []
-          },
-          "compensation": {
-            "compensation_metrics": {
-              "ceo_pay_ratio": 798.2387646647743,
-              "pay_for_performance_correlation": 0.3799576135962363,
-              "ltip_percentage": 0.6150115234980408,
-              "say_on_pay_support": 0.8001915275669638,
-              "clawback_policy": "True"
-            },
-            "pay_ratio_risk": "HIGH",
-            "key_concerns": [
-              "High CEO pay ratio: 798"
-            ]
-          },
-          "assessment_date": "2025-06-10T18:21:16.278051"
+          "assessment_date": "2025-06-10T20:38:12.668294"
         }
       },
       "XLK": {
         "audit_score": 1.0,
-        "board_score": 2.3,
-        "compensation_score": 3.5,
-        "overall_score": 2.14,
+        "board_score": 4.3,
+        "compensation_score": 2.0999999999999996,
+        "overall_score": 2.32,
         "risk_level": "RiskLevel.MEDIUM",
         "details": {
           "audit": {
@@ -678,128 +688,130 @@
               "internal_control_deficiencies": false,
               "going_concern_opinions": false
             },
-            "market_cap": 65263513600,
+            "market_cap": 65279918080,
             "sector": ""
           },
           "board": {
             "board_metrics": {
-              "independence_ratio": 0.6680379324610721,
-              "board_size": 9,
-              "avg_tenure": 4.798642432636784,
-              "diversity_score": 0.33754498589486726,
-              "ceo_chairman_separation": "False"
+              "independence_ratio": 0.48308391307742143,
+              "board_size": 7,
+              "avg_tenure": 11.190715615863617,
+              "diversity_score": 0.5367493856832066,
+              "ceo_chairman_separation": "True"
             },
-            "independence_score": 2.7,
-            "key_concerns": []
+            "independence_score": 0.7000000000000002,
+            "key_concerns": [
+              "Low board independence"
+            ]
           },
           "compensation": {
             "compensation_metrics": {
-              "ceo_pay_ratio": 299.06910452356317,
-              "pay_for_performance_correlation": 0.456577667564984,
-              "ltip_percentage": 0.4483240653685312,
-              "say_on_pay_support": 0.6234811020101435,
-              "clawback_policy": "True"
+              "ceo_pay_ratio": 421.3220568391554,
+              "pay_for_performance_correlation": 0.8666403339142136,
+              "ltip_percentage": 0.644050352936171,
+              "say_on_pay_support": 0.7344166567707537,
+              "clawback_policy": "False"
             },
-            "pay_ratio_risk": "LOW",
+            "pay_ratio_risk": "MEDIUM",
             "key_concerns": []
           },
-          "assessment_date": "2025-06-10T18:21:16.485533"
+          "assessment_date": "2025-06-10T20:38:12.912189"
         }
       }
     },
     "portfolio_metrics": {
-      "expected_return": 0.103,
-      "volatility": 0.1838,
-      "sharpe_ratio": 0.5602,
-      "var_95": -0.0156,
-      "var_99": -0.0373,
-      "cvar_95": -0.0265,
-      "max_drawdown": -0.1739,
-      "avg_correlation": 0.3165,
+      "expected_return": 0.0682,
+      "volatility": 0.178,
+      "sharpe_ratio": 0.3835,
+      "var_95": -0.0154,
+      "var_99": -0.0332,
+      "cvar_95": -0.0259,
+      "max_drawdown": -0.1612,
+      "avg_correlation": 0.2901,
       "num_assets": 15
     },
     "concentration_analysis": {
-      "hhi": 0.114,
-      "effective_assets": 8.77,
+      "hhi": 0.1358,
+      "effective_assets": 7.36,
       "max_weight": 0.1,
       "top_5_weight": 0.5,
       "risk_level": "LOW"
     },
     "liquidity_analysis": {
       "asset_liquidity": {
-        "MSFT": {
-          "avg_volume": 23430806,
-          "market_cap": 3480546967552,
-          "liquidity_score": 1.0
-        },
         "AMZN": {
           "avg_volume": 49592038,
-          "market_cap": 2292930052096,
+          "market_cap": 2295090380800,
           "liquidity_score": 1.0
         },
         "JNJ": {
           "avg_volume": 9056187,
-          "market_cap": 376958976000,
+          "market_cap": 377115377664,
           "liquidity_score": 0.953
         },
         "AAPL": {
           "avg_volume": 61993657,
-          "market_cap": 3015207813120,
+          "market_cap": 3016022032384,
+          "liquidity_score": 1.0
+        },
+        "MSFT": {
+          "avg_volume": 23430806,
+          "market_cap": 3483705802752,
           "liquidity_score": 1.0
         },
         "GOOGL": {
           "avg_volume": 39880019,
-          "market_cap": 2175063556096,
+          "market_cap": 2176586350592,
           "liquidity_score": 1.0
         },
         "XOM": {
           "avg_volume": 17251966,
-          "market_cap": 461928759296,
+          "market_cap": 461519355904,
           "liquidity_score": 1.0
         },
         "SLB": {
           "avg_volume": 17532158,
-          "market_cap": 47790211072,
+          "market_cap": 47749681152,
+          "liquidity_score": 1.0
+        },
+        "NEM": {
+          "avg_volume": 13343480,
+          "market_cap": 58493710336,
           "liquidity_score": 1.0
         },
         "BA": {
           "avg_volume": 9130853,
-          "market_cap": 161854783488,
+          "market_cap": 162405351424,
           "liquidity_score": 0.957
         },
         "HON": {
           "avg_volume": 4400184,
-          "market_cap": 145337499648,
+          "market_cap": 145578721280,
           "liquidity_score": 0.72
         },
         "NKE": {
           "avg_volume": 20073568,
-          "market_cap": 93946617856,
+          "market_cap": 94064844800,
           "liquidity_score": 1.0
         },
         "PG": {
           "avg_volume": 8456273,
-          "market_cap": 381444947968,
+          "market_cap": 382019338240,
           "liquidity_score": 0.923
         },
         "KO": {
           "avg_volume": 16975449,
-          "market_cap": 311370874880,
+          "market_cap": 311496572928,
           "liquidity_score": 1.0
         },
         "MRK": {
           "avg_volume": 16327863,
-          "market_cap": 204058853376,
-          "liquidity_score": 1.0
-        },
-        "JPM": {
-          "avg_volume": 10810257,
-          "market_cap": 744351465472,
+          "market_cap": 204264013824,
           "liquidity_score": 1.0
         },
         "XLK": {
           "avg_volume": 6195168,
-          "market_cap": 65263513600,
+          "market_cap": 65277116416,
           "liquidity_score": 0.81
         }
       },
@@ -811,6 +823,13 @@
     "active_alerts": [],
     "high_risk_assets": [],
     "recommendations": [
+      {
+        "category": "Performance",
+        "priority": "HIGH",
+        "recommendation": "Improve risk-adjusted returns",
+        "details": "Consider rebalancing to higher-quality assets or implementing momentum strategies",
+        "timeline": "1-2 weeks"
+      },
       {
         "category": "Risk Management",
         "priority": "HIGH",
@@ -833,8 +852,8 @@
     "compliance_score": 1.0
   },
   "report_metadata": {
-    "generated_at": "2025-06-10T18:21:22.696341",
-    "assessment_timestamp": "2025-06-10T18:21:12.812765",
+    "generated_at": "2025-06-10T20:38:19.208623",
+    "assessment_timestamp": "2025-06-10T20:38:08.542162",
     "report_version": "1.0"
   }
 }

@@ -1,62 +1,62 @@
 [
   {
-    "ticker": "MSFT",
-    "weight": 6.28
-  },
-  {
     "ticker": "AMZN",
-    "weight": 4.57
+    "weight": 4.86
   },
   {
     "ticker": "JNJ",
-    "weight": 10.7
+    "weight": 11.33
   },
   {
     "ticker": "AAPL",
-    "weight": 5.89
+    "weight": 6.25
+  },
+  {
+    "ticker": "MSFT",
+    "weight": 6.65
   },
   {
     "ticker": "GOOGL",
-    "weight": 4.17
+    "weight": 4.43
   },
   {
     "ticker": "XOM",
-    "weight": 6.71
+    "weight": 7.11
   },
   {
     "ticker": "SLB",
-    "weight": 4.3
+    "weight": 4.58
+  },
+  {
+    "ticker": "NEM",
+    "weight": 3.35
   },
   {
     "ticker": "BA",
-    "weight": 3.04
+    "weight": 3.24
   },
   {
     "ticker": "HON",
-    "weight": 7.46
+    "weight": 7.91
   },
   {
     "ticker": "NKE",
-    "weight": 4.48
+    "weight": 4.75
   },
   {
     "ticker": "PG",
-    "weight": 9.39
+    "weight": 9.94
   },
   {
     "ticker": "KO",
-    "weight": 10.66
+    "weight": 11.28
   },
   {
     "ticker": "MRK",
-    "weight": 7.13
-  },
-  {
-    "ticker": "JPM",
-    "weight": 8.86
+    "weight": 7.55
   },
   {
     "ticker": "XLK",
-    "weight": 6.37
+    "weight": 6.77
   }
 ]

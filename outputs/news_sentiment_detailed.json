@@ -1,14 +1,14 @@
 {
-  "generated_at": "2025-06-10T18:21:05.519772",
-  "processing_time_seconds": 4.1,
+  "generated_at": "2025-06-10T20:38:02.247648",
+  "processing_time_seconds": 5.4,
   "statistics": {
     "requests_made": 15,
     "requests_successful": 15,
     "requests_failed": 0,
-    "total_retry_time": 4.121981143951416,
+    "total_retry_time": 5.419286251068115,
     "cache_hits": 0,
     "success_rate": 100.0,
-    "avg_retry_time": 0.27
+    "avg_retry_time": 0.36
   },
   "sentiment_data": [
     {
@@ -55,7 +55,7 @@
     },
     {
       "ticker": "BA",
-      "avg_sent": 0.31,
+      "avg_sent": 0.333,
       "is_negative": false,
       "weight_adjustment": 0
     },
@@ -72,8 +72,20 @@
       "weight_adjustment": 0
     },
     {
+      "ticker": "PG",
+      "avg_sent": -0.696,
+      "is_negative": true,
+      "weight_adjustment": 0.3
+    },
+    {
       "ticker": "KO",
       "avg_sent": 0.636,
+      "is_negative": false,
+      "weight_adjustment": 0
+    },
+    {
+      "ticker": "MRK",
+      "avg_sent": 0.579,
       "is_negative": false,
       "weight_adjustment": 0
     },
@@ -84,21 +96,13 @@
       "weight_adjustment": 0
     },
     {
-      "ticker": "NFLX",
-      "avg_sent": 0.667,
-      "is_negative": false,
-      "weight_adjustment": 0
-    },
-    {
-      "ticker": "XLV",
-      "avg_sent": 0.667,
+      "ticker": "XLK",
+      "avg_sent": 0.5,
       "is_negative": false,
       "weight_adjustment": 0
     }
   ],
-  "failed_tickers": [
-    "XLY"
-  ],
+  "failed_tickers": [],
   "threshold_config": {
     "negative_threshold": -0.05,
     "weight_cut_percentage": 0.3

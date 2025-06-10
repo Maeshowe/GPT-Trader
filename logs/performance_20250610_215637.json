@@ -1,0 +1,20 @@
+{
+  "total_time": 21.6,
+  "screening_time": 3.9,
+  "composite_scoring_time": 0.0,
+  "requests_made": 11,
+  "requests_failed": 0,
+  "success_rate": 100.0,
+  "avg_sector_time": 8.88,
+  "avg_firm_time": 0,
+  "total_retry_time": 0,
+  "screening_results": {
+    "total_candidates": 4,
+    "market_cap_passed": 4,
+    "liquidity_passed": 1,
+    "fundamentals_passed": 0,
+    "technical_passed": 0,
+    "final_passed": 0
+  },
+  "composite_results": {}
+}

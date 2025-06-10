@@ -9,7 +9,7 @@
     },
     "sector_news_snippets": [],
     "today": "2025-06-10",
-    "sector_score": 75
+    "sector_score": 78
   },
   {
     "name": "Materials",
@@ -21,7 +21,7 @@
     },
     "sector_news_snippets": [],
     "today": "2025-06-10",
-    "sector_score": 75
+    "sector_score": 78
   },
   {
     "name": "Industrials",
@@ -33,7 +33,7 @@
     },
     "sector_news_snippets": [],
     "today": "2025-06-10",
-    "sector_score": 78
+    "sector_score": 72
   },
   {
     "name": "Consumer Discretionary",
@@ -60,7 +60,7 @@
     "sector_score": 75
   },
   {
-    "name": "Health Care",
+    "name": "Healthcare",
     "macro_indicators_json": {
       "GDP": 29.98,
       "CPI": 320.32,
@@ -69,7 +69,7 @@
     },
     "sector_news_snippets": [],
     "today": "2025-06-10",
-    "sector_score": 75
+    "sector_score": 78
   },
   {
     "name": "Financials",
@@ -105,7 +105,7 @@
     },
     "sector_news_snippets": [],
     "today": "2025-06-10",
-    "sector_score": 78
+    "sector_score": 75
   },
   {
     "name": "Utilities",
@@ -129,6 +129,6 @@
     },
     "sector_news_snippets": [],
     "today": "2025-06-10",
-    "sector_score": 75
+    "sector_score": 78
   }
 ]

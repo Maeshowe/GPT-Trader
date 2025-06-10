@@ -43,7 +43,7 @@
   },
   {
     "ticker": "BA",
-    "avg_sent": 0.31,
+    "avg_sent": 0.333,
     "is_negative": false,
     "weight_adjustment": 0
   },
@@ -60,8 +60,20 @@
     "weight_adjustment": 0
   },
   {
+    "ticker": "PG",
+    "avg_sent": -0.696,
+    "is_negative": true,
+    "weight_adjustment": 0.3
+  },
+  {
     "ticker": "KO",
     "avg_sent": 0.636,
+    "is_negative": false,
+    "weight_adjustment": 0
+  },
+  {
+    "ticker": "MRK",
+    "avg_sent": 0.579,
     "is_negative": false,
     "weight_adjustment": 0
   },
@@ -72,14 +84,8 @@
     "weight_adjustment": 0
   },
   {
-    "ticker": "NFLX",
-    "avg_sent": 0.667,
-    "is_negative": false,
-    "weight_adjustment": 0
-  },
-  {
-    "ticker": "XLV",
-    "avg_sent": 0.667,
+    "ticker": "XLK",
+    "avg_sent": 0.5,
     "is_negative": false,
     "weight_adjustment": 0
   }
