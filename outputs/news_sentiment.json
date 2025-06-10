@@ -1,13 +1,13 @@
 [
   {
     "ticker": "MSFT",
-    "avg_sent": 0.5,
+    "avg_sent": 0.49,
     "is_negative": false,
     "weight_adjustment": 0
   },
   {
     "ticker": "GOOGL",
-    "avg_sent": 0.4,
+    "avg_sent": 0.397,
     "is_negative": false,
     "weight_adjustment": 0
   },
@@ -43,7 +43,7 @@
   },
   {
     "ticker": "AMZN",
-    "avg_sent": 0.567,
+    "avg_sent": 0.561,
     "is_negative": false,
     "weight_adjustment": 0
   },
@@ -61,7 +61,7 @@
   },
   {
     "ticker": "WMT",
-    "avg_sent": 0.75,
+    "avg_sent": 0.7,
     "is_negative": false,
     "weight_adjustment": 0
   },
@@ -73,7 +73,7 @@
   },
   {
     "ticker": "MRK",
-    "avg_sent": 0.611,
+    "avg_sent": 0.579,
     "is_negative": false,
     "weight_adjustment": 0
   },
