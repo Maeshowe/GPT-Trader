@@ -1,35 +1,39 @@
 [
   {
+    "ticker": "AAPL",
+    "avg_sent": 0.07
+  },
+  {
+    "ticker": "MSFT",
+    "avg_sent": 0.393
+  },
+  {
     "ticker": "NVDA",
-    "avg_sent": 0.57
+    "avg_sent": 0.61
   },
   {
     "ticker": "JPM",
-    "avg_sent": 0.471
+    "avg_sent": 0.533
   },
   {
-    "ticker": "GS",
-    "avg_sent": 0.5
+    "ticker": "XOM",
+    "avg_sent": 0.588
   },
   {
     "ticker": "SLB",
     "avg_sent": 1.0
   },
   {
-    "ticker": "XOM",
-    "avg_sent": 0.611
-  },
-  {
-    "ticker": "BAC",
-    "avg_sent": 0.714
+    "ticker": "GS",
+    "avg_sent": 0.6
   },
   {
     "ticker": "CVX",
-    "avg_sent": 0.235
+    "avg_sent": 0.2
   },
   {
-    "ticker": "AAPL",
-    "avg_sent": -0.11
+    "ticker": "BAC",
+    "avg_sent": 0.667
   },
   {
     "ticker": "XLK",
@@ -44,15 +48,15 @@
     "avg_sent": 0.0
   },
   {
-    "ticker": "AMZN",
-    "avg_sent": 0.558
-  },
-  {
     "ticker": "TSLA",
-    "avg_sent": -0.18
+    "avg_sent": -0.19
   },
   {
-    "ticker": "META",
-    "avg_sent": 0.613
+    "ticker": "AMZN",
+    "avg_sent": 0.577
+  },
+  {
+    "ticker": "GOOGL",
+    "avg_sent": 0.393
   }
 ]
