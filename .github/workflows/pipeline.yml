@@ -28,46 +28,232 @@ jobs:
       run: |
         python -m pip install --upgrade pip
         pip install -r requirements.txt
+        pip install aiohttp scipy  # Enhanced dependencies for risk management
 
-    # ── 4) Secrets → ENV ──────────────────────────────────────────────
+    # ── 4) Create logs directory ──────────────────────────────────────
+    - name: Create logs directory
+      run: |
+        mkdir -p logs
+        mkdir -p outputs
+
+    # ── 5) Secrets → ENV ──────────────────────────────────────────────
     - name: Export secrets
       run: |
         echo "OPENAI_API_KEY=${{ secrets.OPENAI_API_KEY }}"      >> $GITHUB_ENV
         echo "FRED_API_KEY=${{ secrets.FRED_API_KEY }}"          >> $GITHUB_ENV
         echo "STOCKNEWS_API_KEY=${{ secrets.STOCKNEWS_API_KEY }}" >> $GITHUB_ENV
 
-    # ── 5) Teljes pipeline ────────────────────────────────────────────
-    - name: Run full pipeline
+    # ── 6) Enhanced pipeline execution ────────────────────────────────
+    - name: Run enhanced GPT portfolio pipeline
       run: |
+        echo "🚀 Starting Enhanced GPT Portfolio Pipeline..."
+        
+        # Step 1: Data fetching
+        echo "📊 Step 1: Fetching market data..."
         python data_fetch/fetch_data.py
+        
+        # Step 2: LLM scoring (enhanced with async & logging)
+        echo "🤖 Step 2: Running LLM scoring with enhanced performance..."
         python run_prompts.py
+        
+        # Step 3: News sentiment analysis (enhanced with retry logic)
+        echo "📰 Step 3: Analyzing news sentiment with intelligent retry..."
         python news_sentiment.py
+        
+        # Step 4: Portfolio generation
+        echo "⚖️ Step 4: Generating base portfolio..."
         python generator_runner.py
+        
+        # Step 5: Risk management integration (NEW!)
+        echo "🛡️ Step 5: Applying risk management framework..."
+        python integrate_risk_management.py
+        
+        # Step 6: Backtesting
+        echo "📈 Step 6: Running backtest analysis..."
         python backtest.py
         python backtest_rebal.py
+        
+        # Step 7: Risk budget optimization
+        echo "💰 Step 7: Calculating risk budget allocations..."
         python risk_budget.py
+        
+        echo "✅ Pipeline completed successfully!"
 
-    # ── 6) Commit & push output JSON-ok ───────────────────────────────
-    - name: Commit outputs
+    # ── 7) Validate outputs ───────────────────────────────────────────
+    - name: Validate pipeline outputs
+      run: |
+        echo "🔍 Validating pipeline outputs..."
+        
+        # Check critical files exist
+        required_files=(
+          "outputs/portfolio_latest.json"
+          "outputs/portfolio_risk_adjusted.json"
+          "outputs/portfolio_risk_assessment.json"
+          "outputs/risk_summary.md"
+          "outputs/news_sentiment.json"
+          "outputs/backtest_equity.json"
+          "outputs/backtest_stats.json"
+        )
+        
+        missing_files=()
+        for file in "${required_files[@]}"; do
+          if [[ ! -f "$file" ]]; then
+            missing_files+=("$file")
+          else
+            echo "✅ $file exists"
+          fi
+        done
+        
+        if [[ ${#missing_files[@]} -gt 0 ]]; then
+          echo "❌ Missing critical files:"
+          printf '%s\n' "${missing_files[@]}"
+          exit 1
+        fi
+        
+        # Validate JSON files
+        echo "🔍 Validating JSON files..."
+        for json_file in outputs/*.json; do
+          if [[ -f "$json_file" ]]; then
+            if python -m json.tool "$json_file" > /dev/null 2>&1; then
+              echo "✅ $json_file is valid JSON"
+            else
+              echo "❌ $json_file is invalid JSON"
+              exit 1
+            fi
+          fi
+        done
+        
+        echo "✅ All validations passed!"
+
+    # ── 8) Generate pipeline summary ──────────────────────────────────
+    - name: Generate pipeline summary
+      run: |
+        echo "📊 Generating pipeline execution summary..."
+        
+        # Create summary file
+        cat > pipeline_summary.md << EOF
+        # GPT Portfolio Pipeline Execution Summary
+        
+        **Execution Date:** $(date -u +'%Y-%m-%d %H:%M:%S UTC')
+        **Commit:** ${{ github.sha }}
+        **Triggered by:** ${{ github.event_name }}
+        
+        ## Pipeline Steps Completed
+        - ✅ Data fetching (FRED, StockNews, Yahoo Finance)
+        - ✅ Enhanced LLM scoring (Async with ${MAX_CONCURRENCY:-8}x concurrency)
+        - ✅ News sentiment analysis (With intelligent retry logic)
+        - ✅ Portfolio generation (LLM-based allocation)
+        - ✅ **Risk management integration** (Governance + Market risk)
+        - ✅ Backtesting (Buy&Hold vs Rebalancing)
+        - ✅ Risk budget optimization (Black-Litterman)
+        
+        ## Key Outputs Generated
+        $(ls -la outputs/ | grep -v '^d' | awk '{print "- " $9 " (" $5 " bytes)"}')
+        
+        ## Risk Assessment Summary
+        $(if [ -f "outputs/risk_summary.md" ]; then head -20 outputs/risk_summary.md; else echo "Risk summary not available"; fi)
+        
+        ## Performance Logs
+        $(if [ -f "logs/gpt_trader.log" ]; then echo "Enhanced logging active - $(wc -l < logs/gpt_trader.log) log entries"; else echo "No performance logs"; fi)
+        
+        EOF
+        
+        echo "📄 Pipeline summary generated"
+
+    # ── 9) Enhanced commit & push output files ────────────────────────
+    - name: Commit enhanced outputs
       run: |
         set -e
         git config --global user.email "actions@github.com"
         git config --global user.name  "github-actions[bot]"
 
-        # Force-add: ignore szabályok ellenére is stage-re kerül
+        # Force-add all output files (ignore .gitignore rules)
         git add -f \
-          outputs/news_sentiment.json \
-          outputs/portfolio_risk_budget.json \
           outputs/portfolio_latest.json \
+          outputs/portfolio_risk_adjusted.json \
+          outputs/portfolio_risk_assessment.json \
+          outputs/risk_assessment_report.json \
+          outputs/risk_summary.md \
+          outputs/news_sentiment.json \
+          outputs/news_sentiment_detailed.json \
+          outputs/portfolio_risk_budget.json \
           outputs/backtest_equity.json \
           outputs/backtest_rebal_equity.json \
           outputs/backtest_rebal_stats.json \
-          outputs/backtest_stats.json
-
-        # Commit csak, ha valóban van változás
-        if ! git diff --cached --quiet; then
-          git commit -m "[CI] autoupdate $(date -u +'%Y-%m-%dT%H:%MZ')"
-          git push
-        else
-          echo "No changes to commit."
+          outputs/backtest_stats.json \
+          pipeline_summary.md
+        
+        # Add performance logs if they exist
+        if ls logs/performance_*.json 1> /dev/null 2>&1; then
+          git add -f logs/performance_*.json
         fi
+        
+        # Add main log file if it exists (but limit size)
+        if [[ -f "logs/gpt_trader.log" ]]; then
+          # Only add if log file is reasonable size (< 1MB)
+          if [[ $(stat -f%z "logs/gpt_trader.log" 2>/dev/null || stat -c%s "logs/gpt_trader.log" 2>/dev/null || echo 0) -lt 1048576 ]]; then
+            git add -f logs/gpt_trader.log
+          else
+            echo "⚠️ Log file too large, skipping commit"
+          fi
+        fi
+
+        # Commit only if there are actual changes
+        if ! git diff --cached --quiet; then
+          # Enhanced commit message with summary
+          commit_msg="[CI] Enhanced pipeline autoupdate $(date -u +'%Y-%m-%dT%H:%MZ')
+
+          🚀 Enhanced GPT Portfolio Pipeline Results:
+          - ✅ Risk Management Integration Active
+          - ✅ Enhanced LLM Scoring with Async Processing  
+          - ✅ Intelligent News Sentiment Analysis
+          - ✅ Risk-Adjusted Portfolio Generation
+          - ✅ Comprehensive Risk Assessment Reports
+          
+          📊 Key Files Updated:
+          $(git diff --cached --name-only | head -10)
+          $([ $(git diff --cached --name-only | wc -l) -gt 10 ] && echo "... and $(expr $(git diff --cached --name-only | wc -l) - 10) more files")
+          
+          🛡️ Risk Level: $(grep "Overall Risk Level:" outputs/risk_summary.md 2>/dev/null | head -1 | cut -d: -f2 | xargs || echo "Unknown")
+          📈 Compliance: $(grep "Compliance Status:" outputs/risk_summary.md 2>/dev/null | head -1 | cut -d: -f2 | xargs || echo "Unknown")"
+          
+          git commit -m "$commit_msg"
+          git push
+          
+          echo "✅ Enhanced outputs committed and pushed successfully!"
+        else
+          echo "ℹ️ No changes to commit - pipeline outputs unchanged"
+        fi
+
+    # ── 10) Workflow summary ──────────────────────────────────────────
+    - name: Workflow completion summary
+      if: always()
+      run: |
+        echo "═══════════════════════════════════════════════════════════"
+        echo "🎉 ENHANCED GPT PORTFOLIO PIPELINE COMPLETED"
+        echo "═══════════════════════════════════════════════════════════"
+        echo "📅 Execution Date: $(date -u +'%Y-%m-%d %H:%M:%S UTC')"
+        echo "⏱️  Total Duration: $SECONDS seconds"
+        echo "🔧 Enhanced Features:"
+        echo "   • 8x Async LLM Processing"
+        echo "   • Intelligent Retry Logic"
+        echo "   • Risk Management Integration"
+        echo "   • Governance Risk Assessment"
+        echo "   • Automated Risk Adjustments"
+        echo "   • Comprehensive Logging"
+        echo ""
+        echo "📊 Output Files Generated:"
+        ls -la outputs/ 2>/dev/null | grep -v '^d' | wc -l | xargs echo "   •" "files in outputs/"
+        echo ""
+        echo "🛡️ Risk Assessment:"
+        if [[ -f "outputs/risk_summary.md" ]]; then
+          grep -E "(Overall Risk Level|Compliance Status)" outputs/risk_summary.md | sed 's/^/   • /'
+        else
+          echo "   • Risk assessment data not available"
+        fi
+        echo ""
+        echo "🚀 Ready for dashboard viewing at:"
+        echo "   📊 https://gpt-trader-yprfiqjxyzfscnqejjq93n.streamlit.app"
+        echo "═══════════════════════════════════════════════════════════"
+        echo "Thank you for using the Enhanced GPT Portfolio Pipeline!"
+        echo "For issues, please open a ticket at: https://github.com/Maeshowe/issues"
