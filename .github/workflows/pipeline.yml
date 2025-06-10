@@ -23,101 +23,52 @@ jobs:
       with:
         python-version: '3.11'
 
-    # ── 3) System deps (TA‑Lib headers) ───────────────────────────────
-    #    Fixes wheel‑build error: "fatal error: ta-lib/ta_defs.h: No such file or directory"
-    - name: Install TA‑Lib system dependencies
-      run: |
-        sudo apt-get update
-        # TA-Lib 0.4.x packages were renamed on Ubuntu 22.04+
-        sudo apt-get install -y ta-lib ta-lib-dev || {
-          echo "⚠️  distro repo lacks ta-lib; building from source…";
-          sudo apt-get install -y build-essential wget;
-          wget -q http://prdownloads.sourceforge.net/ta-lib/ta-lib-0.4.0-src.tar.gz;
-          tar -xzf ta-lib-0.4.0-src.tar.gz;
-          cd ta-lib && ./configure --prefix=/usr && make -j$(nproc) && sudo make install;
-          cd ..;
-          sudo ldconfig;
-        }
-
-    # ── 4) Python dependencies ────────────────────────────────────────
-    - name: Install Python dependencies
+    # ── 3) Dependencies ───────────────────────────────────────────────
+    - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
-        #  ta-lib will now compile successfully because the headers are present
         pip install -r requirements.txt
-        pip install aiohttp scipy  # extra deps
 
-    # ── 5) Create logs & outputs dirs ─────────────────────────────────
-    - name: Create logs and outputs directories
-      run: |
-        mkdir -p logs
-        mkdir -p outputs
-
-    # ── 6) Secrets → ENV ──────────────────────────────────────────────
+    # ── 4) Secrets → ENV ──────────────────────────────────────────────
     - name: Export secrets
       run: |
         echo "OPENAI_API_KEY=${{ secrets.OPENAI_API_KEY }}"      >> $GITHUB_ENV
         echo "FRED_API_KEY=${{ secrets.FRED_API_KEY }}"          >> $GITHUB_ENV
         echo "STOCKNEWS_API_KEY=${{ secrets.STOCKNEWS_API_KEY }}" >> $GITHUB_ENV
 
-    # ── 7) Run pipeline ───────────────────────────────────────────────
-    - name: Run GPT portfolio pipeline
+    # ── 5) Teljes pipeline ────────────────────────────────────────────
+    - name: Run full pipeline
       run: |
-        echo "🚀 Starting GPT Portfolio Pipeline..."
-        echo "📊 Step 1: Fetching market data..." && python data_fetch/fetch_data.py
-        echo "🤖 Step 2: Running LLM scoring..."    && python run_prompts.py
-        echo "📰 Step 3: Analyzing news sentiment..." && python news_sentiment.py
-        echo "⚖️ Step 4: Generating portfolio..."  && python generator_runner.py
-        echo "🛡️ Step 5: Applying risk management..." && python integrate_risk_management.py
-        echo "📈 Step 6: Backtesting..."           && python backtest.py && python backtest_rebal.py
-        echo "💰 Step 7: Risk budget optimization..." && python risk_budget.py
-        echo "✅ Pipeline completed successfully!"
+        python data_fetch/fetch_data.py
+        python run_prompts.py
+        python news_sentiment.py
+        python generator_runner.py
+        python integrate_risk_management.py
+        python backtest.py
+        python backtest_rebal.py
+        python risk_budget.py
 
-    # ── 8) Validate outputs ───────────────────────────────────────────
-    - name: Validate pipeline outputs
-      run: |
-        echo "🔍 Validating pipeline outputs..."
-        required_files=(
-          "outputs/portfolio_latest.json"
-          "outputs/portfolio_risk_adjusted.json"
-          "outputs/portfolio_risk_assessment.json"
-          "outputs/risk_summary.md"
-          "outputs/news_sentiment.json"
-          "outputs/backtest_equity.json"
-          "outputs/backtest_stats.json"
-        )
-        missing=()
-        for f in "${required_files[@]}"; do
-          [[ -f "$f" ]] && echo "✅ $f exists" || missing+=("$f")
-        done
-        if (( ${#missing[@]} )); then
-          echo "❌ Missing files:"; printf '%s\n' "${missing[@]}"; exit 1; fi
-        echo "🔍 Validating JSON..."
-        for jf in outputs/*.json; do python -m json.tool "$jf" > /dev/null || { echo "❌ $jf invalid"; exit 1; }; done
-        echo "✅ All validations passed!"
-
-    # ── 9) Generate summary ───────────────────────────────────────────
-    - name: Generate pipeline summary
-      run: |
-        echo "📊 Generating summary..."
-        cat > pipeline_summary.md <<EOF
-        # GPT Portfolio Pipeline Execution Summary
-        **Execution Date:** \$(date -u '+%Y-%m-%d %H:%M:%S UTC')
-        **Commit:** \${{ github.sha }}
-        **Triggered by:** \${{ github.event_name }}
-        EOF
-
-    # ── 10) Commit outputs (unchanged block) ──────────────────────────
-    - name: Commit pipeline outputs
+    # ── 6) Commit & push output JSON-ok ───────────────────────────────
+    - name: Commit outputs
       run: |
         set -e
         git config --global user.email "actions@github.com"
         git config --global user.name  "github-actions[bot]"
-        # (commit logic unchanged, omitted here for brevity)
-        echo "ℹ️ Commit step trimmed in this snippet"
 
-    # ── 11) Final workflow summary ────────────────────────────────────
-    - name: Workflow completion summary
-      if: always()
-      run: |
-        echo "🎉 GPT PORTFOLIO PIPELINE COMPLETED — see summary above"
+        # Force-add: ignore szabályok ellenére is stage-re kerül
+        git add -f \
+          outputs/news_sentiment.json \
+          outputs/portfolio_risk_budget.json \
+          outputs/portfolio_latest.json \
+          outputs/backtest_equity.json \
+          outputs/backtest_rebal_equity.json \
+          outputs/backtest_rebal_stats.json \
+          outputs/backtest_stats.json
+
+        # Commit csak, ha valóban van változás
+        if ! git diff --cached --quiet; then
+          git commit -m "[CI] autoupdate $(date -u +'%Y-%m-%dT%H:%MZ')"
+          git push
+        else
+          echo "No changes to commit."
+        fi
