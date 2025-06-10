@@ -13,27 +13,27 @@
   },
   {
     "ticker": "JPM",
-    "avg_sent": 0.533
-  },
-  {
-    "ticker": "XOM",
-    "avg_sent": 0.588
-  },
-  {
-    "ticker": "SLB",
-    "avg_sent": 1.0
+    "avg_sent": 0.571
   },
   {
     "ticker": "GS",
     "avg_sent": 0.6
   },
   {
-    "ticker": "CVX",
-    "avg_sent": 0.2
+    "ticker": "SLB",
+    "avg_sent": 1.0
+  },
+  {
+    "ticker": "XOM",
+    "avg_sent": 0.562
   },
   {
     "ticker": "BAC",
     "avg_sent": 0.667
+  },
+  {
+    "ticker": "CVX",
+    "avg_sent": 0.2
   },
   {
     "ticker": "XLK",
@@ -44,19 +44,11 @@
     "avg_sent": 0.5
   },
   {
-    "ticker": "XLE",
-    "avg_sent": 0.0
+    "ticker": "XLI",
+    "avg_sent": 1.0
   },
   {
-    "ticker": "TSLA",
-    "avg_sent": -0.19
-  },
-  {
-    "ticker": "AMZN",
-    "avg_sent": 0.577
-  },
-  {
-    "ticker": "GOOGL",
-    "avg_sent": 0.393
+    "ticker": "XLV",
+    "avg_sent": 0.667
   }
 ]

@@ -51,4 +51,16 @@ python backtest.py
 python backtest_rebal.py
 python risk_budget.py
 
-streamlit run dashboard/app.py  
+streamlit run dashboard/app.py
+
+git commit -am "chore(docs): trigger CI" 
+
+
+# CI lefutott és pusholt változásokat
+git pull origin main  # Lehúzod a CI változásait
+
+# Most folytathatod a munkát
+vim news_sentiment.py
+git add .
+git commit -m "feat: add new feature"
+git push origin main

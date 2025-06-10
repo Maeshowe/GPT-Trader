@@ -1,6 +1,6 @@
 [
   {
-    "name": "technology",
+    "name": "Energy",
     "macro_indicators_json": {
       "GDP": 29.98,
       "CPI": 320.32,
@@ -8,11 +8,11 @@
       "InterestRate": 4.33
     },
     "sector_news_snippets": [],
-    "today": "2025-06-09",
-    "sector_score": 85
+    "today": "2025-06-10",
+    "sector_score": 75
   },
   {
-    "name": "financials",
+    "name": "Materials",
     "macro_indicators_json": {
       "GDP": 29.98,
       "CPI": 320.32,
@@ -20,11 +20,11 @@
       "InterestRate": 4.33
     },
     "sector_news_snippets": [],
-    "today": "2025-06-09",
+    "today": "2025-06-10",
     "sector_score": 78
   },
   {
-    "name": "energy",
+    "name": "Industrials",
     "macro_indicators_json": {
       "GDP": 29.98,
       "CPI": 320.32,
@@ -32,7 +32,103 @@
       "InterestRate": 4.33
     },
     "sector_news_snippets": [],
-    "today": "2025-06-09",
+    "today": "2025-06-10",
+    "sector_score": 75
+  },
+  {
+    "name": "Consumer Discretionary",
+    "macro_indicators_json": {
+      "GDP": 29.98,
+      "CPI": 320.32,
+      "Unemployment": 4.2,
+      "InterestRate": 4.33
+    },
+    "sector_news_snippets": [],
+    "today": "2025-06-10",
     "sector_score": 78
+  },
+  {
+    "name": "Consumer Staples",
+    "macro_indicators_json": {
+      "GDP": 29.98,
+      "CPI": 320.32,
+      "Unemployment": 4.2,
+      "InterestRate": 4.33
+    },
+    "sector_news_snippets": [],
+    "today": "2025-06-10",
+    "sector_score": 75
+  },
+  {
+    "name": "Health Care",
+    "macro_indicators_json": {
+      "GDP": 29.98,
+      "CPI": 320.32,
+      "Unemployment": 4.2,
+      "InterestRate": 4.33
+    },
+    "sector_news_snippets": [],
+    "today": "2025-06-10",
+    "sector_score": 78
+  },
+  {
+    "name": "Financials",
+    "macro_indicators_json": {
+      "GDP": 29.98,
+      "CPI": 320.32,
+      "Unemployment": 4.2,
+      "InterestRate": 4.33
+    },
+    "sector_news_snippets": [],
+    "today": "2025-06-10",
+    "sector_score": 78
+  },
+  {
+    "name": "Information Technology",
+    "macro_indicators_json": {
+      "GDP": 29.98,
+      "CPI": 320.32,
+      "Unemployment": 4.2,
+      "InterestRate": 4.33
+    },
+    "sector_news_snippets": [],
+    "today": "2025-06-10",
+    "sector_score": 78
+  },
+  {
+    "name": "Communication Services",
+    "macro_indicators_json": {
+      "GDP": 29.98,
+      "CPI": 320.32,
+      "Unemployment": 4.2,
+      "InterestRate": 4.33
+    },
+    "sector_news_snippets": [],
+    "today": "2025-06-10",
+    "sector_score": 78
+  },
+  {
+    "name": "Utilities",
+    "macro_indicators_json": {
+      "GDP": 29.98,
+      "CPI": 320.32,
+      "Unemployment": 4.2,
+      "InterestRate": 4.33
+    },
+    "sector_news_snippets": [],
+    "today": "2025-06-10",
+    "sector_score": 78
+  },
+  {
+    "name": "Real Estate",
+    "macro_indicators_json": {
+      "GDP": 29.98,
+      "CPI": 320.32,
+      "Unemployment": 4.2,
+      "InterestRate": 4.33
+    },
+    "sector_news_snippets": [],
+    "today": "2025-06-10",
+    "sector_score": 75
   }
 ]
