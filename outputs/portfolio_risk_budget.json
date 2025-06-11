@@ -1,62 +1,62 @@
 [
   {
     "ticker": "MSFT",
-    "weight": 5.2
+    "weight": 6.41
   },
   {
     "ticker": "AAPL",
-    "weight": 4.85
+    "weight": 6.02
+  },
+  {
+    "ticker": "XOM",
+    "weight": 6.84
+  },
+  {
+    "ticker": "SLB",
+    "weight": 4.39
+  },
+  {
+    "ticker": "MRK",
+    "weight": 7.27
+  },
+  {
+    "ticker": "NKE",
+    "weight": 4.58
+  },
+  {
+    "ticker": "NVDA",
+    "weight": 2.5
+  },
+  {
+    "ticker": "CSCO",
+    "weight": 7.92
   },
   {
     "ticker": "BAC",
-    "weight": 4.9
-  },
-  {
-    "ticker": "PFE",
-    "weight": 4.23
-  },
-  {
-    "ticker": "XLE",
-    "weight": 5.78
-  },
-  {
-    "ticker": "XLB",
-    "weight": 7.08
-  },
-  {
-    "ticker": "XLI",
-    "weight": 8.49
-  },
-  {
-    "ticker": "XLY",
     "weight": 6.05
   },
   {
-    "ticker": "XLP",
-    "weight": 10.32
+    "ticker": "KO",
+    "weight": 10.86
+  },
+  {
+    "ticker": "UBER",
+    "weight": 3.26
+  },
+  {
+    "ticker": "T",
+    "weight": 5.74
+  },
+  {
+    "ticker": "WMT",
+    "weight": 8.95
+  },
+  {
+    "ticker": "WFC",
+    "weight": 5.14
   },
   {
     "ticker": "XLV",
-    "weight": 11.35
-  },
-  {
-    "ticker": "XLF",
-    "weight": 9.42
-  },
-  {
-    "ticker": "XLK",
-    "weight": 5.17
-  },
-  {
-    "ticker": "XLC",
-    "weight": 5.77
-  },
-  {
-    "ticker": "XLU",
-    "weight": 5.72
-  },
-  {
-    "ticker": "XLRE",
-    "weight": 5.67
+    "weight": 14.05
   }
 ]

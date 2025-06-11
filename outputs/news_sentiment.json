@@ -1,7 +1,7 @@
 [
   {
     "ticker": "MSFT",
-    "avg_sent": 0.509,
+    "avg_sent": 0.569,
     "is_negative": false,
     "weight_adjustment": 0
   },
@@ -36,6 +36,12 @@
     "weight_adjustment": 0
   },
   {
+    "ticker": "XLI",
+    "avg_sent": 0.0,
+    "is_negative": false,
+    "weight_adjustment": 0
+  },
+  {
     "ticker": "XLP",
     "avg_sent": 0.0,
     "is_negative": false,
@@ -43,7 +49,7 @@
   },
   {
     "ticker": "XLV",
-    "avg_sent": 0.5,
+    "avg_sent": 0.333,
     "is_negative": false,
     "weight_adjustment": 0
   },
@@ -55,7 +61,7 @@
   },
   {
     "ticker": "XLK",
-    "avg_sent": 0.0,
+    "avg_sent": 0.5,
     "is_negative": false,
     "weight_adjustment": 0
   },

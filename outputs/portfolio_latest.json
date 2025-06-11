@@ -1,110 +1,110 @@
 {
-  "date": "2025-06-10",
+  "date": "2025-06-11",
   "table": [
     {
       "Asset": "MSFT ",
-      "Weight (%)": " 10 ",
+      "Weight (%)": " 8 ",
       "Thesis": " Top-ranked firm ",
-      "Edge": " Strong tech sector ",
+      "Edge": " Strong tech sector performance ",
       "Risk": " Market volatility"
     },
     {
       "Asset": "AAPL ",
-      "Weight (%)": " 10 ",
+      "Weight (%)": " 8 ",
       "Thesis": " Top-ranked firm ",
       "Edge": " Innovation leadership ",
       "Risk": " Supply chain disruptions"
     },
     {
-      "Asset": "BAC ",
-      "Weight (%)": " 10 ",
+      "Asset": "XOM ",
+      "Weight (%)": " 8 ",
       "Thesis": " Top-ranked firm ",
-      "Edge": " Financial sector strength ",
-      "Risk": " Interest rate fluctuations"
+      "Edge": " Energy sector strength ",
+      "Risk": " Commodity price fluctuations"
     },
     {
-      "Asset": "PFE ",
-      "Weight (%)": " 10 ",
+      "Asset": "SLB ",
+      "Weight (%)": " 8 ",
+      "Thesis": " Top-ranked firm ",
+      "Edge": " Energy sector strength ",
+      "Risk": " Geopolitical risks"
+    },
+    {
+      "Asset": "MRK ",
+      "Weight (%)": " 8 ",
       "Thesis": " Top-ranked firm ",
       "Edge": " Healthcare demand ",
-      "Risk": " Regulatory challenges"
+      "Risk": " Regulatory changes"
     },
     {
-      "Asset": "XLE ",
+      "Asset": "NKE ",
       "Weight (%)": " 8 ",
-      "Thesis": " Energy sector ETF ",
-      "Edge": " Rising energy prices ",
-      "Risk": " Geopolitical tensions"
+      "Thesis": " Top-ranked firm ",
+      "Edge": " Brand strength ",
+      "Risk": " Consumer spending shifts"
     },
     {
-      "Asset": "XLB ",
+      "Asset": "NVDA ",
       "Weight (%)": " 8 ",
-      "Thesis": " Materials sector ETF ",
-      "Edge": " Infrastructure spending ",
-      "Risk": " Commodity price swings"
+      "Thesis": " Top-ranked firm ",
+      "Edge": " AI and gaming growth ",
+      "Risk": " Tech sector volatility"
     },
     {
-      "Asset": "XLI ",
+      "Asset": "CSCO ",
       "Weight (%)": " 8 ",
-      "Thesis": " Industrial sector ETF ",
-      "Edge": " Economic recovery ",
-      "Risk": " Supply chain issues"
-    },
-    {
-      "Asset": "XLY ",
-      "Weight (%)": " 8 ",
-      "Thesis": " Consumer discretionary ETF ",
-      "Edge": " Consumer spending rebound ",
-      "Risk": " Inflation pressures"
-    },
-    {
-      "Asset": "XLP ",
-      "Weight (%)": " 8 ",
-      "Thesis": " Consumer staples ETF ",
-      "Edge": " Defensive play ",
-      "Risk": " Price sensitivity"
-    },
-    {
-      "Asset": "XLV ",
-      "Weight (%)": " 8 ",
-      "Thesis": " Healthcare sector ETF ",
-      "Edge": " Aging population ",
-      "Risk": " Policy changes"
-    },
-    {
-      "Asset": "XLF ",
-      "Weight (%)": " 8 ",
-      "Thesis": " Financial sector ETF ",
-      "Edge": " Interest rate environment ",
-      "Risk": " Credit risk"
-    },
-    {
-      "Asset": "XLK ",
-      "Weight (%)": " 8 ",
-      "Thesis": " Technology sector ETF ",
-      "Edge": " Tech innovation ",
-      "Risk": " Valuation concerns"
-    },
-    {
-      "Asset": "XLC ",
-      "Weight (%)": " 8 ",
-      "Thesis": " Communication services ETF ",
-      "Edge": " Digital transformation ",
+      "Thesis": " Top-ranked firm ",
+      "Edge": " Networking demand ",
       "Risk": " Competitive pressures"
     },
     {
-      "Asset": "XLU ",
+      "Asset": "BAC ",
       "Weight (%)": " 8 ",
-      "Thesis": " Utilities sector ETF ",
-      "Edge": " Stable cash flows ",
-      "Risk": " Regulatory risks"
+      "Thesis": " Top-ranked firm ",
+      "Edge": " Financial sector resilience ",
+      "Risk": " Interest rate changes"
     },
     {
-      "Asset": "XLRE ",
+      "Asset": "KO ",
       "Weight (%)": " 8 ",
-      "Thesis": " Real estate sector ETF ",
-      "Edge": " Real estate recovery ",
-      "Risk": " Interest rate sensitivity"
+      "Thesis": " Top-ranked firm ",
+      "Edge": " Consumer staples stability ",
+      "Risk": " Currency fluctuations"
+    },
+    {
+      "Asset": "UBER ",
+      "Weight (%)": " 8 ",
+      "Thesis": " Top-ranked firm ",
+      "Edge": " Mobility recovery ",
+      "Risk": " Regulatory challenges"
+    },
+    {
+      "Asset": "T ",
+      "Weight (%)": " 8 ",
+      "Thesis": " Top-ranked firm ",
+      "Edge": " Telecom stability ",
+      "Risk": " Market competition"
+    },
+    {
+      "Asset": "WMT ",
+      "Weight (%)": " 8 ",
+      "Thesis": " Top-ranked firm ",
+      "Edge": " Retail dominance ",
+      "Risk": " Supply chain issues"
+    },
+    {
+      "Asset": "WFC ",
+      "Weight (%)": " 8 ",
+      "Thesis": " Top-ranked firm ",
+      "Edge": " Financial sector resilience ",
+      "Risk": " Economic downturns"
+    },
+    {
+      "Asset": "XLV ",
+      "Weight (%)": " 4 ",
+      "Thesis": " Healthcare ETF ",
+      "Edge": " Sector diversification ",
+      "Risk": " Sector-specific risks"
     }
   ]
 }
