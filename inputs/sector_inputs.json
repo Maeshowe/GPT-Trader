@@ -8,7 +8,7 @@
       "InterestRate": 4.33
     },
     "sector_news_snippets": [],
-    "today": "2025-06-10",
+    "today": "2025-06-11",
     "sector_score": 78
   },
   {
@@ -20,8 +20,8 @@
       "InterestRate": 4.33
     },
     "sector_news_snippets": [],
-    "today": "2025-06-10",
-    "sector_score": 78
+    "today": "2025-06-11",
+    "sector_score": 75
   },
   {
     "name": "Industrials",
@@ -32,23 +32,11 @@
       "InterestRate": 4.33
     },
     "sector_news_snippets": [],
-    "today": "2025-06-10",
-    "sector_score": 72
-  },
-  {
-    "name": "Consumer Discretionary",
-    "macro_indicators_json": {
-      "GDP": 29.98,
-      "CPI": 320.32,
-      "Unemployment": 4.2,
-      "InterestRate": 4.33
-    },
-    "sector_news_snippets": [],
-    "today": "2025-06-10",
+    "today": "2025-06-11",
     "sector_score": 78
   },
   {
-    "name": "Consumer Staples",
+    "name": "Utilities",
     "macro_indicators_json": {
       "GDP": 29.98,
       "CPI": 320.32,
@@ -56,7 +44,7 @@
       "InterestRate": 4.33
     },
     "sector_news_snippets": [],
-    "today": "2025-06-10",
+    "today": "2025-06-11",
     "sector_score": 75
   },
   {
@@ -68,7 +56,7 @@
       "InterestRate": 4.33
     },
     "sector_news_snippets": [],
-    "today": "2025-06-10",
+    "today": "2025-06-11",
     "sector_score": 78
   },
   {
@@ -80,8 +68,32 @@
       "InterestRate": 4.33
     },
     "sector_news_snippets": [],
-    "today": "2025-06-10",
+    "today": "2025-06-11",
     "sector_score": 78
+  },
+  {
+    "name": "Consumer Discretionary",
+    "macro_indicators_json": {
+      "GDP": 29.98,
+      "CPI": 320.32,
+      "Unemployment": 4.2,
+      "InterestRate": 4.33
+    },
+    "sector_news_snippets": [],
+    "today": "2025-06-11",
+    "sector_score": 78
+  },
+  {
+    "name": "Consumer Staples",
+    "macro_indicators_json": {
+      "GDP": 29.98,
+      "CPI": 320.32,
+      "Unemployment": 4.2,
+      "InterestRate": 4.33
+    },
+    "sector_news_snippets": [],
+    "today": "2025-06-11",
+    "sector_score": 75
   },
   {
     "name": "Information Technology",
@@ -92,7 +104,7 @@
       "InterestRate": 4.33
     },
     "sector_news_snippets": [],
-    "today": "2025-06-10",
+    "today": "2025-06-11",
     "sector_score": 75
   },
   {
@@ -104,19 +116,7 @@
       "InterestRate": 4.33
     },
     "sector_news_snippets": [],
-    "today": "2025-06-10",
-    "sector_score": 75
-  },
-  {
-    "name": "Utilities",
-    "macro_indicators_json": {
-      "GDP": 29.98,
-      "CPI": 320.32,
-      "Unemployment": 4.2,
-      "InterestRate": 4.33
-    },
-    "sector_news_snippets": [],
-    "today": "2025-06-10",
+    "today": "2025-06-11",
     "sector_score": 78
   },
   {
@@ -128,7 +128,7 @@
       "InterestRate": 4.33
     },
     "sector_news_snippets": [],
-    "today": "2025-06-10",
-    "sector_score": 78
+    "today": "2025-06-11",
+    "sector_score": 75
   }
 ]

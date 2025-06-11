@@ -676,3 +676,161 @@
 2025-06-10 21:56:37,478 - __main__ - INFO -    ✅ Enhanced SHAP with screening integration
 2025-06-10 21:56:37,478 - __main__ - INFO -    ✅ Filtered firm processing (efficiency boost)
 2025-06-10 21:56:37,478 - __main__ - INFO -    ✅ Comprehensive performance monitoring
+2025-06-11 13:06:34,690 - __main__ - INFO - ============================================================
+2025-06-11 13:06:34,690 - __main__ - INFO - 🚀 Starting ENHANCED GPT Portfolio Scoring Pipeline V3 with Composite Scoring
+2025-06-11 13:06:34,690 - __main__ - INFO - ============================================================
+2025-06-11 13:06:34,690 - __main__ - INFO - 📋 Configuration:
+2025-06-11 13:06:34,690 - __main__ - INFO -    Model: gpt-4o
+2025-06-11 13:06:34,691 - __main__ - INFO -    Max Concurrency: 8
+2025-06-11 13:06:34,691 - __main__ - INFO -    Request Timeout: 90s
+2025-06-11 13:06:34,691 - __main__ - INFO -    Retry Limit: 5
+2025-06-11 13:06:34,691 - __main__ - INFO -    🆕 Quantitative Screening: ENABLED
+2025-06-11 13:06:34,691 - __main__ - INFO -    🆕 Composite Scoring: ENABLED
+2025-06-11 13:06:34,691 - __main__ - INFO - 🔍 Step 0: Starting quantitative pre-screening...
+2025-06-11 13:06:34,691 - quantitative_screening - INFO - 🎯 Starting quantitative screening for 110 tickers
+2025-06-11 13:06:34,691 - quantitative_screening - INFO - 🔍 Starting quantitative screening for 110 candidates
+2025-06-11 13:06:34,691 - quantitative_screening - INFO - 📊 Step 1: Applying market cap filter...
+2025-06-11 13:07:01,830 - quantitative_screening - INFO - 📊 Market cap filter: 109/110 passed
+2025-06-11 13:07:01,831 - quantitative_screening - INFO - ❌ Failed market cap: BRK.B
+2025-06-11 13:07:01,831 - quantitative_screening - INFO - 💧 Step 2: Applying liquidity filter...
+2025-06-11 13:07:23,527 - quantitative_screening - INFO - 💧 Liquidity filter: 22/109 passed (threshold: 15,640,496)
+2025-06-11 13:07:23,528 - quantitative_screening - INFO - 📈 Step 3: Applying fundamentals filter...
+2025-06-11 13:07:27,734 - quantitative_screening - INFO - 📈 Fundamentals filter: 19/22 passed
+2025-06-11 13:07:27,734 - quantitative_screening - INFO - ⚡ Step 4: Applying technical filter...
+2025-06-11 13:07:31,153 - quantitative_screening - INFO - ⚡ Technical filter: 14/19 passed
+2025-06-11 13:07:31,153 - quantitative_screening - INFO - ============================================================
+2025-06-11 13:07:31,153 - quantitative_screening - INFO - 📊 QUANTITATIVE SCREENING RESULTS
+2025-06-11 13:07:31,153 - quantitative_screening - INFO - ============================================================
+2025-06-11 13:07:31,153 - quantitative_screening - INFO - 📈 Total candidates: 110
+2025-06-11 13:07:31,153 - quantitative_screening - INFO - 💰 Market cap filter: 109 passed
+2025-06-11 13:07:31,153 - quantitative_screening - INFO - 💧 Liquidity filter: 22 passed
+2025-06-11 13:07:31,153 - quantitative_screening - INFO - 📊 Fundamentals filter: 19 passed
+2025-06-11 13:07:31,153 - quantitative_screening - INFO - ⚡ Technical filter: 14 passed
+2025-06-11 13:07:31,153 - quantitative_screening - INFO - ✅ Final passed: 14
+2025-06-11 13:07:31,153 - quantitative_screening - INFO - 🎯 Overall pass rate: 12.7%
+2025-06-11 13:07:31,153 - quantitative_screening - INFO - ============================================================
+2025-06-11 13:07:31,155 - quantitative_screening - INFO - ✅ Screening results saved to /Users/safrtam/SSH-Services/GPT-Trader/outputs/quantitative_screening_results.json
+2025-06-11 13:07:31,155 - __main__ - INFO - ✅ Quantitative screening completed in 56.5s
+2025-06-11 13:07:31,155 - __main__ - INFO - 🎯 Passed screening: 14 tickers
+2025-06-11 13:07:31,156 - __main__ - INFO - 📊 Updated firm_inputs.json: 14/110 firms passed screening
+2025-06-11 13:07:31,156 - __main__ - INFO - 📊 Step 1: Starting sector scoring batch...
+2025-06-11 13:07:31,158 - __main__ - INFO - → Processing sector: Energy
+2025-06-11 13:07:31,273 - __main__ - INFO - → Processing sector: Materials
+2025-06-11 13:07:31,276 - __main__ - INFO - → Processing sector: Industrials
+2025-06-11 13:07:31,280 - __main__ - INFO - → Processing sector: Utilities
+2025-06-11 13:07:31,284 - __main__ - INFO - → Processing sector: Healthcare
+2025-06-11 13:07:31,288 - __main__ - INFO - → Processing sector: Financials
+2025-06-11 13:07:31,289 - __main__ - INFO - → Processing sector: Consumer Discretionary
+2025-06-11 13:07:31,290 - __main__ - INFO - → Processing sector: Consumer Staples
+2025-06-11 13:07:31,290 - __main__ - INFO - → Processing sector: Information Technology
+2025-06-11 13:07:31,291 - __main__ - INFO - → Processing sector: Communication Services
+2025-06-11 13:07:31,291 - __main__ - INFO - → Processing sector: Real Estate
+2025-06-11 13:07:37,113 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-11 13:07:37,121 - __main__ - INFO - ✓ Communication Services score = 78 (took 5.83s)
+2025-06-11 13:07:37,316 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-11 13:07:37,318 - __main__ - INFO - ✓ Energy score = 78 (took 6.16s)
+2025-06-11 13:07:37,321 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-11 13:07:37,334 - __main__ - INFO - ✓ Consumer Discretionary score = 78 (took 6.04s)
+2025-06-11 13:07:38,033 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-11 13:07:38,036 - __main__ - INFO - ✓ Real Estate score = 75 (took 6.74s)
+2025-06-11 13:07:38,237 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-11 13:07:38,239 - __main__ - INFO - ✓ Information Technology score = 75 (took 6.95s)
+2025-06-11 13:07:39,117 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-11 13:07:39,120 - __main__ - INFO - ✓ Industrials score = 78 (took 7.84s)
+2025-06-11 13:07:39,138 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-11 13:07:39,143 - __main__ - INFO - ✓ Materials score = 75 (took 7.87s)
+2025-06-11 13:07:39,254 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-11 13:07:39,257 - __main__ - INFO - ✓ Utilities score = 75 (took 7.98s)
+2025-06-11 13:07:40,183 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-11 13:07:40,186 - __main__ - INFO - ✓ Consumer Staples score = 75 (took 8.90s)
+2025-06-11 13:07:40,310 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-11 13:07:40,313 - __main__ - INFO - ✓ Healthcare score = 78 (took 9.03s)
+2025-06-11 13:07:42,026 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-11 13:07:42,030 - __main__ - INFO - ✓ Financials score = 78 (took 10.74s)
+2025-06-11 13:07:42,031 - __main__ - INFO - ✅ Sector scoring completed: 11/11 successful in 10.9s
+2025-06-11 13:07:42,032 - __main__ - INFO - 🏢 Step 2: Starting firm scoring batch (screened firms only)...
+2025-06-11 13:07:42,032 - __main__ - INFO - 📊 Processing 14/14 firms that passed screening
+2025-06-11 13:07:42,033 - __main__ - INFO - → Processing firm: XOM
+2025-06-11 13:07:42,035 - __main__ - INFO - → Processing firm: SLB
+2025-06-11 13:07:42,038 - __main__ - INFO - → Processing firm: UBER
+2025-06-11 13:07:42,040 - __main__ - INFO - → Processing firm: MRK
+2025-06-11 13:07:42,041 - __main__ - INFO - → Processing firm: BAC
+2025-06-11 13:07:42,043 - __main__ - INFO - → Processing firm: WFC
+2025-06-11 13:07:42,044 - __main__ - INFO - → Processing firm: NKE
+2025-06-11 13:07:42,046 - __main__ - INFO - → Processing firm: WMT
+2025-06-11 13:07:47,658 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-11 13:07:47,660 - __main__ - INFO - ✓ BAC score = 75 (took 5.62s)
+2025-06-11 13:07:47,661 - __main__ - INFO - → Processing firm: KO
+2025-06-11 13:07:48,783 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-11 13:07:48,786 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-11 13:07:48,788 - __main__ - INFO - ✓ UBER score = 72 (took 6.75s)
+2025-06-11 13:07:48,789 - __main__ - INFO - ✓ WFC score = 65 (took 6.75s)
+2025-06-11 13:07:48,790 - __main__ - INFO - → Processing firm: MSFT
+2025-06-11 13:07:48,792 - __main__ - INFO - → Processing firm: AAPL
+2025-06-11 13:07:49,703 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-11 13:07:49,704 - __main__ - INFO - ✓ WMT score = 72 (took 7.66s)
+2025-06-11 13:07:49,704 - __main__ - INFO - → Processing firm: NVDA
+2025-06-11 13:07:50,832 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-11 13:07:50,834 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-11 13:07:50,836 - __main__ - INFO - ✓ MRK score = 78 (took 8.80s)
+2025-06-11 13:07:50,837 - __main__ - INFO - ✓ NKE score = 78 (took 8.79s)
+2025-06-11 13:07:50,837 - __main__ - INFO - → Processing firm: CSCO
+2025-06-11 13:07:50,839 - __main__ - INFO - → Processing firm: T
+2025-06-11 13:07:51,491 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-11 13:07:51,500 - __main__ - INFO - ✓ XOM score = 78 (took 9.47s)
+2025-06-11 13:07:55,033 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-11 13:07:55,036 - __main__ - INFO - ✓ KO score = 78 (took 12.99s)
+2025-06-11 13:07:55,955 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-11 13:07:55,959 - __main__ - INFO - ✓ T score = 75 (took 13.91s)
+2025-06-11 13:07:56,497 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-11 13:07:56,500 - __main__ - INFO - ✓ MSFT score = 85 (took 14.45s)
+2025-06-11 13:07:57,079 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-11 13:07:57,083 - __main__ - INFO - ✓ CSCO score = 78 (took 15.04s)
+2025-06-11 13:07:57,112 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-11 13:07:57,117 - __main__ - INFO - ✓ AAPL score = 78 (took 15.07s)
+2025-06-11 13:07:57,590 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-11 13:07:57,592 - __main__ - INFO - ✓ SLB score = 78 (took 15.56s)
+2025-06-11 13:08:00,459 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-11 13:08:00,463 - __main__ - INFO - ✓ NVDA score = 78 (took 18.42s)
+2025-06-11 13:08:00,466 - __main__ - INFO - ✅ Firm scoring completed: 14/14 successful in 18.4s
+2025-06-11 13:08:00,466 - __main__ - INFO - 🔢 Step 3: Starting composite scoring integration...
+2025-06-11 13:08:00,466 - CompositeScorer - INFO - 🚀 Starting composite scoring integration…
+2025-06-11 13:08:00,466 - CompositeScorer - INFO - 🔢 Starting composite scoring calculation…
+2025-06-11 13:08:00,466 - CompositeScorer - INFO - 📥 Loading data sources…
+2025-06-11 13:08:00,467 - CompositeScorer - WARNING - ⚠️ News sentiment data not found
+2025-06-11 13:08:00,469 - CompositeScorer - WARNING - ⚠️ Macro indicators not found
+2025-06-11 13:08:00,472 - CompositeScorer - INFO - 🔍 DEBUG: Data sources analysis →
+2025-06-11 13:08:00,472 - CompositeScorer - INFO -    ✅ quantitative_screening: available
+2025-06-11 13:08:00,473 - CompositeScorer - INFO -    ❌ news_sentiment: NOT available
+2025-06-11 13:08:00,473 - CompositeScorer - INFO -    ✅ firm_inputs: available
+2025-06-11 13:08:00,473 - CompositeScorer - INFO -    ✅ sector_inputs: available
+2025-06-11 13:08:00,473 - CompositeScorer - INFO -    ❌ macro_indicators: NOT available
+2025-06-11 13:08:00,473 - CompositeScorer - INFO -    Total unique assets: 14
+2025-06-11 13:08:00,473 - CompositeScorer - INFO - 📊 Assets to score: 14
+2025-06-11 13:08:00,473 - CompositeScorer - WARNING - ⚠️ No composite scores calculated
+2025-06-11 13:08:00,473 - __main__ - ERROR - ❌ Composite scoring failed: No composite scores calculated
+2025-06-11 13:08:00,473 - __main__ - INFO - 🔢 Composite scoring step completed in 0.0s
+2025-06-11 13:08:00,473 - __main__ - INFO - ============================================================
+2025-06-11 13:08:00,474 - __main__ - INFO - 📊 ENHANCED PIPELINE V3 PERFORMANCE SUMMARY:
+2025-06-11 13:08:00,474 - __main__ - INFO - ============================================================
+2025-06-11 13:08:00,474 - __main__ - INFO - 🔍 Quantitative screening time: 56.5 seconds
+2025-06-11 13:08:00,474 - __main__ - INFO - 🔢 Composite scoring time: 0.0 seconds
+2025-06-11 13:08:00,474 - __main__ - INFO - ⏱️  Total execution time: 85.8 seconds
+2025-06-11 13:08:00,474 - __main__ - INFO - 🔢 Total API requests: 25
+2025-06-11 13:08:00,474 - __main__ - INFO - ❌ Failed requests: 0
+2025-06-11 13:08:00,474 - __main__ - INFO - ✅ Success rate: 100.0%
+2025-06-11 13:08:00,474 - __main__ - INFO - 📈 Average sector processing time: 7.64s
+2025-06-11 13:08:00,474 - __main__ - INFO - 🏢 Average firm processing time: 11.38s
+2025-06-11 13:08:00,474 - __main__ - INFO - ⏳ Total retry time: 0s
+2025-06-11 13:08:00,475 - __main__ - INFO - 🎯 Screening results:
+2025-06-11 13:08:00,475 - __main__ - INFO -    Total candidates: 110
+2025-06-11 13:08:00,476 - __main__ - INFO -    Final passed: 14
+2025-06-11 13:08:00,476 - __main__ - INFO -    Pass rate: 12.7%
+2025-06-11 13:08:00,476 - __main__ - INFO - ============================================================
+2025-06-11 13:08:00,476 - __main__ - INFO - 🎉 Enhanced pipeline V3 completed successfully!
+2025-06-11 13:08:00,478 - __main__ - INFO - 🆕 V3 features active:
+2025-06-11 13:08:00,478 - __main__ - INFO -    ✅ Quantitative pre-screening (4-factor filtering)
+2025-06-11 13:08:00,478 - __main__ - INFO -    ✅ 🆕 Composite Scoring Model (Whitepaper V3 formula)
+2025-06-11 13:08:00,478 - __main__ - INFO -    ✅ Enhanced SHAP with screening integration
+2025-06-11 13:08:00,478 - __main__ - INFO -    ✅ Filtered firm processing (efficiency boost)
+2025-06-11 13:08:00,479 - __main__ - INFO -    ✅ Comprehensive performance monitoring

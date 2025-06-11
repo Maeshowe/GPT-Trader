@@ -1,4 +1,61 @@
--e \n\n=== CONFIG: ./pipeline_summary.md ===
+-e \n\n=== CONFIG: ./temp/config.yaml ===
+sectors:
+- name: Energy
+  etf: XLE
+  keyword: data-center power demand
+  override_tickers: ["XOM", "CVX", "COP", "WMB", "EOG", "KMI", "MPC", "OKE", "SLB", "PSX"]
+
+- name: Materials
+  etf: XLB
+  keyword: critical minerals
+  override_tickers: ["FCX", "LIN", "SHW", "ECL", "CTVA", "NEM", "APD", "VMC", "MLM", "DD"]
+
+- name: Industrials
+  etf: XLI
+  keyword: reshoring
+  override_tickers: ["GE", "RTX", "UBER", "CAT", "BA", "HON", "UNP", "DE", "GEV", "ETN"]
+
+- name: Utilities
+  etf: XLU
+  keyword: grid modernization
+  override_tickers: ["NEE", "SO", "DUK", "EXC", "XEL", "AEP", "SRE", "D", "CEG", "VST"]
+ 
+- name: Healthcare
+  etf: XLV
+  keyword: elder-care labor shortage
+  override_tickers: ["LLY", "JNJ", "ABBV", "UNH", "ABT", "MRK", "ISRG", "TMO", "AMGN", "BSX"]
+
+- name: Financials
+  etf: XLF
+  keyword: digital deregulation
+  override_tickers: ["BRK.B", "JPM", "V", "MA", "BAC", "WFC", "GS", "AXP", "MS", "SPGI"]
+  
+- name: Consumer Discretionary
+  etf: XLY
+  keyword: e-commerce expansion
+  override_tickers: ["AMZN", "TSLA", "HD", "BKNG", "MCD", "TJX", "LOW", "SBUX", "ORLY", "NKE"]
+  
+- name: Consumer Staples
+  etf: XLP
+  keyword: pricing power
+  override_tickers: ["COST", "WMT", "PG", "KO", "PM", "MDLZ", "MO", "CL", "PEP", "TGT"]
+
+- name: Information Technology
+  etf: XLK
+  keyword: generative AI
+  override_tickers: ["MSFT", "AAPL", "NVDA", "AVGO", "ORCL", "PLTR", "CSCO", "CRM", "IBM", "INTU"]
+
+- name: Communication Services
+  etf: XLC
+  keyword: streaming bundling
+  override_tickers: ["META", "GOOGL", "NFLX", "GOOG", "DIS", "TTWO", "LYV", "CHTR", "EA", "T"]
+
+- name: Real Estate
+  etf: XLRE
+  keyword: office-to-resi conversion
+  override_tickers: ["PLD", "AMT", "WELL", "EQIX", "DLR", "O", "SPG", "PSA", "CCI", "CBRE"]
+  
+max_firms_per_sector: 10-e \n\n=== CONFIG: ./pipeline_summary.md ===
 # GPT Portfolio Pipeline Execution Summary
 
 **Execution Date:** 2025-06-10 18:21:33 UTC
@@ -56,62 +113,175 @@ Enhanced logging active - 270 log entries
 
 -e \n\n=== CONFIG: ./config.yaml ===
 sectors:
-  - name: Energy
-    etf: XLE
-    keyword: Energy
-    override_tickers: ["XOM", "CVX", "SLB"]
+- name: Energy
+  etf: XLE
+  keyword: data-center power demand
+  override_tickers: ["XOM", "CVX", "COP", "WMB", "EOG", "KMI", "MPC", "OKE", "SLB", "PSX"]
 
-  - name: Materials
-    etf: XLB
-    keyword: Materials
-    override_tickers: ["DD", "NEM", "FCX"]
+- name: Materials
+  etf: XLB
+  keyword: critical minerals
+  override_tickers: ["FCX", "LIN", "SHW", "ECL", "CTVA", "NEM", "APD", "VMC", "MLM", "DD"]
 
-  - name: Industrials
-    etf: XLI
-    keyword: Industrials
-    override_tickers: ["BA", "CAT", "HON"]
+- name: Industrials
+  etf: XLI
+  keyword: reshoring
+  override_tickers: ["GE", "RTX", "UBER", "CAT", "BA", "HON", "UNP", "DE", "GEV", "ETN"]
 
-  - name: Consumer Discretionary
-    etf: XLY
-    keyword: Consumer Discretionary
-    override_tickers: ["AMZN", "TSLA", "NKE"]
+- name: Utilities
+  etf: XLU
+  keyword: grid modernization
+  override_tickers: ["NEE", "SO", "DUK", "EXC", "XEL", "AEP", "SRE", "D", "CEG", "VST"]
+ 
+- name: Healthcare
+  etf: XLV
+  keyword: elder-care labor shortage
+  override_tickers: ["LLY", "JNJ", "ABBV", "UNH", "ABT", "MRK", "ISRG", "TMO", "AMGN", "BSX"]
 
-  - name: Consumer Staples
-    etf: XLP
-    keyword: Consumer Staples
-    override_tickers: ["PG", "KO", "WMT"]
+- name: Financials
+  etf: XLF
+  keyword: digital deregulation
+  override_tickers: ["BRK.B", "JPM", "V", "MA", "BAC", "WFC", "GS", "AXP", "MS", "SPGI"]
   
-  - name: Healthcare
-    etf: XLV
-    keyword: Health Care
-    override_tickers: ["JNJ", "PFE", "MRK"]
-
-  - name: Financials
-    etf: XLF
-    keyword: Financials
-    override_tickers: ["JPM", "BAC", "WFC"]
-
-  - name: Information Technology
-    etf: XLK
-    keyword: Information Technology
-    override_tickers: ["AAPL", "MSFT", "GOOGL"]
-
-  - name: Communication Services
-    etf: XLC
-    keyword: Communication Services
-    override_tickers: ["FB", "GOOGL", "NFLX"]
+- name: Consumer Discretionary
+  etf: XLY
+  keyword: e-commerce expansion
+  override_tickers: ["AMZN", "TSLA", "HD", "BKNG", "MCD", "TJX", "LOW", "SBUX", "ORLY", "NKE"]
   
-  - name: Utilities
-    etf: XLU
-    keyword: Utilities
-    override_tickers: ["DUK", "SO", "NEE"]
+- name: Consumer Staples
+  etf: XLP
+  keyword: pricing power
+  override_tickers: ["COST", "WMT", "PG", "KO", "PM", "MDLZ", "MO", "CL", "PEP", "TGT"]
 
-  - name: Real Estate 
-    etf: XLRE
-    keyword: Real Estate
-    override_tickers: ["AMT", "PLD", "SPG"]
-    
-max_firms_per_sector: 3-e \n\n=== CONFIG: ./logs/performance_20250610_194542.json ===
+- name: Information Technology
+  etf: XLK
+  keyword: generative AI
+  override_tickers: ["MSFT", "AAPL", "NVDA", "AVGO", "ORCL", "PLTR", "CSCO", "CRM", "IBM", "INTU"]
+
+- name: Communication Services
+  etf: XLC
+  keyword: streaming bundling
+  override_tickers: ["META", "GOOGL", "NFLX", "GOOG", "DIS", "TTWO", "LYV", "CHTR", "EA", "T"]
+
+- name: Real Estate
+  etf: XLRE
+  keyword: office-to-resi conversion
+  override_tickers: ["PLD", "AMT", "WELL", "EQIX", "DLR", "O", "SPG", "PSA", "CCI", "CBRE"]
+  
+max_firms_per_sector: 10-e \n\n=== CONFIG: ./TODO.md ===
+GPT‑Trader – Részletes fejlesztési terv
+
+Verzió: 2025‑06‑10
+Állapot: Draft / Közös szerkesztésre kész
+
+⸻
+
+🎯 Fő célkitűzések (2025 Q3)
+	1.	Automatikus ticker‑felfedező modul a szektor‑ETF‑holdings alapján (Option 1, ajánlott).
+	2.	composite_scoring.py funkcionális bővítése (technikai‑, fundamentális‑, és LLM‑score kompozit).
+	3.	Konfigurációs séma kibővítése (YAML), manuális override támogatása.
+	4.	Black‑Litterman & SHAP integráció produkciós szintre emelése.
+	5.	CI + Tesztlefedettség ≥ 80 % (PyTest, GitHub Actions).
+
+⸻
+
+✅ Elkészítendő feladatok (checkboxokkal)
+
+1. composite_scoring.py – funkcionális kiegészítések
+	•	Refaktor: moduláris ScoreComponent osztály (fundamental, technical, sentiment, ESG).
+	•	Súlykezelés: dinamikus súlyok YAML‑ből, fallback default értékekkel.
+	•	Technikai mutatók: RSI 14d, 50/200 DMA trend, ATR‑volatilitás.
+	•	Dokumentáció & példafüzet (notebooks/composite_scoring_demo.ipynb).
+	•	Unit tesztek (tests/test_composite_scoring.py).
+
+2. automatic_ticker_discovery.py
+
+Prioritás: P0 – ez nyitja a teljes univerzumot.
+
+2.1 Option 1 – ETF holdings (ajánlott)
+	•	Függőségek: yfinance + requests → adatokhoz fallback API/web‑scraping.
+	•	Fő függvény get_etf_holdings(etf_symbol: str, top_n=10) -> list[str].
+	•	Kivételkezelés: hálózati hibára retry + log warning.
+	•	Cache: 1 napos lokális JSON (cache/etf_holdings/{symbol}.json).
+	•	CLI parancs python -m tools.auto_ticker --update (argumentumok: --sector, --top-n).
+
+2.2 Option 2 – Market Cap rangsor
+	•	API integráció: FinancialModelingPrep (/stock-screener) vagy Alpha Vantage.
+	•	get_sector_top_stocks(sector: str, top_n=5).
+	•	Input univerzum szűkítés: S&P 500 vagy Russell 1000.
+
+2.3 Option 3 – Hybrid mód
+	•	YAML kulcsok: auto_discovery, auto_count, manual_additions, manual_exclusions.
+	•	Merge‑logika: (ETF ∪ MarketCap ∪ ManualAdd) \ ManualEx.
+
+2.4 Option 4 – Több forrás (Union / Intersection)
+	•	Keretrendszer a jövőbeni források (e.g. MSCI ACWI) bevonására.
+
+3. Konfiguráció & séma (config/sectors.yaml)
+	•	Új mezők definiálása (lásd Option 3 példa).
+	•	JSON‑schema generálás (schemas/sectors.schema.json).
+	•	Validátor: pre‑commit hook, ami YAML‑t JSON‑schema ellenőriz.
+
+4. Black‑Litterman & Risk‑Budget modul
+	•	risk_budget.py → parametrikus „views” YAML (példa: views/2025‑Q3.yaml).
+	•	Stress‑teszt: Monte Carlo 10 000 szimuláció; SHAP a risk hozzájárulásra.
+	•	Notebook: notebooks/bl_demo.ipynb – Exhibit 4 reprodukció a Whitepaperből.
+
+5. Explainability & SHAP
+	•	Integráció a composite_scoring outputra (feature importance).
+	•	Streamlit widget: SHAP beeswarm / heatmap, asset‑ és factor‑szinten.
+	•	Mentés: outputs/shap_values/{run_id}.parquet.
+
+6. CI / CD
+	•	GitHub Actions: python -m pytest, coverage badge, flake8.
+	•	Schedule‑trigger (cron) – hetente egyszer friss ETF holdings & universe.
+
+7. Dokumentáció & README
+	•	Frissített architektúra‑diagram (draw.io → PNG/SVG).
+	•	„Getting Started” szekció ETF‑ticker felfedezéshez.
+	•	Whitepaper ↔ Kód mátrix (funkció × fájl).
+
+⸻
+
+📅 Sprint‑javaslat (kéthetes)
+
+Sprint	Fókusz	Kimenet
+S‑1	Option 1 ETF holdings, YAML séma, unit tesztek	auto_discovery modul + 80 % branch coverage
+S‑2	Composite scoring bővítés, SHAP prototípus	új score pipeline + SHAP demo notebook
+S‑3	BL optimizer & Risk‑budget, Streamlit SHAP widget	kockázati dashboard v2
+S‑4	Hybride / több univerzum opciók, CI‑finomítás	Option 3 & 4, teljes CI badge > 80 %
+
+
+⸻
+
+🗂️ Fájl‑ és mappa‑struktúra változások
+
+project_root/
+├── auto_discovery/
+│   ├── __init__.py
+│   └── automatic_ticker_discovery.py
+├── config/
+│   └── sectors.yaml
+├── schemas/
+│   └── sectors.schema.json
+├── tests/
+│   ├── test_composite_scoring.py
+│   └── test_auto_discovery.py
+└── notebooks/
+    ├── composite_scoring_demo.ipynb
+    └── bl_demo.ipynb
+
+
+⸻
+
+ℹ️ Megjegyzések / Függőségek
+	•	API‑kulcsok (Alpha Vantage, FMP) – .env / GitHub Secrets.
+	•	Licence – ETF holdings scraping ellenőrizendő (legal notice).
+	•	Open source – későbbi cél: PyPI csomag (gpt_trader).
+
+⸻
+
+Következő lépés: jelöld meg kommentben, ha módosítanál, vagy húzz fel branch‑et az S‑1 sprinthez.-e \n\n=== CONFIG: ./logs/performance_20250610_194542.json ===
 {
   "total_time": 13.0,
   "requests_made": 11,
@@ -119,6 +289,15 @@ max_firms_per_sector: 3-e \n\n=== CONFIG: ./logs/performance_20250610_194542.jso
   "success_rate": 100.0,
   "avg_sector_time": 8.35,
   "avg_firm_time": 0,
+  "total_retry_time": 0
+}-e \n\n=== CONFIG: ./logs/performance_20250610_203756.json ===
+{
+  "total_time": 50.1,
+  "requests_made": 44,
+  "requests_failed": 0,
+  "success_rate": 100.0,
+  "avg_sector_time": 10.95,
+  "avg_firm_time": 14.91,
   "total_retry_time": 0
 }-e \n\n=== CONFIG: ./logs/performance_20250610_182101.json ===
 {
@@ -128,6 +307,56 @@ max_firms_per_sector: 3-e \n\n=== CONFIG: ./logs/performance_20250610_194542.jso
   "success_rate": 100.0,
   "avg_sector_time": 9.43,
   "avg_firm_time": 15.12,
+  "total_retry_time": 0
+}-e \n\n=== CONFIG: ./logs/performance_20250611_130800.json ===
+{
+  "total_time": 85.8,
+  "screening_time": 56.5,
+  "composite_scoring_time": 0.0,
+  "requests_made": 25,
+  "requests_failed": 0,
+  "success_rate": 100.0,
+  "avg_sector_time": 7.64,
+  "avg_firm_time": 11.38,
+  "total_retry_time": 0,
+  "screening_results": {
+    "total_candidates": 110,
+    "market_cap_passed": 109,
+    "liquidity_passed": 22,
+    "fundamentals_passed": 19,
+    "technical_passed": 14,
+    "final_passed": 14
+  },
+  "composite_results": {}
+}-e \n\n=== CONFIG: ./logs/performance_20250610_215637.json ===
+{
+  "total_time": 21.6,
+  "screening_time": 3.9,
+  "composite_scoring_time": 0.0,
+  "requests_made": 11,
+  "requests_failed": 0,
+  "success_rate": 100.0,
+  "avg_sector_time": 8.88,
+  "avg_firm_time": 0,
+  "total_retry_time": 0,
+  "screening_results": {
+    "total_candidates": 4,
+    "market_cap_passed": 4,
+    "liquidity_passed": 1,
+    "fundamentals_passed": 0,
+    "technical_passed": 0,
+    "final_passed": 0
+  },
+  "composite_results": {}
+}-e \n\n=== CONFIG: ./logs/performance_20250610_210715.json ===
+{
+  "total_time": 27.5,
+  "screening_time": 15.9,
+  "requests_made": 11,
+  "requests_failed": 0,
+  "success_rate": 100.0,
+  "avg_sector_time": 8.76,
+  "avg_firm_time": 0,
   "total_retry_time": 0
 }-e \n\n=== CONFIG: ./logs/performance_20250610_194701.json ===
 {
@@ -169,235 +398,50 @@ jobs:
       run: |
         python -m pip install --upgrade pip
         pip install -r requirements.txt
-        pip install aiohttp scipy  # Enhanced dependencies for risk management
 
-    # ── 4) Create logs directory ──────────────────────────────────────
-    - name: Create logs directory
-      run: |
-        mkdir -p logs
-        mkdir -p outputs
-
-    # ── 5) Secrets → ENV ──────────────────────────────────────────────
+    # ── 4) Secrets → ENV ──────────────────────────────────────────────
     - name: Export secrets
       run: |
         echo "OPENAI_API_KEY=${{ secrets.OPENAI_API_KEY }}"      >> $GITHUB_ENV
         echo "FRED_API_KEY=${{ secrets.FRED_API_KEY }}"          >> $GITHUB_ENV
         echo "STOCKNEWS_API_KEY=${{ secrets.STOCKNEWS_API_KEY }}" >> $GITHUB_ENV
 
-    # ── 6) Enhanced pipeline execution ────────────────────────────────
-    - name: Run enhanced GPT portfolio pipeline
+    # ── 5) Teljes pipeline ────────────────────────────────────────────
+    - name: Run full pipeline
       run: |
-        echo "🚀 Starting Enhanced GPT Portfolio Pipeline..."
-        
-        # Step 1: Data fetching
-        echo "📊 Step 1: Fetching market data..."
         python data_fetch/fetch_data.py
-        
-        # Step 2: LLM scoring (enhanced with async & logging)
-        echo "🤖 Step 2: Running LLM scoring with enhanced performance..."
         python run_prompts.py
-        
-        # Step 3: News sentiment analysis (enhanced with retry logic)
-        echo "📰 Step 3: Analyzing news sentiment with intelligent retry..."
         python news_sentiment.py
-        
-        # Step 4: Portfolio generation
-        echo "⚖️ Step 4: Generating base portfolio..."
         python generator_runner.py
-        
-        # Step 5: Risk management integration (NEW!)
-        echo "🛡️ Step 5: Applying risk management framework..."
         python integrate_risk_management.py
-        
-        # Step 6: Backtesting
-        echo "📈 Step 6: Running backtest analysis..."
         python backtest.py
         python backtest_rebal.py
-        
-        # Step 7: Risk budget optimization
-        echo "💰 Step 7: Calculating risk budget allocations..."
         python risk_budget.py
-        
-        echo "✅ Pipeline completed successfully!"
 
-    # ── 7) Validate outputs ───────────────────────────────────────────
-    - name: Validate pipeline outputs
-      run: |
-        echo "🔍 Validating pipeline outputs..."
-        
-        # Check critical files exist
-        required_files=(
-          "outputs/portfolio_latest.json"
-          "outputs/portfolio_risk_adjusted.json"
-          "outputs/portfolio_risk_assessment.json"
-          "outputs/risk_summary.md"
-          "outputs/news_sentiment.json"
-          "outputs/backtest_equity.json"
-          "outputs/backtest_stats.json"
-        )
-        
-        missing_files=()
-        for file in "${required_files[@]}"; do
-          if [[ ! -f "$file" ]]; then
-            missing_files+=("$file")
-          else
-            echo "✅ $file exists"
-          fi
-        done
-        
-        if [[ ${#missing_files[@]} -gt 0 ]]; then
-          echo "❌ Missing critical files:"
-          printf '%s\n' "${missing_files[@]}"
-          exit 1
-        fi
-        
-        # Validate JSON files
-        echo "🔍 Validating JSON files..."
-        for json_file in outputs/*.json; do
-          if [[ -f "$json_file" ]]; then
-            if python -m json.tool "$json_file" > /dev/null 2>&1; then
-              echo "✅ $json_file is valid JSON"
-            else
-              echo "❌ $json_file is invalid JSON"
-              exit 1
-            fi
-          fi
-        done
-        
-        echo "✅ All validations passed!"
-
-    # ── 8) Generate pipeline summary ──────────────────────────────────
-    - name: Generate pipeline summary
-      run: |
-        echo "📊 Generating pipeline execution summary..."
-        
-        # Create summary file
-        cat > pipeline_summary.md << EOF
-        # GPT Portfolio Pipeline Execution Summary
-        
-        **Execution Date:** $(date -u +'%Y-%m-%d %H:%M:%S UTC')
-        **Commit:** ${{ github.sha }}
-        **Triggered by:** ${{ github.event_name }}
-        
-        ## Pipeline Steps Completed
-        - ✅ Data fetching (FRED, StockNews, Yahoo Finance)
-        - ✅ Enhanced LLM scoring (Async with ${MAX_CONCURRENCY:-8}x concurrency)
-        - ✅ News sentiment analysis (With intelligent retry logic)
-        - ✅ Portfolio generation (LLM-based allocation)
-        - ✅ **Risk management integration** (Governance + Market risk)
-        - ✅ Backtesting (Buy&Hold vs Rebalancing)
-        - ✅ Risk budget optimization (Black-Litterman)
-        
-        ## Key Outputs Generated
-        $(ls -la outputs/ | grep -v '^d' | awk '{print "- " $9 " (" $5 " bytes)"}')
-        
-        ## Risk Assessment Summary
-        $(if [ -f "outputs/risk_summary.md" ]; then head -20 outputs/risk_summary.md; else echo "Risk summary not available"; fi)
-        
-        ## Performance Logs
-        $(if [ -f "logs/gpt_trader.log" ]; then echo "Enhanced logging active - $(wc -l < logs/gpt_trader.log) log entries"; else echo "No performance logs"; fi)
-        
-        EOF
-        
-        echo "📄 Pipeline summary generated"
-
-    # ── 9) Enhanced commit & push output files ────────────────────────
-    - name: Commit enhanced outputs
+    # ── 6) Commit & push output JSON-ok ───────────────────────────────
+    - name: Commit outputs
       run: |
         set -e
         git config --global user.email "actions@github.com"
         git config --global user.name  "github-actions[bot]"
 
-        # Force-add all output files (ignore .gitignore rules)
+        # Force-add: ignore szabályok ellenére is stage-re kerül
         git add -f \
-          outputs/portfolio_latest.json \
-          outputs/portfolio_risk_adjusted.json \
-          outputs/portfolio_risk_assessment.json \
-          outputs/risk_assessment_report.json \
-          outputs/risk_summary.md \
           outputs/news_sentiment.json \
-          outputs/news_sentiment_detailed.json \
           outputs/portfolio_risk_budget.json \
+          outputs/portfolio_latest.json \
           outputs/backtest_equity.json \
           outputs/backtest_rebal_equity.json \
           outputs/backtest_rebal_stats.json \
-          outputs/backtest_stats.json \
-          pipeline_summary.md
-        
-        # Add performance logs if they exist
-        if ls logs/performance_*.json 1> /dev/null 2>&1; then
-          git add -f logs/performance_*.json
-        fi
-        
-        # Add main log file if it exists (but limit size)
-        if [[ -f "logs/gpt_trader.log" ]]; then
-          # Only add if log file is reasonable size (< 1MB)
-          if [[ $(stat -f%z "logs/gpt_trader.log" 2>/dev/null || stat -c%s "logs/gpt_trader.log" 2>/dev/null || echo 0) -lt 1048576 ]]; then
-            git add -f logs/gpt_trader.log
-          else
-            echo "⚠️ Log file too large, skipping commit"
-          fi
-        fi
+          outputs/backtest_stats.json
 
-        # Commit only if there are actual changes
+        # Commit csak, ha valóban van változás
         if ! git diff --cached --quiet; then
-          # Enhanced commit message with summary
-          commit_msg="[CI] Enhanced pipeline autoupdate $(date -u +'%Y-%m-%dT%H:%MZ')
-
-          🚀 Enhanced GPT Portfolio Pipeline Results:
-          - ✅ Risk Management Integration Active
-          - ✅ Enhanced LLM Scoring with Async Processing  
-          - ✅ Intelligent News Sentiment Analysis
-          - ✅ Risk-Adjusted Portfolio Generation
-          - ✅ Comprehensive Risk Assessment Reports
-          
-          📊 Key Files Updated:
-          $(git diff --cached --name-only | head -10)
-          $([ $(git diff --cached --name-only | wc -l) -gt 10 ] && echo "... and $(expr $(git diff --cached --name-only | wc -l) - 10) more files")
-          
-          🛡️ Risk Level: $(grep "Overall Risk Level:" outputs/risk_summary.md 2>/dev/null | head -1 | cut -d: -f2 | xargs || echo "Unknown")
-          📈 Compliance: $(grep "Compliance Status:" outputs/risk_summary.md 2>/dev/null | head -1 | cut -d: -f2 | xargs || echo "Unknown")"
-          
-          git commit -m "$commit_msg"
+          git commit -m "[CI] autoupdate $(date -u +'%Y-%m-%dT%H:%MZ')"
           git push
-          
-          echo "✅ Enhanced outputs committed and pushed successfully!"
         else
-          echo "ℹ️ No changes to commit - pipeline outputs unchanged"
-        fi
-
-    # ── 10) Workflow summary ──────────────────────────────────────────
-    - name: Workflow completion summary
-      if: always()
-      run: |
-        echo "═══════════════════════════════════════════════════════════"
-        echo "🎉 ENHANCED GPT PORTFOLIO PIPELINE COMPLETED"
-        echo "═══════════════════════════════════════════════════════════"
-        echo "📅 Execution Date: $(date -u +'%Y-%m-%d %H:%M:%S UTC')"
-        echo "⏱️  Total Duration: $SECONDS seconds"
-        echo "🔧 Enhanced Features:"
-        echo "   • 8x Async LLM Processing"
-        echo "   • Intelligent Retry Logic"
-        echo "   • Risk Management Integration"
-        echo "   • Governance Risk Assessment"
-        echo "   • Automated Risk Adjustments"
-        echo "   • Comprehensive Logging"
-        echo ""
-        echo "📊 Output Files Generated:"
-        ls -la outputs/ 2>/dev/null | grep -v '^d' | wc -l | xargs echo "   •" "files in outputs/"
-        echo ""
-        echo "🛡️ Risk Assessment:"
-        if [[ -f "outputs/risk_summary.md" ]]; then
-          grep -E "(Overall Risk Level|Compliance Status)" outputs/risk_summary.md | sed 's/^/   • /'
-        else
-          echo "   • Risk assessment data not available"
-        fi
-        echo ""
-        echo "🚀 Ready for dashboard viewing at:"
-        echo "   📊 https://gpt-trader-yprfiqjxyzfscnqejjq93n.streamlit.app"
-        echo "═══════════════════════════════════════════════════════════"
-        echo "Thank you for using the Enhanced GPT Portfolio Pipeline!"
-        echo "For issues, please open a ticket at: https://github.com/Maeshowe/issues"-e \n\n=== CONFIG: ./restlee.md ===
+          echo "No changes to commit."
+        fi-e \n\n=== CONFIG: ./NOTES.md ===
 fetch_data.py
 GDP skálázása
 get_macro_indicators()-ben válts:
@@ -463,7 +507,48 @@ git pull origin main  # Lehúzod a CI változásait
 vim news_sentiment.py
 git add .
 git commit -m "feat: add new feature"
-git push origin main-e \n\n=== CONFIG: ./inputs/generator_input.json ===
+git push origin main
+
+
+# Komplett directory structure VENV nélkül
+tree -a -I 'venv|.git|__pycache__|outputs|*.pyc|node_modules|.env'
+
+# Vagy ha túl mély, korlátozd a szinteket
+tree -a -L 4 -I 'venv|.git|__pycache__|outputs|*.pyc|node_modules|.env'
+
+# Save to file
+tree -a -I 'venv|.git|__pycache__|outputs|*.pyc|node_modules|.env' > project_structure.txt
+
+# 1. Directory structure
+tree -a -I 'venv|.git|__pycache__|outputs|*.pyc|node_modules|.env' > project_structure.txt
+
+# 2. All Python files
+find . -name "*.py" -not -path "./venv/*" -not -path "./.git/*" -not -path "./__pycache__/*" \
+  -exec echo -e "\n\n=== FILE: {} ===" \; -exec cat {} \; > all_python_files.txt
+
+# 3. Config files  
+find . \( -name "*.yaml" -o -name "*.yml" -o -name "*.json" -o -name "*.md" \) \
+  -not -path "./venv/*" -not -path "./.git/*" -not -path "./outputs/*" \
+  -exec echo -e "\n\n=== CONFIG: {} ===" \; -exec cat {} \; > all_config_files.txt
+
+# 4. Check results
+echo "Generated files:"
+ls -la *.txt
+wc -l *.txt
+
+# Get the .j2 template files too
+find . -name "*.j2" -not -path "./venv/*" \
+  -exec echo -e "\n\n=== TEMPLATE: {} ===" \; -exec cat {} \; > prompt_templates.txt
+
+# Check what .j2 files we have
+find . -name "*.j2" -not -path "./venv/*"
+
+
+
+
+composite_scoring <-- nem teljes funkcionalitás -->
+Next step: Implementáljuk az ETF holdings automatikus lekérést?
+-e \n\n=== CONFIG: ./inputs/generator_input.json ===
 {
   "top_firms_list": [
     {
@@ -509,8 +594,8 @@ git push origin main-e \n\n=== CONFIG: ./inputs/generator_input.json ===
       "InterestRate": 4.33
     },
     "sector_news_snippets": [],
-    "today": "2025-06-10",
-    "sector_score": 75
+    "today": "2025-06-11",
+    "sector_score": 78
   },
   {
     "name": "Materials",
@@ -521,7 +606,7 @@ git push origin main-e \n\n=== CONFIG: ./inputs/generator_input.json ===
       "InterestRate": 4.33
     },
     "sector_news_snippets": [],
-    "today": "2025-06-10",
+    "today": "2025-06-11",
     "sector_score": 75
   },
   {
@@ -533,79 +618,7 @@ git push origin main-e \n\n=== CONFIG: ./inputs/generator_input.json ===
       "InterestRate": 4.33
     },
     "sector_news_snippets": [],
-    "today": "2025-06-10",
-    "sector_score": 78
-  },
-  {
-    "name": "Consumer Discretionary",
-    "macro_indicators_json": {
-      "GDP": 29.98,
-      "CPI": 320.32,
-      "Unemployment": 4.2,
-      "InterestRate": 4.33
-    },
-    "sector_news_snippets": [],
-    "today": "2025-06-10",
-    "sector_score": 78
-  },
-  {
-    "name": "Consumer Staples",
-    "macro_indicators_json": {
-      "GDP": 29.98,
-      "CPI": 320.32,
-      "Unemployment": 4.2,
-      "InterestRate": 4.33
-    },
-    "sector_news_snippets": [],
-    "today": "2025-06-10",
-    "sector_score": 75
-  },
-  {
-    "name": "Health Care",
-    "macro_indicators_json": {
-      "GDP": 29.98,
-      "CPI": 320.32,
-      "Unemployment": 4.2,
-      "InterestRate": 4.33
-    },
-    "sector_news_snippets": [],
-    "today": "2025-06-10",
-    "sector_score": 75
-  },
-  {
-    "name": "Financials",
-    "macro_indicators_json": {
-      "GDP": 29.98,
-      "CPI": 320.32,
-      "Unemployment": 4.2,
-      "InterestRate": 4.33
-    },
-    "sector_news_snippets": [],
-    "today": "2025-06-10",
-    "sector_score": 78
-  },
-  {
-    "name": "Information Technology",
-    "macro_indicators_json": {
-      "GDP": 29.98,
-      "CPI": 320.32,
-      "Unemployment": 4.2,
-      "InterestRate": 4.33
-    },
-    "sector_news_snippets": [],
-    "today": "2025-06-10",
-    "sector_score": 75
-  },
-  {
-    "name": "Communication Services",
-    "macro_indicators_json": {
-      "GDP": 29.98,
-      "CPI": 320.32,
-      "Unemployment": 4.2,
-      "InterestRate": 4.33
-    },
-    "sector_news_snippets": [],
-    "today": "2025-06-10",
+    "today": "2025-06-11",
     "sector_score": 78
   },
   {
@@ -617,7 +630,79 @@ git push origin main-e \n\n=== CONFIG: ./inputs/generator_input.json ===
       "InterestRate": 4.33
     },
     "sector_news_snippets": [],
-    "today": "2025-06-10",
+    "today": "2025-06-11",
+    "sector_score": 75
+  },
+  {
+    "name": "Healthcare",
+    "macro_indicators_json": {
+      "GDP": 29.98,
+      "CPI": 320.32,
+      "Unemployment": 4.2,
+      "InterestRate": 4.33
+    },
+    "sector_news_snippets": [],
+    "today": "2025-06-11",
+    "sector_score": 78
+  },
+  {
+    "name": "Financials",
+    "macro_indicators_json": {
+      "GDP": 29.98,
+      "CPI": 320.32,
+      "Unemployment": 4.2,
+      "InterestRate": 4.33
+    },
+    "sector_news_snippets": [],
+    "today": "2025-06-11",
+    "sector_score": 78
+  },
+  {
+    "name": "Consumer Discretionary",
+    "macro_indicators_json": {
+      "GDP": 29.98,
+      "CPI": 320.32,
+      "Unemployment": 4.2,
+      "InterestRate": 4.33
+    },
+    "sector_news_snippets": [],
+    "today": "2025-06-11",
+    "sector_score": 78
+  },
+  {
+    "name": "Consumer Staples",
+    "macro_indicators_json": {
+      "GDP": 29.98,
+      "CPI": 320.32,
+      "Unemployment": 4.2,
+      "InterestRate": 4.33
+    },
+    "sector_news_snippets": [],
+    "today": "2025-06-11",
+    "sector_score": 75
+  },
+  {
+    "name": "Information Technology",
+    "macro_indicators_json": {
+      "GDP": 29.98,
+      "CPI": 320.32,
+      "Unemployment": 4.2,
+      "InterestRate": 4.33
+    },
+    "sector_news_snippets": [],
+    "today": "2025-06-11",
+    "sector_score": 75
+  },
+  {
+    "name": "Communication Services",
+    "macro_indicators_json": {
+      "GDP": 29.98,
+      "CPI": 320.32,
+      "Unemployment": 4.2,
+      "InterestRate": 4.33
+    },
+    "sector_news_snippets": [],
+    "today": "2025-06-11",
     "sector_score": 78
   },
   {
@@ -629,7 +714,7 @@ git push origin main-e \n\n=== CONFIG: ./inputs/generator_input.json ===
       "InterestRate": 4.33
     },
     "sector_news_snippets": [],
-    "today": "2025-06-10",
+    "today": "2025-06-11",
     "sector_score": 75
   }
 ]-e \n\n=== CONFIG: ./inputs/sector_input.json ===
@@ -661,44 +746,27 @@ git push origin main-e \n\n=== CONFIG: ./inputs/generator_input.json ===
       "Quick Ratio": 0.86
     },
     "firm_news_snippets": [
-      "3 Bargain Dividend Stocks to Buy Today",
-      "ExxonMobil's Valuation Remains Premium: Are Investors Overpaying?",
-      "3 Top Energy Stocks to Buy Without Hesitation in June"
+      "Exxon Mobil (XOM) Laps the Stock Market: Here's Why",
+      "5 Ideal 'Safe' Buys From June Fortune Return On Leadership Screen",
+      "Here is What to Know Beyond Why Exxon Mobil Corporation (XOM) is a Trending Stock"
     ],
-    "today": "2025-06-10",
-    "firm_score": 72,
+    "today": "2025-06-11",
+    "firm_score": 78,
+    "quantitative_screening": {
+      "passed": true,
+      "overall_screening_score": 49.66,
+      "fundamental_score": 49.32,
+      "technical_score": 50,
+      "screening_timestamp": "2025-06-11T13:07:31.153428"
+    },
+    "screening_context": "\nQuantitative Screening Results:\n- Overall Score: 49.66\n- Fundamental Score: 49.32\n- Technical Score: 50\n- Status: PASSED all quantitative filters\n",
     "firm_shap": {
       "P/E": 2.78,
       "PEG": -0.0,
       "Beta": -0.05,
       "ROE": 0.06,
-      "Quick Ratio": 0.26
-    }
-  },
-  {
-    "sector": "Energy",
-    "ticker": "CVX",
-    "company_name": "CVX",
-    "industry": "Energy",
-    "firm_financials_json": {
-      "P/E": 16.07,
-      "Beta": 0.8,
-      "ROE": 0.1,
-      "Quick Ratio": 0.68
-    },
-    "firm_news_snippets": [
-      "As Oil Prices Rebound, These Stocks Could Fuel the Next Rally",
-      "These 3 Dividend Stocks Pay You to Stay Calm in Summer",
-      "Chevron's Texas Job Cuts: What's Really Driving the Layoffs?"
-    ],
-    "today": "2025-06-10",
-    "firm_score": 72,
-    "firm_shap": {
-      "P/E": 3.21,
-      "PEG": -0.0,
-      "Beta": -0.08,
-      "ROE": 0.04,
-      "Quick Ratio": 0.2
+      "Quick Ratio": 0.26,
+      "screening_bonus": -0.03
     }
   },
   {
@@ -717,220 +785,161 @@ git push origin main-e \n\n=== CONFIG: ./inputs/generator_input.json ===
       "Schlumberger (SLB) Outperforms Broader Market: What You Need to Know",
       "Why I Just Bought Back SLB (Schlumberger)"
     ],
-    "today": "2025-06-10",
+    "today": "2025-06-11",
     "firm_score": 78,
+    "quantitative_screening": {
+      "passed": true,
+      "overall_screening_score": 54.44,
+      "fundamental_score": 48.88,
+      "technical_score": 60,
+      "screening_timestamp": "2025-06-11T13:07:31.153432"
+    },
+    "screening_context": "\nQuantitative Screening Results:\n- Overall Score: 54.44\n- Fundamental Score: 48.88\n- Technical Score: 60\n- Status: PASSED all quantitative filters\n",
     "firm_shap": {
       "P/E": 2.31,
       "PEG": -0.0,
       "Beta": -0.1,
       "ROE": 0.08,
-      "Quick Ratio": 0.25
-    }
-  },
-  {
-    "sector": "Materials",
-    "ticker": "DD",
-    "company_name": "DD",
-    "industry": "Materials",
-    "firm_financials_json": {
-      "P/E": 2286.0,
-      "Beta": 1.03,
-      "ROE": 0.0,
-      "Quick Ratio": 0.87
-    },
-    "firm_news_snippets": [
-      "DD Adds Sterile Packaging Capacity at Costa Rica Manufacturing Plant",
-      "DuPont Expands Healthcare Manufacturing Site in Costa Rica, Adding Sterile Packaging Capacity",
-      "DuPont Powers AI and Next-Gen Electronics with Advanced Interconnect Innovations at JPCA Show 2025"
-    ],
-    "today": "2025-06-10",
-    "firm_score": 45,
-    "firm_shap": {
-      "P/E": 457.2,
-      "PEG": -0.0,
-      "Beta": -0.1,
-      "ROE": 0.0,
-      "Quick Ratio": 0.26
-    }
-  },
-  {
-    "sector": "Materials",
-    "ticker": "NEM",
-    "company_name": "NEM",
-    "industry": "Materials",
-    "firm_financials_json": {
-      "P/E": 12.14,
-      "Beta": 0.32,
-      "ROE": 0.17,
-      "Quick Ratio": 1.03
-    },
-    "firm_news_snippets": [
-      "NEM or RGLD: Which Is the Better Value Stock Right Now?",
-      "Is It Worth Investing in Newmont (NEM) Based on Wall Street's Bullish Views?",
-      "Major Market Disconnect: 2 High-Flying Funds That Remain Dirt Cheap"
-    ],
-    "today": "2025-06-10",
-    "firm_score": 78,
-    "firm_shap": {
-      "P/E": 2.43,
-      "PEG": -0.0,
-      "Beta": -0.03,
-      "ROE": 0.07,
-      "Quick Ratio": 0.31
-    }
-  },
-  {
-    "sector": "Materials",
-    "ticker": "FCX",
-    "company_name": "FCX",
-    "industry": "Materials",
-    "firm_financials_json": {
-      "P/E": 34.7,
-      "Beta": 1.63,
-      "ROE": 0.14,
-      "Quick Ratio": 0.96
-    },
-    "firm_news_snippets": [
-      "Is Freeport Overvalued At $42?",
-      "4 Non-Ferrous Metal Mining Stocks to Watch in a Promising Industry",
-      "Freeport-McMoRan (FCX) Rises But Trails Market: What Investors Should Know"
-    ],
-    "today": "2025-06-10",
-    "firm_score": 62,
-    "firm_shap": {
-      "P/E": 6.94,
-      "PEG": -0.0,
-      "Beta": -0.16,
-      "ROE": 0.06,
-      "Quick Ratio": 0.29
+      "Quick Ratio": 0.25,
+      "screening_bonus": 0.44
     }
   },
   {
     "sector": "Industrials",
-    "ticker": "BA",
-    "company_name": "BA",
+    "ticker": "UBER",
+    "company_name": "UBER",
     "industry": "Industrials",
     "firm_financials_json": {
-      "Beta": 1.42,
-      "Quick Ratio": 0.35
+      "P/E": 15.26,
+      "Beta": 1.39,
+      "ROE": 0.69,
+      "Quick Ratio": 0.83
     },
     "firm_news_snippets": [
-      "Final Trades: Broadcom, Qualcomm and Boeing",
-      "3 Potential Winners From The Tariff/Trade War",
-      "Controversial Boeing Attempts To DominaBOED e The Friendly Skies, Highlighting Potential In Direxion's BOEU And BOED ETFs"
+      "Better Autonomous Driving Stock: Tesla or Uber? The Answer Might Surprise You.",
+      "Uber and Wayve Plan UK Self-Driving Trial",
+      "Uber Soars 37% YTD On Robotaxi Deal, M&A Buzz: Strategist Eyes Buy-The-Dip Opportunity"
     ],
-    "today": "2025-06-10",
-    "firm_score": 65,
+    "today": "2025-06-11",
+    "firm_score": 72,
+    "quantitative_screening": {
+      "passed": true,
+      "overall_screening_score": 73.44,
+      "fundamental_score": 61.87,
+      "technical_score": 85,
+      "screening_timestamp": "2025-06-11T13:07:31.153436"
+    },
+    "screening_context": "\nQuantitative Screening Results:\n- Overall Score: 73.44\n- Fundamental Score: 61.87\n- Technical Score: 85\n- Status: PASSED all quantitative filters\n",
     "firm_shap": {
-      "P/E": 0.0,
+      "P/E": 3.05,
       "PEG": -0.0,
       "Beta": -0.14,
-      "ROE": 0.0,
-      "Quick Ratio": 0.1
+      "ROE": 0.28,
+      "Quick Ratio": 0.25,
+      "screening_bonus": 2.34
     }
   },
   {
-    "sector": "Industrials",
-    "ticker": "CAT",
-    "company_name": "CAT",
-    "industry": "Industrials",
+    "sector": "Healthcare",
+    "ticker": "MRK",
+    "company_name": "MRK",
+    "industry": "Healthcare",
     "firm_financials_json": {
-      "P/E": 17.45,
-      "Beta": 1.37,
-      "ROE": 0.56,
-      "Quick Ratio": 0.69
+      "P/E": 11.54,
+      "Beta": 0.44,
+      "ROE": 0.39,
+      "Quick Ratio": 0.83
     },
     "firm_news_snippets": [
-      "Caterpillar Volumes Keep Sliding: Is It Time for Investors to Worry?",
-      "Buy, Sell, Or Hold CAT Stock At $350?",
-      "Caterpillar Inc. (CAT) is Attracting Investor Attention: Here is What You Should Know"
+      "Should You Buy the 3 Highest-Paying Dividend Stocks in the Dow Jones?",
+      "Merck (MRK) Rises Higher Than Market: Key Facts",
+      "Merck: Best Case For Option Collars We'll Ever See"
     ],
-    "today": "2025-06-10",
-    "firm_score": 65,
-    "firm_shap": {
-      "P/E": 3.49,
-      "PEG": -0.0,
-      "Beta": -0.14,
-      "ROE": 0.22,
-      "Quick Ratio": 0.21
-    }
-  },
-  {
-    "sector": "Industrials",
-    "ticker": "HON",
-    "company_name": "HON",
-    "industry": "Industrials",
-    "firm_financials_json": {
-      "P/E": 26.11,
-      "Beta": 1.07,
-      "ROE": 0.33,
-      "Quick Ratio": 0.84
-    },
-    "firm_news_snippets": [
-      "HONEYWELL COMPLETES ACQUISITION OF SUNDYNE TO EXPAND PROCESS INDUSTRY CAPABILITIES",
-      "Calls of the Day: Spotify, Honeywell, Live Nation and defense Stocks",
-      "3 Rock-Solid Dow Jones Dividend Stocks to Double Up on in June"
-    ],
-    "today": "2025-06-10",
+    "today": "2025-06-11",
     "firm_score": 78,
+    "quantitative_screening": {
+      "passed": true,
+      "overall_screening_score": 58.58,
+      "fundamental_score": 57.17,
+      "technical_score": 60,
+      "screening_timestamp": "2025-06-11T13:07:31.153430"
+    },
+    "screening_context": "\nQuantitative Screening Results:\n- Overall Score: 58.58\n- Fundamental Score: 57.17\n- Technical Score: 60\n- Status: PASSED all quantitative filters\n",
     "firm_shap": {
-      "P/E": 5.22,
+      "P/E": 2.31,
       "PEG": -0.0,
-      "Beta": -0.11,
-      "ROE": 0.13,
-      "Quick Ratio": 0.25
+      "Beta": -0.04,
+      "ROE": 0.16,
+      "Quick Ratio": 0.25,
+      "screening_bonus": 0.86
     }
   },
   {
-    "sector": "Consumer Discretionary",
-    "ticker": "AMZN",
-    "company_name": "AMZN",
-    "industry": "Consumer Discretionary",
+    "sector": "Financials",
+    "ticker": "BAC",
+    "company_name": "BAC",
+    "industry": "Financials",
     "firm_financials_json": {
-      "P/E": 35.34,
-      "Beta": 1.33,
-      "ROE": 0.25,
-      "Quick Ratio": 0.81
+      "P/E": 13.38,
+      "Beta": 1.31,
+      "ROE": 0.09
     },
     "firm_news_snippets": [
-      "Amazon's Next Leap Forward In Advertising Could Boost Market Cap",
-      "Warren Buffett Has 23% of Berkshire Hathaway's Portfolio Invested in 2 AI Stocks Up 600% and 900% in the Last Decade",
-      "Amazon positions AWS as global AI marketplace with model-agnostic Bedrock platform"
+      "Visa, Street Soccer USA and Bank of America Join Forces to Expand Access to Soccer in Communities Across the United States",
+      "20 stocks bucking bad trends on Wall Street \u2014 what might be next for them?",
+      "BofA Clients Embrace New $10 Million Limit in U.S. Real-Time Payments"
     ],
-    "today": "2025-06-10",
-    "firm_score": 85,
+    "today": "2025-06-11",
+    "firm_score": 75,
+    "quantitative_screening": {
+      "passed": true,
+      "overall_screening_score": 52.48,
+      "fundamental_score": 44.97,
+      "technical_score": 60,
+      "screening_timestamp": "2025-06-11T13:07:31.153427"
+    },
+    "screening_context": "\nQuantitative Screening Results:\n- Overall Score: 52.48\n- Fundamental Score: 44.97\n- Technical Score: 60\n- Status: PASSED all quantitative filters\n",
     "firm_shap": {
-      "P/E": 7.07,
+      "P/E": 2.68,
       "PEG": -0.0,
       "Beta": -0.13,
-      "ROE": 0.1,
-      "Quick Ratio": 0.24
+      "ROE": 0.04,
+      "Quick Ratio": 0.0,
+      "screening_bonus": 0.25
     }
   },
   {
-    "sector": "Consumer Discretionary",
-    "ticker": "TSLA",
-    "company_name": "TSLA",
-    "industry": "Consumer Discretionary",
+    "sector": "Financials",
+    "ticker": "WFC",
+    "company_name": "WFC",
+    "industry": "Financials",
     "firm_financials_json": {
-      "P/E": 175.33,
-      "Beta": 2.46,
-      "ROE": 0.09,
-      "Quick Ratio": 1.38
+      "P/E": 13.74,
+      "Beta": 1.16,
+      "ROE": 0.11
     },
     "firm_news_snippets": [
-      "Musk Turns On Trump.Tesla Will Pay The Price",
-      "Tesla Stock Is Rising. Trump and Musk Are Making Up.",
-      "Tesla: A Unique Opportunity To Buy The Drop (Again)"
+      "Wells Fargo (WFC) Stock Slides as Market Rises: Facts to Know Before You Trade",
+      "Wells Fargo Expects Consumer Loan Growth to Remain Flat or Slow",
+      "Wells Fargo & Company (WFC) Presents at Morgan Stanley US Financials, Payments & CRE Conference Transcript"
     ],
-    "today": "2025-06-10",
+    "today": "2025-06-11",
     "firm_score": 65,
+    "quantitative_screening": {
+      "passed": true,
+      "overall_screening_score": 65.7,
+      "fundamental_score": 46.41,
+      "technical_score": 85,
+      "screening_timestamp": "2025-06-11T13:07:31.153415"
+    },
+    "screening_context": "\nQuantitative Screening Results:\n- Overall Score: 65.7\n- Fundamental Score: 46.41\n- Technical Score: 85\n- Status: PASSED all quantitative filters\n",
     "firm_shap": {
-      "P/E": 35.07,
+      "P/E": 2.75,
       "PEG": -0.0,
-      "Beta": -0.25,
+      "Beta": -0.12,
       "ROE": 0.04,
-      "Quick Ratio": 0.41
+      "Quick Ratio": 0.0,
+      "screening_bonus": 1.57
     }
   },
   {
@@ -939,7 +948,7 @@ git push origin main-e \n\n=== CONFIG: ./inputs/generator_input.json ===
     "company_name": "NKE",
     "industry": "Consumer Discretionary",
     "firm_financials_json": {
-      "P/E": 20.57,
+      "P/E": 20.6,
       "Beta": 1.22,
       "ROE": 0.32,
       "Quick Ratio": 1.33
@@ -949,40 +958,58 @@ git push origin main-e \n\n=== CONFIG: ./inputs/generator_input.json ===
       "Can Nike Stock Double a $1,000 Investment in 5 Years?",
       "3 Magnificent Stocks to Buy in June"
     ],
-    "today": "2025-06-10",
+    "today": "2025-06-11",
     "firm_score": 78,
+    "quantitative_screening": {
+      "passed": true,
+      "overall_screening_score": 57.07,
+      "fundamental_score": 54.14,
+      "technical_score": 60,
+      "screening_timestamp": "2025-06-11T13:07:31.153425"
+    },
+    "screening_context": "\nQuantitative Screening Results:\n- Overall Score: 57.07\n- Fundamental Score: 54.14\n- Technical Score: 60\n- Status: PASSED all quantitative filters\n",
     "firm_shap": {
-      "P/E": 4.11,
+      "P/E": 4.12,
       "PEG": -0.0,
       "Beta": -0.12,
       "ROE": 0.13,
-      "Quick Ratio": 0.4
+      "Quick Ratio": 0.4,
+      "screening_bonus": 0.71
     }
   },
   {
     "sector": "Consumer Staples",
-    "ticker": "PG",
-    "company_name": "PG",
+    "ticker": "WMT",
+    "company_name": "WMT",
     "industry": "Consumer Staples",
     "firm_financials_json": {
-      "P/E": 25.76,
-      "Beta": 0.43,
-      "ROE": 0.3,
-      "Quick Ratio": 0.45
+      "P/E": 41.59,
+      "Beta": 0.69,
+      "ROE": 0.22,
+      "Quick Ratio": 0.18
     },
     "firm_news_snippets": [
-      "P&G Appoints Craig Arnold to Board of Directors",
-      "Here's How Much You Would Need to Invest to Retire on $50,000 in Annual Dividend Income",
-      "2 Dividend Kings Reshaping Their Empires\u2014Here's The Hidden Opportunity"
+      "3 Resilient Retail Stocks That Are Still Growing Amid Tariffs",
+      "Mooove Over, Magnificent Seven. It's Time to Invest in COW.",
+      "Here's Where Consumer Purchase Data Shows Walmart Prices Rising"
     ],
-    "today": "2025-06-10",
-    "firm_score": 78,
+    "today": "2025-06-11",
+    "firm_score": 72,
+    "quantitative_screening": {
+      "passed": true,
+      "overall_screening_score": 63.39,
+      "fundamental_score": 41.78,
+      "technical_score": 85,
+      "screening_timestamp": "2025-06-11T13:07:31.153423"
+    },
+    "screening_context": "\nQuantitative Screening Results:\n- Overall Score: 63.39\n- Fundamental Score: 41.78\n- Technical Score: 85\n- Status: PASSED all quantitative filters\n",
     "firm_shap": {
-      "P/E": 5.15,
+      "P/E": 8.32,
       "PEG": -0.0,
-      "Beta": -0.04,
-      "ROE": 0.12,
-      "Quick Ratio": 0.14
+      "Beta": -0.07,
+      "ROE": 0.09,
+      "Quick Ratio": 0.05,
+      "screening_bonus": 1.34
     }
   },
   {
@@ -997,223 +1024,27 @@ git push origin main-e \n\n=== CONFIG: ./inputs/generator_input.json ===
       "Quick Ratio": 0.75
     },
     "firm_news_snippets": [
-      "Coca-Cola: A Potential Case Of Margin Expansion With A Highly Insulated Business Model",
-      "Where Will Coca-Cola Stock Be in 5 Years?",
-      "These 3 Dividend Stocks Pay You to Stay Calm in Summer"
+      "Coca-Cola Stays Ahead In The Ozempic Era",
+      "Turkey's antitrust authority opens probe of Coca-Cola over possible competition violation",
+      "20 stocks bucking bad trends on Wall Street \u2014 what might be next for them?"
     ],
-    "today": "2025-06-10",
-    "firm_score": 85,
+    "today": "2025-06-11",
+    "firm_score": 78,
+    "quantitative_screening": {
+      "passed": true,
+      "overall_screening_score": 64.49,
+      "fundamental_score": 53.98,
+      "technical_score": 75,
+      "screening_timestamp": "2025-06-11T13:07:31.153406"
+    },
+    "screening_context": "\nQuantitative Screening Results:\n- Overall Score: 64.49\n- Fundamental Score: 53.98\n- Technical Score: 75\n- Status: PASSED all quantitative filters\n",
     "firm_shap": {
       "P/E": 5.76,
       "PEG": -0.0,
       "Beta": -0.05,
       "ROE": 0.16,
-      "Quick Ratio": 0.22
-    }
-  },
-  {
-    "sector": "Consumer Staples",
-    "ticker": "WMT",
-    "company_name": "WMT",
-    "industry": "Consumer Staples",
-    "firm_financials_json": {
-      "P/E": 41.65,
-      "Beta": 0.69,
-      "ROE": 0.22,
-      "Quick Ratio": 0.18
-    },
-    "firm_news_snippets": [
-      "Prediction: These Are Wall Street's Next 2 Trillion-Dollar Stocks -- and Neither Is Palantir Technologies",
-      "Walmart Takes Aim at Banks With OnePay Expansion",
-      "Walmart Inc. (WMT) Presents at 2025 Oppenheimer Consumer Growth & E-Commerce Conference (Transcript)"
-    ],
-    "today": "2025-06-10",
-    "firm_score": 78,
-    "firm_shap": {
-      "P/E": 8.33,
-      "PEG": -0.0,
-      "Beta": -0.07,
-      "ROE": 0.09,
-      "Quick Ratio": 0.05
-    }
-  },
-  {
-    "sector": "Health Care",
-    "ticker": "JNJ",
-    "company_name": "JNJ",
-    "industry": "Health Care",
-    "firm_financials_json": {
-      "P/E": 17.27,
-      "Beta": 0.41,
-      "ROE": 0.29,
-      "Quick Ratio": 0.96
-    },
-    "firm_news_snippets": [
-      "Healthcare companies are hiring. Is it time to look for growth stocks in this beaten-down sector?",
-      "3 Top Dividend Stocks Analysts Are Bullish on Right Now",
-      "Johnson & Johnson (JNJ) Is a Trending Stock: Facts to Know Before Betting on It"
-    ],
-    "today": "2025-06-10",
-    "firm_score": 85,
-    "firm_shap": {
-      "P/E": 3.45,
-      "PEG": -0.0,
-      "Beta": -0.04,
-      "ROE": 0.12,
-      "Quick Ratio": 0.29
-    }
-  },
-  {
-    "sector": "Health Care",
-    "ticker": "PFE",
-    "company_name": "PFE",
-    "industry": "Health Care",
-    "firm_financials_json": {
-      "P/E": 17.37,
-      "Beta": 0.49,
-      "ROE": 0.09,
-      "Quick Ratio": 0.88
-    },
-    "firm_news_snippets": [
-      "Pfizer: Dividend Investor's Dream And Patent Cliff Nightmare",
-      "Vaccine Stocks Moderna, Pfizer Hit After A Surprise Blow From RFK Jr.",
-      "Pfizer Stock Down Almost 11% YTD: Should You Buy the Dip?"
-    ],
-    "today": "2025-06-10",
-    "firm_score": 62,
-    "firm_shap": {
-      "P/E": 3.47,
-      "PEG": -0.0,
-      "Beta": -0.05,
-      "ROE": 0.04,
-      "Quick Ratio": 0.26
-    }
-  },
-  {
-    "sector": "Health Care",
-    "ticker": "MRK",
-    "company_name": "MRK",
-    "industry": "Health Care",
-    "firm_financials_json": {
-      "P/E": 11.53,
-      "Beta": 0.44,
-      "ROE": 0.39,
-      "Quick Ratio": 0.83
-    },
-    "firm_news_snippets": [
-      "FDA approves Merck's RSV shot for infants, ramping up competition with Sanofi and AstaZeneca",
-      "US FDA approves Merck's RSV antibody for infants",
-      "U.S. FDA Approves Merck's ENFLONSIA\u2122 (clesrovimab-cfor) for Prevention of Respiratory Syncytial Virus (RSV) Lower Respiratory Tract Disease in Infants Born During or Entering Their First RSV Season"
-    ],
-    "today": "2025-06-10",
-    "firm_score": 78,
-    "firm_shap": {
-      "P/E": 2.31,
-      "PEG": -0.0,
-      "Beta": -0.04,
-      "ROE": 0.16,
-      "Quick Ratio": 0.25
-    }
-  },
-  {
-    "sector": "Financials",
-    "ticker": "JPM",
-    "company_name": "JPM",
-    "industry": "Financials",
-    "firm_financials_json": {
-      "P/E": 13.09,
-      "Beta": 1.08,
-      "ROE": 0.17
-    },
-    "firm_news_snippets": [
-      "Can JPMorgan's IB Division Weather the Near-Term Macro Challenges?",
-      "These 3 Dividend Stocks Pay You to Stay Calm in Summer",
-      "5 Relatively Secure And Cheap Dividend Stocks, Yields Up To 10% (June 2025)"
-    ],
-    "today": "2025-06-10",
-    "firm_score": 78,
-    "firm_shap": {
-      "P/E": 2.62,
-      "PEG": -0.0,
-      "Beta": -0.11,
-      "ROE": 0.07,
-      "Quick Ratio": 0.0
-    }
-  },
-  {
-    "sector": "Financials",
-    "ticker": "BAC",
-    "company_name": "BAC",
-    "industry": "Financials",
-    "firm_financials_json": {
-      "P/E": 13.39,
-      "Beta": 1.31,
-      "ROE": 0.09
-    },
-    "firm_news_snippets": [
-      "SoFi Loan Boom Impresses But Bank Of America Sticks To 'Underperform'",
-      "Is Most-Watched Stock Bank of America Corporation (BAC) Worth Betting on Now?",
-      "BAC's Push to Expand Financial Centers: A Catalyst for Growth?"
-    ],
-    "today": "2025-06-10",
-    "firm_score": 65,
-    "firm_shap": {
-      "P/E": 2.68,
-      "PEG": -0.0,
-      "Beta": -0.13,
-      "ROE": 0.04,
-      "Quick Ratio": 0.0
-    }
-  },
-  {
-    "sector": "Financials",
-    "ticker": "WFC",
-    "company_name": "WFC",
-    "industry": "Financials",
-    "firm_financials_json": {
-      "P/E": 13.75,
-      "Beta": 1.16,
-      "ROE": 0.11
-    },
-    "firm_news_snippets": [
-      "Wells Fargo Just Got Unshackled. What Next?",
-      "Marathon Asset Management CEO Bruce Richards: 'I am bullish on Wells Fargo'",
-      "Marathon CEO Bruce Richards: How can you not be bullish on Wells Fargo"
-    ],
-    "today": "2025-06-10",
-    "firm_score": 78,
-    "firm_shap": {
-      "P/E": 2.75,
-      "PEG": -0.0,
-      "Beta": -0.12,
-      "ROE": 0.04,
-      "Quick Ratio": 0.0
-    }
-  },
-  {
-    "sector": "Information Technology",
-    "ticker": "AAPL",
-    "company_name": "AAPL",
-    "industry": "Information Technology",
-    "firm_financials_json": {
-      "P/E": 31.33,
-      "Beta": 1.21,
-      "ROE": 1.38,
-      "Quick Ratio": 0.68
-    },
-    "firm_news_snippets": [
-      "Apple Fails to Clear a Low Bar on AI",
-      "Warren Buffett Has 23% of Berkshire Hathaway's Portfolio Invested in 2 AI Stocks Up 600% and 900% in the Last Decade",
-      "Apple unveils software redesign while reeling from AI missteps, tech upheaval and Trump's trade war"
-    ],
-    "today": "2025-06-10",
-    "firm_score": 75,
-    "firm_shap": {
-      "P/E": 6.27,
-      "PEG": -0.0,
-      "Beta": -0.12,
-      "ROE": 0.55,
-      "Quick Ratio": 0.2
+      "Quick Ratio": 0.22,
+      "screening_bonus": 1.45
     }
   },
   {
@@ -1228,273 +1059,167 @@ git push origin main-e \n\n=== CONFIG: ./inputs/generator_input.json ===
       "Quick Ratio": 1.24
     },
     "firm_news_snippets": [
-      "Microsoft-backed AI lab Mistral is launching its first reasoning model in challenge to OpenAI",
-      "Want to Invest in Quantum Computing? 3 Stocks That Are Great Buys Right Now.",
-      "Uber is teaming up with a Microsoft-backed startup to launch robotaxis on the chaotic roads of London"
+      "5 Cybersecurity Stocks You Can Buy and Hold for the Next Decade",
+      "Starbucks AI assistant, powered by Microsoft, aims to help baristas focus on coffee and customers",
+      "'Closing Bell Overtime' panel talks the bull and bear case for Microsoft"
     ],
-    "today": "2025-06-10",
+    "today": "2025-06-11",
     "firm_score": 85,
+    "quantitative_screening": {
+      "passed": true,
+      "overall_screening_score": 68.84,
+      "fundamental_score": 52.68,
+      "technical_score": 85,
+      "screening_timestamp": "2025-06-11T13:07:31.153421"
+    },
+    "screening_context": "\nQuantitative Screening Results:\n- Overall Score: 68.84\n- Fundamental Score: 52.68\n- Technical Score: 85\n- Status: PASSED all quantitative filters\n",
     "firm_shap": {
       "P/E": 7.3,
       "PEG": -0.0,
       "Beta": -0.1,
       "ROE": 0.14,
-      "Quick Ratio": 0.37
+      "Quick Ratio": 0.37,
+      "screening_bonus": 1.88
     }
   },
   {
     "sector": "Information Technology",
-    "ticker": "GOOGL",
-    "company_name": "GOOGL",
+    "ticker": "AAPL",
+    "company_name": "AAPL",
     "industry": "Information Technology",
     "firm_financials_json": {
-      "P/E": 19.65,
-      "Beta": 1.01,
-      "ROE": 0.35,
-      "Quick Ratio": 1.6
+      "P/E": 31.32,
+      "Beta": 1.21,
+      "ROE": 1.38,
+      "Quick Ratio": 0.68
     },
     "firm_news_snippets": [
-      "News Sites Are Getting Crushed by Google's New AI Tools",
-      "Alphabet: Bing And AI Come To The Rescue",
-      "Want $1 Million in Retirement? Invest $100,000 in These 3 Stocks and Wait a Decade"
+      "Epson's New PowerLite L-Series Portable Projectors Now Available and Compatible with Apple AirPlay",
+      "3 Reasons to Buy This Beaten-Down Warren Buffett Stock",
+      "Future CPI Prints Paramount in Rate Cut Cycle, AAPL & NVDA to Lead Mag 7"
     ],
-    "today": "2025-06-10",
-    "firm_score": 85,
-    "firm_shap": {
-      "P/E": 3.93,
-      "PEG": -0.0,
-      "Beta": -0.1,
-      "ROE": 0.14,
-      "Quick Ratio": 0.48
-    }
-  },
-  {
-    "sector": "Communication Services",
-    "ticker": "FB",
-    "company_name": "FB",
-    "industry": "Communication Services",
-    "firm_financials_json": {},
-    "firm_news_snippets": [
-      "Wall Street Breakfast Podcast: Analysts Weigh Meta's Future Without Instagram, WhatsApp",
-      "Virtus' Joe Terranova says focus on these three 'Mag 7' names",
-      "RiskOn360! Global Success Conference Taps John Rossman, Early Amazon Executive, Innovator and Author, as Keynote Speaker"
-    ],
-    "today": "2025-06-10",
-    "firm_score": 75,
-    "firm_shap": {
-      "P/E": 0.0,
-      "PEG": -0.0,
-      "Beta": -0.0,
-      "ROE": 0.0,
-      "Quick Ratio": 0.0
-    }
-  },
-  {
-    "sector": "Communication Services",
-    "ticker": "GOOGL",
-    "company_name": "GOOGL",
-    "industry": "Communication Services",
-    "firm_financials_json": {
-      "P/E": 19.65,
-      "Beta": 1.01,
-      "ROE": 0.35,
-      "Quick Ratio": 1.6
-    },
-    "firm_news_snippets": [
-      "News Sites Are Getting Crushed by Google's New AI Tools",
-      "Alphabet: Bing And AI Come To The Rescue",
-      "Want $1 Million in Retirement? Invest $100,000 in These 3 Stocks and Wait a Decade"
-    ],
-    "today": "2025-06-10",
-    "firm_score": 85,
-    "firm_shap": {
-      "P/E": 3.93,
-      "PEG": -0.0,
-      "Beta": -0.1,
-      "ROE": 0.14,
-      "Quick Ratio": 0.48
-    }
-  },
-  {
-    "sector": "Communication Services",
-    "ticker": "NFLX",
-    "company_name": "NFLX",
-    "industry": "Communication Services",
-    "firm_financials_json": {
-      "P/E": 57.81,
-      "Beta": 1.59,
-      "ROE": 0.41,
-      "Quick Ratio": 1.01
-    },
-    "firm_news_snippets": [
-      "Prediction: This Tariff-Resistant Growth Stock Could Join the Trillion-Dollar Club by 2030",
-      "Visa, Eli Lilly or Netflix\u2014 Which Stock Will Be A Trillion Dollar Company Next?",
-      "FOX or NFLX: Which Is the Better Value Stock Right Now?"
-    ],
-    "today": "2025-06-10",
+    "today": "2025-06-11",
     "firm_score": 78,
+    "quantitative_screening": {
+      "passed": true,
+      "overall_screening_score": 65.18,
+      "fundamental_score": 80.35,
+      "technical_score": 50,
+      "screening_timestamp": "2025-06-11T13:07:31.153417"
+    },
+    "screening_context": "\nQuantitative Screening Results:\n- Overall Score: 65.18\n- Fundamental Score: 80.35\n- Technical Score: 50\n- Status: PASSED all quantitative filters\n",
     "firm_shap": {
-      "P/E": 11.56,
+      "P/E": 6.26,
       "PEG": -0.0,
-      "Beta": -0.16,
-      "ROE": 0.16,
-      "Quick Ratio": 0.3
+      "Beta": -0.12,
+      "ROE": 0.55,
+      "Quick Ratio": 0.2,
+      "screening_bonus": 1.52
     }
   },
   {
-    "sector": "Utilities",
-    "ticker": "DUK",
-    "company_name": "DUK",
-    "industry": "Utilities",
+    "sector": "Information Technology",
+    "ticker": "NVDA",
+    "company_name": "NVDA",
+    "industry": "Information Technology",
     "firm_financials_json": {
-      "P/E": 19.15,
-      "Beta": 0.36,
-      "ROE": 0.09,
-      "Quick Ratio": 0.3
+      "P/E": 46.14,
+      "Beta": 2.12,
+      "ROE": 1.15,
+      "Quick Ratio": 2.86
     },
     "firm_news_snippets": [
-      "Duke Energy proposes milestone new natural gas plant to help build a stronger energy future for South Carolina",
-      "Summer Market Sell-Off Could Be Coming \u2013 Buy High-Yield Utility Stocks As Power Demand Soars",
-      "Duke Energy supports North Carolina emergency response organizations with $500,000 in storm preparedness funds"
+      "Dataiku Unveils Enterprise-Grade Blueprint to Accelerate Agentic AI in Financial Services Built with NVIDIA",
+      "Nvidia and Perplexity Team Up in European AI Push",
+      "Trend Micro Enhances AI Safety and Security in NVIDIA Enterprise AI Factories"
     ],
-    "today": "2025-06-10",
-    "firm_score": 72,
+    "today": "2025-06-11",
+    "firm_score": 78,
+    "quantitative_screening": {
+      "passed": true,
+      "overall_screening_score": 66.98,
+      "fundamental_score": 83.96,
+      "technical_score": 50,
+      "screening_timestamp": "2025-06-11T13:07:31.153419"
+    },
+    "screening_context": "\nQuantitative Screening Results:\n- Overall Score: 66.98\n- Fundamental Score: 83.96\n- Technical Score: 50\n- Status: PASSED all quantitative filters\n",
     "firm_shap": {
-      "P/E": 3.83,
+      "P/E": 9.23,
       "PEG": -0.0,
-      "Beta": -0.04,
-      "ROE": 0.04,
-      "Quick Ratio": 0.09
+      "Beta": -0.21,
+      "ROE": 0.46,
+      "Quick Ratio": 0.86,
+      "screening_bonus": 1.7
     }
   },
   {
-    "sector": "Utilities",
-    "ticker": "SO",
-    "company_name": "SO",
-    "industry": "Utilities",
+    "sector": "Information Technology",
+    "ticker": "CSCO",
+    "company_name": "CSCO",
+    "industry": "Information Technology",
     "firm_financials_json": {
-      "P/E": 21.22,
-      "Beta": 0.37,
-      "ROE": 0.12,
-      "Quick Ratio": 0.48
+      "P/E": 26.92,
+      "Beta": 0.88,
+      "ROE": 0.21,
+      "Quick Ratio": 0.71
     },
     "firm_news_snippets": [
-      "Georgia Power names Arthur Tripp as vice president of Economic Development",
-      "Southern Company's Georgia Power Prepares for a Storm-Heavy 2025",
-      "Southern's Subsidiary Backs Edged to Expand Green Data Centers"
+      "Is Trending Stock Cisco Systems, Inc. (CSCO) a Buy Now?",
+      "The Highest-Quality Dividend Contenders By Quality Scores",
+      "Cisco Unveils Secure Network Architecture to Accelerate Workplace AI Transformation"
     ],
-    "today": "2025-06-10",
-    "firm_score": 68,
+    "today": "2025-06-11",
+    "firm_score": 78,
+    "quantitative_screening": {
+      "passed": true,
+      "overall_screening_score": 65.92,
+      "fundamental_score": 46.84,
+      "technical_score": 85,
+      "screening_timestamp": "2025-06-11T13:07:31.153434"
+    },
+    "screening_context": "\nQuantitative Screening Results:\n- Overall Score: 65.92\n- Fundamental Score: 46.84\n- Technical Score: 85\n- Status: PASSED all quantitative filters\n",
     "firm_shap": {
-      "P/E": 4.24,
+      "P/E": 5.38,
       "PEG": -0.0,
-      "Beta": -0.04,
-      "ROE": 0.05,
-      "Quick Ratio": 0.14
+      "Beta": -0.09,
+      "ROE": 0.08,
+      "Quick Ratio": 0.21,
+      "screening_bonus": 1.59
     }
   },
   {
-    "sector": "Utilities",
-    "ticker": "NEE",
-    "company_name": "NEE",
-    "industry": "Utilities",
+    "sector": "Communication Services",
+    "ticker": "T",
+    "company_name": "T",
+    "industry": "Communication Services",
     "firm_financials_json": {
-      "P/E": 26.93,
-      "Beta": 0.67,
-      "ROE": 0.07,
-      "Quick Ratio": 0.32
-    },
-    "firm_news_snippets": [
-      "NextEra Energy: Built for Long-Term Growth?",
-      "intoPIX and Nextera-Adeas Announce Latest IPMX Demo Design with JPEG XS on Compact FPGAs at Infocomm 2025",
-      "Trade Tracker: Stephanie Link sells Nextera and buys more Intuitive Surgical"
-    ],
-    "today": "2025-06-10",
-    "firm_score": 65,
-    "firm_shap": {
-      "P/E": 5.39,
-      "PEG": -0.0,
-      "Beta": -0.07,
-      "ROE": 0.03,
-      "Quick Ratio": 0.1
-    }
-  },
-  {
-    "sector": "Real Estate",
-    "ticker": "AMT",
-    "company_name": "AMT",
-    "industry": "Real Estate",
-    "firm_financials_json": {
-      "P/E": 34.49,
-      "Beta": 0.83,
-      "ROE": 0.28,
-      "Quick Ratio": 0.49
-    },
-    "firm_news_snippets": [
-      "Should You Hold Onto American Tower Stock in Your Portfolio for Now?",
-      "3 Dividend Stocks for June 2025",
-      "Why Warren Buffett Doesn't Buy REITs, But I Do (With A Twist)"
-    ],
-    "today": "2025-06-10",
-    "firm_score": 72,
-    "firm_shap": {
-      "P/E": 6.9,
-      "PEG": -0.0,
-      "Beta": -0.08,
+      "P/E": 17.12,
+      "Beta": 0.6,
       "ROE": 0.11,
-      "Quick Ratio": 0.15
-    }
-  },
-  {
-    "sector": "Real Estate",
-    "ticker": "PLD",
-    "company_name": "PLD",
-    "industry": "Real Estate",
-    "firm_financials_json": {
-      "P/E": 27.16,
-      "Beta": 1.27,
-      "ROE": 0.07,
-      "Quick Ratio": 0.32
+      "Quick Ratio": 0.44
     },
     "firm_news_snippets": [
-      "Dividends Don't Lie: 2 Of The Best Retirement Picks Money Can Buy",
-      "3 Top Stocks Yielding Over 3% to Buy Right Now for Dividend Income and Upside Potential",
-      "Why Warren Buffett Doesn't Buy REITs, But I Do (With A Twist)"
+      "AT&T Inc. (T) Presents at Mizuho Technology Conference 2025 Transcript",
+      "5 Ideal 'Safe' Buys From June Fortune Return On Leadership Screen",
+      "AT&T Expands Nation's Largest Fiber Network, Now Reaching More Than 30 Million Fiber Locations"
     ],
-    "today": "2025-06-10",
-    "firm_score": 65,
-    "firm_shap": {
-      "P/E": 5.43,
-      "PEG": -0.0,
-      "Beta": -0.13,
-      "ROE": 0.03,
-      "Quick Ratio": 0.1
-    }
-  },
-  {
-    "sector": "Real Estate",
-    "ticker": "SPG",
-    "company_name": "SPG",
-    "industry": "Real Estate",
-    "firm_financials_json": {
-      "P/E": 25.59,
-      "Beta": 1.49,
-      "ROE": 0.67,
-      "Quick Ratio": 0.37
+    "today": "2025-06-11",
+    "firm_score": 75,
+    "quantitative_screening": {
+      "passed": true,
+      "overall_screening_score": 64.56,
+      "fundamental_score": 44.12,
+      "technical_score": 85,
+      "screening_timestamp": "2025-06-11T13:07:31.153412"
     },
-    "firm_news_snippets": [
-      "Realty Income Is Better Than Simon Property After U.S. Credit Rating Downgrade",
-      "Is SPG Stock Still Worth Holding in the Current Climate?",
-      "Why Warren Buffett Doesn't Buy REITs, But I Do (With A Twist)"
-    ],
-    "today": "2025-06-10",
-    "firm_score": 62,
+    "screening_context": "\nQuantitative Screening Results:\n- Overall Score: 64.56\n- Fundamental Score: 44.12\n- Technical Score: 85\n- Status: PASSED all quantitative filters\n",
     "firm_shap": {
-      "P/E": 5.12,
+      "P/E": 3.42,
       "PEG": -0.0,
-      "Beta": -0.15,
-      "ROE": 0.27,
-      "Quick Ratio": 0.11
+      "Beta": -0.06,
+      "ROE": 0.04,
+      "Quick Ratio": 0.13,
+      "screening_bonus": 1.46
     }
   }
 ]-e \n\n=== CONFIG: ./inputs/firm_input.json ===

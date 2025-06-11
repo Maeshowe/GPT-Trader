@@ -6,6 +6,7 @@
 ├── .gitignore
 ├── backtest_rebal.py
 ├── backtest.py
+├── composite_scoring.py
 ├── config.yaml
 ├── dashboard
 │   └── app.py
@@ -24,8 +25,13 @@
 │   ├── gpt_trader.log
 │   ├── performance_20250610_182101.json
 │   ├── performance_20250610_194542.json
-│   └── performance_20250610_194701.json
+│   ├── performance_20250610_194701.json
+│   ├── performance_20250610_203756.json
+│   ├── performance_20250610_210715.json
+│   ├── performance_20250610_215637.json
+│   └── performance_20250611_130800.json
 ├── news_sentiment.py
+├── NOTES.md
 ├── pipeline_summary.md
 ├── project_structure.txt
 ├── prompt_runner.py
@@ -33,11 +39,21 @@
 │   ├── firm_prompt.j2
 │   ├── generator_prompt.j2
 │   └── sector_prompt.j2
+├── quantitative_screening.py
 ├── requirements.txt
-├── restlee.md
 ├── risk_budget.py
 ├── risk_management.py
 ├── run_prompts.py
-└── sector_runner.py
+├── sector_keywords.csv
+├── sector_runner.py
+├── stocknews_sector_keyword_pipeline_extended.py
+├── stocknews_sector_keyword_pipeline.py
+├── temp
+│   ├── build_config.py
+│   ├── config.yaml
+│   └── test_build.config.py
+├── test_screening.py
+├── tests
+└── TODO.md
 
-8 directories, 33 files
+10 directories, 47 files

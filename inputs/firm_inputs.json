@@ -1,1 +1,490 @@
-[]
+[
+  {
+    "sector": "Energy",
+    "ticker": "XOM",
+    "company_name": "XOM",
+    "industry": "Energy",
+    "firm_financials_json": {
+      "P/E": 13.92,
+      "Beta": 0.46,
+      "ROE": 0.14,
+      "Quick Ratio": 0.86
+    },
+    "firm_news_snippets": [
+      "Exxon Mobil (XOM) Laps the Stock Market: Here's Why",
+      "5 Ideal 'Safe' Buys From June Fortune Return On Leadership Screen",
+      "Here is What to Know Beyond Why Exxon Mobil Corporation (XOM) is a Trending Stock"
+    ],
+    "today": "2025-06-11",
+    "firm_score": 78,
+    "quantitative_screening": {
+      "passed": true,
+      "overall_screening_score": 49.66,
+      "fundamental_score": 49.32,
+      "technical_score": 50,
+      "screening_timestamp": "2025-06-11T13:07:31.153428"
+    },
+    "screening_context": "\nQuantitative Screening Results:\n- Overall Score: 49.66\n- Fundamental Score: 49.32\n- Technical Score: 50\n- Status: PASSED all quantitative filters\n",
+    "firm_shap": {
+      "P/E": 2.78,
+      "PEG": -0.0,
+      "Beta": -0.05,
+      "ROE": 0.06,
+      "Quick Ratio": 0.26,
+      "screening_bonus": -0.03
+    }
+  },
+  {
+    "sector": "Energy",
+    "ticker": "SLB",
+    "company_name": "SLB",
+    "industry": "Energy",
+    "firm_financials_json": {
+      "P/E": 11.57,
+      "Beta": 1.03,
+      "ROE": 0.2,
+      "Quick Ratio": 0.83
+    },
+    "firm_news_snippets": [
+      "Is It Worth Investing in Schlumberger (SLB) Based on Wall Street's Bullish Views?",
+      "Schlumberger (SLB) Outperforms Broader Market: What You Need to Know",
+      "Why I Just Bought Back SLB (Schlumberger)"
+    ],
+    "today": "2025-06-11",
+    "firm_score": 78,
+    "quantitative_screening": {
+      "passed": true,
+      "overall_screening_score": 54.44,
+      "fundamental_score": 48.88,
+      "technical_score": 60,
+      "screening_timestamp": "2025-06-11T13:07:31.153432"
+    },
+    "screening_context": "\nQuantitative Screening Results:\n- Overall Score: 54.44\n- Fundamental Score: 48.88\n- Technical Score: 60\n- Status: PASSED all quantitative filters\n",
+    "firm_shap": {
+      "P/E": 2.31,
+      "PEG": -0.0,
+      "Beta": -0.1,
+      "ROE": 0.08,
+      "Quick Ratio": 0.25,
+      "screening_bonus": 0.44
+    }
+  },
+  {
+    "sector": "Industrials",
+    "ticker": "UBER",
+    "company_name": "UBER",
+    "industry": "Industrials",
+    "firm_financials_json": {
+      "P/E": 15.26,
+      "Beta": 1.39,
+      "ROE": 0.69,
+      "Quick Ratio": 0.83
+    },
+    "firm_news_snippets": [
+      "Better Autonomous Driving Stock: Tesla or Uber? The Answer Might Surprise You.",
+      "Uber and Wayve Plan UK Self-Driving Trial",
+      "Uber Soars 37% YTD On Robotaxi Deal, M&A Buzz: Strategist Eyes Buy-The-Dip Opportunity"
+    ],
+    "today": "2025-06-11",
+    "firm_score": 72,
+    "quantitative_screening": {
+      "passed": true,
+      "overall_screening_score": 73.44,
+      "fundamental_score": 61.87,
+      "technical_score": 85,
+      "screening_timestamp": "2025-06-11T13:07:31.153436"
+    },
+    "screening_context": "\nQuantitative Screening Results:\n- Overall Score: 73.44\n- Fundamental Score: 61.87\n- Technical Score: 85\n- Status: PASSED all quantitative filters\n",
+    "firm_shap": {
+      "P/E": 3.05,
+      "PEG": -0.0,
+      "Beta": -0.14,
+      "ROE": 0.28,
+      "Quick Ratio": 0.25,
+      "screening_bonus": 2.34
+    }
+  },
+  {
+    "sector": "Healthcare",
+    "ticker": "MRK",
+    "company_name": "MRK",
+    "industry": "Healthcare",
+    "firm_financials_json": {
+      "P/E": 11.54,
+      "Beta": 0.44,
+      "ROE": 0.39,
+      "Quick Ratio": 0.83
+    },
+    "firm_news_snippets": [
+      "Should You Buy the 3 Highest-Paying Dividend Stocks in the Dow Jones?",
+      "Merck (MRK) Rises Higher Than Market: Key Facts",
+      "Merck: Best Case For Option Collars We'll Ever See"
+    ],
+    "today": "2025-06-11",
+    "firm_score": 78,
+    "quantitative_screening": {
+      "passed": true,
+      "overall_screening_score": 58.58,
+      "fundamental_score": 57.17,
+      "technical_score": 60,
+      "screening_timestamp": "2025-06-11T13:07:31.153430"
+    },
+    "screening_context": "\nQuantitative Screening Results:\n- Overall Score: 58.58\n- Fundamental Score: 57.17\n- Technical Score: 60\n- Status: PASSED all quantitative filters\n",
+    "firm_shap": {
+      "P/E": 2.31,
+      "PEG": -0.0,
+      "Beta": -0.04,
+      "ROE": 0.16,
+      "Quick Ratio": 0.25,
+      "screening_bonus": 0.86
+    }
+  },
+  {
+    "sector": "Financials",
+    "ticker": "BAC",
+    "company_name": "BAC",
+    "industry": "Financials",
+    "firm_financials_json": {
+      "P/E": 13.38,
+      "Beta": 1.31,
+      "ROE": 0.09
+    },
+    "firm_news_snippets": [
+      "Visa, Street Soccer USA and Bank of America Join Forces to Expand Access to Soccer in Communities Across the United States",
+      "20 stocks bucking bad trends on Wall Street \u2014 what might be next for them?",
+      "BofA Clients Embrace New $10 Million Limit in U.S. Real-Time Payments"
+    ],
+    "today": "2025-06-11",
+    "firm_score": 75,
+    "quantitative_screening": {
+      "passed": true,
+      "overall_screening_score": 52.48,
+      "fundamental_score": 44.97,
+      "technical_score": 60,
+      "screening_timestamp": "2025-06-11T13:07:31.153427"
+    },
+    "screening_context": "\nQuantitative Screening Results:\n- Overall Score: 52.48\n- Fundamental Score: 44.97\n- Technical Score: 60\n- Status: PASSED all quantitative filters\n",
+    "firm_shap": {
+      "P/E": 2.68,
+      "PEG": -0.0,
+      "Beta": -0.13,
+      "ROE": 0.04,
+      "Quick Ratio": 0.0,
+      "screening_bonus": 0.25
+    }
+  },
+  {
+    "sector": "Financials",
+    "ticker": "WFC",
+    "company_name": "WFC",
+    "industry": "Financials",
+    "firm_financials_json": {
+      "P/E": 13.74,
+      "Beta": 1.16,
+      "ROE": 0.11
+    },
+    "firm_news_snippets": [
+      "Wells Fargo (WFC) Stock Slides as Market Rises: Facts to Know Before You Trade",
+      "Wells Fargo Expects Consumer Loan Growth to Remain Flat or Slow",
+      "Wells Fargo & Company (WFC) Presents at Morgan Stanley US Financials, Payments & CRE Conference Transcript"
+    ],
+    "today": "2025-06-11",
+    "firm_score": 65,
+    "quantitative_screening": {
+      "passed": true,
+      "overall_screening_score": 65.7,
+      "fundamental_score": 46.41,
+      "technical_score": 85,
+      "screening_timestamp": "2025-06-11T13:07:31.153415"
+    },
+    "screening_context": "\nQuantitative Screening Results:\n- Overall Score: 65.7\n- Fundamental Score: 46.41\n- Technical Score: 85\n- Status: PASSED all quantitative filters\n",
+    "firm_shap": {
+      "P/E": 2.75,
+      "PEG": -0.0,
+      "Beta": -0.12,
+      "ROE": 0.04,
+      "Quick Ratio": 0.0,
+      "screening_bonus": 1.57
+    }
+  },
+  {
+    "sector": "Consumer Discretionary",
+    "ticker": "NKE",
+    "company_name": "NKE",
+    "industry": "Consumer Discretionary",
+    "firm_financials_json": {
+      "P/E": 20.6,
+      "Beta": 1.22,
+      "ROE": 0.32,
+      "Quick Ratio": 1.33
+    },
+    "firm_news_snippets": [
+      "Nike (NKE) Stock Sinks As Market Gains: Here's Why",
+      "Can Nike Stock Double a $1,000 Investment in 5 Years?",
+      "3 Magnificent Stocks to Buy in June"
+    ],
+    "today": "2025-06-11",
+    "firm_score": 78,
+    "quantitative_screening": {
+      "passed": true,
+      "overall_screening_score": 57.07,
+      "fundamental_score": 54.14,
+      "technical_score": 60,
+      "screening_timestamp": "2025-06-11T13:07:31.153425"
+    },
+    "screening_context": "\nQuantitative Screening Results:\n- Overall Score: 57.07\n- Fundamental Score: 54.14\n- Technical Score: 60\n- Status: PASSED all quantitative filters\n",
+    "firm_shap": {
+      "P/E": 4.12,
+      "PEG": -0.0,
+      "Beta": -0.12,
+      "ROE": 0.13,
+      "Quick Ratio": 0.4,
+      "screening_bonus": 0.71
+    }
+  },
+  {
+    "sector": "Consumer Staples",
+    "ticker": "WMT",
+    "company_name": "WMT",
+    "industry": "Consumer Staples",
+    "firm_financials_json": {
+      "P/E": 41.59,
+      "Beta": 0.69,
+      "ROE": 0.22,
+      "Quick Ratio": 0.18
+    },
+    "firm_news_snippets": [
+      "3 Resilient Retail Stocks That Are Still Growing Amid Tariffs",
+      "Mooove Over, Magnificent Seven. It's Time to Invest in COW.",
+      "Here's Where Consumer Purchase Data Shows Walmart Prices Rising"
+    ],
+    "today": "2025-06-11",
+    "firm_score": 72,
+    "quantitative_screening": {
+      "passed": true,
+      "overall_screening_score": 63.39,
+      "fundamental_score": 41.78,
+      "technical_score": 85,
+      "screening_timestamp": "2025-06-11T13:07:31.153423"
+    },
+    "screening_context": "\nQuantitative Screening Results:\n- Overall Score: 63.39\n- Fundamental Score: 41.78\n- Technical Score: 85\n- Status: PASSED all quantitative filters\n",
+    "firm_shap": {
+      "P/E": 8.32,
+      "PEG": -0.0,
+      "Beta": -0.07,
+      "ROE": 0.09,
+      "Quick Ratio": 0.05,
+      "screening_bonus": 1.34
+    }
+  },
+  {
+    "sector": "Consumer Staples",
+    "ticker": "KO",
+    "company_name": "KO",
+    "industry": "Consumer Staples",
+    "firm_financials_json": {
+      "P/E": 28.82,
+      "Beta": 0.46,
+      "ROE": 0.39,
+      "Quick Ratio": 0.75
+    },
+    "firm_news_snippets": [
+      "Coca-Cola Stays Ahead In The Ozempic Era",
+      "Turkey's antitrust authority opens probe of Coca-Cola over possible competition violation",
+      "20 stocks bucking bad trends on Wall Street \u2014 what might be next for them?"
+    ],
+    "today": "2025-06-11",
+    "firm_score": 78,
+    "quantitative_screening": {
+      "passed": true,
+      "overall_screening_score": 64.49,
+      "fundamental_score": 53.98,
+      "technical_score": 75,
+      "screening_timestamp": "2025-06-11T13:07:31.153406"
+    },
+    "screening_context": "\nQuantitative Screening Results:\n- Overall Score: 64.49\n- Fundamental Score: 53.98\n- Technical Score: 75\n- Status: PASSED all quantitative filters\n",
+    "firm_shap": {
+      "P/E": 5.76,
+      "PEG": -0.0,
+      "Beta": -0.05,
+      "ROE": 0.16,
+      "Quick Ratio": 0.22,
+      "screening_bonus": 1.45
+    }
+  },
+  {
+    "sector": "Information Technology",
+    "ticker": "MSFT",
+    "company_name": "MSFT",
+    "industry": "Information Technology",
+    "firm_financials_json": {
+      "P/E": 36.51,
+      "Beta": 1.03,
+      "ROE": 0.34,
+      "Quick Ratio": 1.24
+    },
+    "firm_news_snippets": [
+      "5 Cybersecurity Stocks You Can Buy and Hold for the Next Decade",
+      "Starbucks AI assistant, powered by Microsoft, aims to help baristas focus on coffee and customers",
+      "'Closing Bell Overtime' panel talks the bull and bear case for Microsoft"
+    ],
+    "today": "2025-06-11",
+    "firm_score": 85,
+    "quantitative_screening": {
+      "passed": true,
+      "overall_screening_score": 68.84,
+      "fundamental_score": 52.68,
+      "technical_score": 85,
+      "screening_timestamp": "2025-06-11T13:07:31.153421"
+    },
+    "screening_context": "\nQuantitative Screening Results:\n- Overall Score: 68.84\n- Fundamental Score: 52.68\n- Technical Score: 85\n- Status: PASSED all quantitative filters\n",
+    "firm_shap": {
+      "P/E": 7.3,
+      "PEG": -0.0,
+      "Beta": -0.1,
+      "ROE": 0.14,
+      "Quick Ratio": 0.37,
+      "screening_bonus": 1.88
+    }
+  },
+  {
+    "sector": "Information Technology",
+    "ticker": "AAPL",
+    "company_name": "AAPL",
+    "industry": "Information Technology",
+    "firm_financials_json": {
+      "P/E": 31.32,
+      "Beta": 1.21,
+      "ROE": 1.38,
+      "Quick Ratio": 0.68
+    },
+    "firm_news_snippets": [
+      "Epson's New PowerLite L-Series Portable Projectors Now Available and Compatible with Apple AirPlay",
+      "3 Reasons to Buy This Beaten-Down Warren Buffett Stock",
+      "Future CPI Prints Paramount in Rate Cut Cycle, AAPL & NVDA to Lead Mag 7"
+    ],
+    "today": "2025-06-11",
+    "firm_score": 78,
+    "quantitative_screening": {
+      "passed": true,
+      "overall_screening_score": 65.18,
+      "fundamental_score": 80.35,
+      "technical_score": 50,
+      "screening_timestamp": "2025-06-11T13:07:31.153417"
+    },
+    "screening_context": "\nQuantitative Screening Results:\n- Overall Score: 65.18\n- Fundamental Score: 80.35\n- Technical Score: 50\n- Status: PASSED all quantitative filters\n",
+    "firm_shap": {
+      "P/E": 6.26,
+      "PEG": -0.0,
+      "Beta": -0.12,
+      "ROE": 0.55,
+      "Quick Ratio": 0.2,
+      "screening_bonus": 1.52
+    }
+  },
+  {
+    "sector": "Information Technology",
+    "ticker": "NVDA",
+    "company_name": "NVDA",
+    "industry": "Information Technology",
+    "firm_financials_json": {
+      "P/E": 46.14,
+      "Beta": 2.12,
+      "ROE": 1.15,
+      "Quick Ratio": 2.86
+    },
+    "firm_news_snippets": [
+      "Dataiku Unveils Enterprise-Grade Blueprint to Accelerate Agentic AI in Financial Services Built with NVIDIA",
+      "Nvidia and Perplexity Team Up in European AI Push",
+      "Trend Micro Enhances AI Safety and Security in NVIDIA Enterprise AI Factories"
+    ],
+    "today": "2025-06-11",
+    "firm_score": 78,
+    "quantitative_screening": {
+      "passed": true,
+      "overall_screening_score": 66.98,
+      "fundamental_score": 83.96,
+      "technical_score": 50,
+      "screening_timestamp": "2025-06-11T13:07:31.153419"
+    },
+    "screening_context": "\nQuantitative Screening Results:\n- Overall Score: 66.98\n- Fundamental Score: 83.96\n- Technical Score: 50\n- Status: PASSED all quantitative filters\n",
+    "firm_shap": {
+      "P/E": 9.23,
+      "PEG": -0.0,
+      "Beta": -0.21,
+      "ROE": 0.46,
+      "Quick Ratio": 0.86,
+      "screening_bonus": 1.7
+    }
+  },
+  {
+    "sector": "Information Technology",
+    "ticker": "CSCO",
+    "company_name": "CSCO",
+    "industry": "Information Technology",
+    "firm_financials_json": {
+      "P/E": 26.92,
+      "Beta": 0.88,
+      "ROE": 0.21,
+      "Quick Ratio": 0.71
+    },
+    "firm_news_snippets": [
+      "Is Trending Stock Cisco Systems, Inc. (CSCO) a Buy Now?",
+      "The Highest-Quality Dividend Contenders By Quality Scores",
+      "Cisco Unveils Secure Network Architecture to Accelerate Workplace AI Transformation"
+    ],
+    "today": "2025-06-11",
+    "firm_score": 78,
+    "quantitative_screening": {
+      "passed": true,
+      "overall_screening_score": 65.92,
+      "fundamental_score": 46.84,
+      "technical_score": 85,
+      "screening_timestamp": "2025-06-11T13:07:31.153434"
+    },
+    "screening_context": "\nQuantitative Screening Results:\n- Overall Score: 65.92\n- Fundamental Score: 46.84\n- Technical Score: 85\n- Status: PASSED all quantitative filters\n",
+    "firm_shap": {
+      "P/E": 5.38,
+      "PEG": -0.0,
+      "Beta": -0.09,
+      "ROE": 0.08,
+      "Quick Ratio": 0.21,
+      "screening_bonus": 1.59
+    }
+  },
+  {
+    "sector": "Communication Services",
+    "ticker": "T",
+    "company_name": "T",
+    "industry": "Communication Services",
+    "firm_financials_json": {
+      "P/E": 17.12,
+      "Beta": 0.6,
+      "ROE": 0.11,
+      "Quick Ratio": 0.44
+    },
+    "firm_news_snippets": [
+      "AT&T Inc. (T) Presents at Mizuho Technology Conference 2025 Transcript",
+      "5 Ideal 'Safe' Buys From June Fortune Return On Leadership Screen",
+      "AT&T Expands Nation's Largest Fiber Network, Now Reaching More Than 30 Million Fiber Locations"
+    ],
+    "today": "2025-06-11",
+    "firm_score": 75,
+    "quantitative_screening": {
+      "passed": true,
+      "overall_screening_score": 64.56,
+      "fundamental_score": 44.12,
+      "technical_score": 85,
+      "screening_timestamp": "2025-06-11T13:07:31.153412"
+    },
+    "screening_context": "\nQuantitative Screening Results:\n- Overall Score: 64.56\n- Fundamental Score: 44.12\n- Technical Score: 85\n- Status: PASSED all quantitative filters\n",
+    "firm_shap": {
+      "P/E": 3.42,
+      "PEG": -0.0,
+      "Beta": -0.06,
+      "ROE": 0.04,
+      "Quick Ratio": 0.13,
+      "screening_bonus": 1.46
+    }
+  }
+]

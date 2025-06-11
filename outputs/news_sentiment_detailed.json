@@ -1,108 +1,89 @@
 {
-  "generated_at": "2025-06-10T20:38:02.247648",
-  "processing_time_seconds": 5.4,
+  "generated_at": "2025-06-11T13:08:54.478351",
+  "processing_time_seconds": 5.7,
   "statistics": {
     "requests_made": 15,
     "requests_successful": 15,
     "requests_failed": 0,
-    "total_retry_time": 5.419286251068115,
+    "total_retry_time": 5.672577381134033,
     "cache_hits": 0,
     "success_rate": 100.0,
-    "avg_retry_time": 0.36
+    "avg_retry_time": 0.38
   },
   "sentiment_data": [
     {
       "ticker": "MSFT",
-      "avg_sent": 0.49,
-      "is_negative": false,
-      "weight_adjustment": 0
-    },
-    {
-      "ticker": "AMZN",
-      "avg_sent": 0.561,
-      "is_negative": false,
-      "weight_adjustment": 0
-    },
-    {
-      "ticker": "JNJ",
-      "avg_sent": 0.714,
+      "avg_sent": 0.509,
       "is_negative": false,
       "weight_adjustment": 0
     },
     {
       "ticker": "AAPL",
-      "avg_sent": 0.14,
+      "avg_sent": 0.12,
       "is_negative": false,
       "weight_adjustment": 0
     },
     {
-      "ticker": "GOOGL",
-      "avg_sent": 0.406,
+      "ticker": "BAC",
+      "avg_sent": 0.5,
       "is_negative": false,
       "weight_adjustment": 0
     },
     {
-      "ticker": "XOM",
-      "avg_sent": 0.529,
+      "ticker": "PFE",
+      "avg_sent": 0.44,
       "is_negative": false,
       "weight_adjustment": 0
     },
     {
-      "ticker": "SLB",
-      "avg_sent": 1.0,
+      "ticker": "XLE",
+      "avg_sent": 0.0,
       "is_negative": false,
       "weight_adjustment": 0
     },
     {
-      "ticker": "BA",
-      "avg_sent": 0.333,
+      "ticker": "XLB",
+      "avg_sent": 0.5,
       "is_negative": false,
       "weight_adjustment": 0
     },
     {
-      "ticker": "HON",
-      "avg_sent": 0.571,
+      "ticker": "XLP",
+      "avg_sent": 0.0,
       "is_negative": false,
       "weight_adjustment": 0
     },
     {
-      "ticker": "NKE",
-      "avg_sent": 0.556,
+      "ticker": "XLV",
+      "avg_sent": 0.5,
       "is_negative": false,
       "weight_adjustment": 0
     },
     {
-      "ticker": "PG",
-      "avg_sent": -0.696,
-      "is_negative": true,
-      "weight_adjustment": 0.3
-    },
-    {
-      "ticker": "KO",
-      "avg_sent": 0.636,
-      "is_negative": false,
-      "weight_adjustment": 0
-    },
-    {
-      "ticker": "MRK",
-      "avg_sent": 0.579,
-      "is_negative": false,
-      "weight_adjustment": 0
-    },
-    {
-      "ticker": "JPM",
-      "avg_sent": 0.667,
+      "ticker": "XLF",
+      "avg_sent": 0.0,
       "is_negative": false,
       "weight_adjustment": 0
     },
     {
       "ticker": "XLK",
-      "avg_sent": 0.5,
+      "avg_sent": 0.0,
+      "is_negative": false,
+      "weight_adjustment": 0
+    },
+    {
+      "ticker": "XLC",
+      "avg_sent": 0.0,
       "is_negative": false,
       "weight_adjustment": 0
     }
   ],
-  "failed_tickers": [],
+  "failed_tickers": [
+    "XLI",
+    "XLY",
+    "XLU",
+    "XLRE"
+  ],
   "threshold_config": {
     "negative_threshold": -0.05,
     "weight_cut_percentage": 0.3

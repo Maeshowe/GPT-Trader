@@ -1,62 +1,62 @@
 [
   {
     "ticker": "MSFT",
-    "weight": 5.19
+    "weight": 5.2
   },
   {
     "ticker": "AAPL",
-    "weight": 4.83
+    "weight": 4.85
   },
   {
     "ticker": "BAC",
-    "weight": 4.86
+    "weight": 4.9
   },
   {
     "ticker": "PFE",
-    "weight": 4.46
+    "weight": 4.23
   },
   {
     "ticker": "XLE",
-    "weight": 5.77
+    "weight": 5.78
   },
   {
     "ticker": "XLB",
-    "weight": 7.06
+    "weight": 7.08
   },
   {
     "ticker": "XLI",
-    "weight": 8.48
+    "weight": 8.49
   },
   {
     "ticker": "XLY",
-    "weight": 6.04
+    "weight": 6.05
   },
   {
     "ticker": "XLP",
-    "weight": 10.3
+    "weight": 10.32
   },
   {
     "ticker": "XLV",
-    "weight": 11.32
+    "weight": 11.35
   },
   {
     "ticker": "XLF",
-    "weight": 9.4
+    "weight": 9.42
   },
   {
     "ticker": "XLK",
-    "weight": 5.16
+    "weight": 5.17
   },
   {
     "ticker": "XLC",
-    "weight": 5.76
+    "weight": 5.77
   },
   {
     "ticker": "XLU",
-    "weight": 5.71
+    "weight": 5.72
   },
   {
     "ticker": "XLRE",
-    "weight": 5.66
+    "weight": 5.67
   }
 ]

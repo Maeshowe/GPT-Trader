@@ -1,13 +1,13 @@
 [
   {
     "ticker": "MSFT",
-    "avg_sent": 0.519,
+    "avg_sent": 0.509,
     "is_negative": false,
     "weight_adjustment": 0
   },
   {
     "ticker": "AAPL",
-    "avg_sent": 0.14,
+    "avg_sent": 0.12,
     "is_negative": false,
     "weight_adjustment": 0
   },
@@ -19,7 +19,7 @@
   },
   {
     "ticker": "PFE",
-    "avg_sent": 0.444,
+    "avg_sent": 0.44,
     "is_negative": false,
     "weight_adjustment": 0
   },
