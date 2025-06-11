@@ -1,46 +1,57 @@
 sectors:
-- name: Energy
-  etf: XLE
-  keyword: Energy
-  override_tickers: []
-- name: Materials
-  etf: XLB
-  keyword: Materials
-  override_tickers: []
-- name: Industrials
-  etf: XLI
-  keyword: Sector
-  override_tickers: []
-- name: Consumer Discretionary
-  etf: XLY
-  keyword: Consumer
-  override_tickers: []
-- name: Consumer Staples
-  etf: XLP
-  keyword: Consumer
-  override_tickers: []
-- name: Healthcare
-  etf: XLV
-  keyword: Sector
-  override_tickers: []
-- name: Financials
-  etf: XLF
-  keyword: Sector
-  override_tickers: []
-- name: Information Technology
-  etf: XLK
-  keyword: Tech
-  override_tickers: []
-- name: Communication Services
-  etf: XLC
-  keyword: Sector
-  override_tickers: []
-- name: Utilities
-  etf: XLU
-  keyword: Utilities
-  override_tickers: []
-- name: Real Estate
-  etf: XLRE
-  keyword: Reits
-  override_tickers: []
-max_firms_per_sector: 3
+  - name: Energy
+    etf: XLK
+    keyword: Energy
+    override_tickers: ["XOM", "CVX", "COP", "WMB", "EOG"]
+
+  - name: Materials
+    etf: XLB
+    keyword: Materials
+    override_tickers: ["LIN", "SHW", "ECL", "NEM", "CTVA"]
+
+  - name: Industrials
+    etf: XLI
+    keyword: Industrials
+    override_tickers: ["GE", "RTX", "UBER", "CAT", "BA"]
+
+  - name: Consumer Discretionary
+    etf: XLY
+    keyword: Consumer Discretionary
+    override_tickers: ["AMZN", "TSLA", "HD", "BKNG", "MCD"]
+
+  - name: Consumer Staples
+    etf: XLP
+    keyword: Consumer Staples
+    override_tickers: ["COST", "WMT", "PG", "PM", "KO"]
+  
+  - name: Healthcare
+    etf: XLV
+    keyword: Health Care
+    override_tickers: ["LLY", "JNJ", "ABBV", "UNH", "ABT"]
+
+  - name: Financials
+    etf: XLF
+    keyword: Financials
+    override_tickers: ["BRK.B", "JPM", "V", "MA", "BAC"]
+
+  - name: Information Technology
+    etf: XLK
+    keyword: Information Technology
+    override_tickers: ["MSFT", "NVDA", "AAPL", "AVGO", "ORCL"]
+
+  - name: Communication Services
+    etf: XLC
+    keyword: Communication Services
+    override_tickers: ["META", "GOOGL", "NFLX", "DIS", "VZ"]
+  
+  - name: Utilities
+    etf: XLU
+    keyword: Utilities
+    override_tickers: ["NEE", "SO", "CEG", "DUK", "VST"]
+
+  - name: Real Estate 
+    etf: XLF
+    keyword: Real Estate
+    override_tickers: ["PLD", "AMT", "WELL", "EQIX", "DLR"]
+    
+max_firms_per_sector: 5
