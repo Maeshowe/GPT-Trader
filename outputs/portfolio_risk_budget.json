@@ -1,62 +1,58 @@
 [
   {
+    "ticker": "GOOGL",
+    "weight": 4.48
+  },
+  {
+    "ticker": "AMZN",
+    "weight": 4.89
+  },
+  {
     "ticker": "MSFT",
-    "weight": 6.41
+    "weight": 6.74
   },
   {
     "ticker": "AAPL",
-    "weight": 6.02
-  },
-  {
-    "ticker": "XOM",
-    "weight": 6.84
-  },
-  {
-    "ticker": "SLB",
-    "weight": 4.39
+    "weight": 6.34
   },
   {
     "ticker": "MRK",
-    "weight": 7.27
+    "weight": 7.67
   },
   {
     "ticker": "NKE",
-    "weight": 4.58
-  },
-  {
-    "ticker": "NVDA",
-    "weight": 2.5
-  },
-  {
-    "ticker": "CSCO",
-    "weight": 7.92
-  },
-  {
-    "ticker": "BAC",
-    "weight": 6.05
-  },
-  {
-    "ticker": "KO",
-    "weight": 10.86
-  },
-  {
-    "ticker": "UBER",
-    "weight": 3.26
-  },
-  {
-    "ticker": "T",
-    "weight": 5.74
+    "weight": 4.81
   },
   {
     "ticker": "WMT",
-    "weight": 8.95
+    "weight": 9.49
   },
   {
-    "ticker": "WFC",
-    "weight": 5.14
+    "ticker": "KO",
+    "weight": 11.48
+  },
+  {
+    "ticker": "CSCO",
+    "weight": 8.36
+  },
+  {
+    "ticker": "XOM",
+    "weight": 7.22
+  },
+  {
+    "ticker": "NVDA",
+    "weight": 2.57
+  },
+  {
+    "ticker": "UBER",
+    "weight": 3.44
+  },
+  {
+    "ticker": "XLE",
+    "weight": 7.64
   },
   {
     "ticker": "XLV",
-    "weight": 14.05
+    "weight": 14.87
   }
 ]

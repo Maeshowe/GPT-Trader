@@ -1,110 +1,103 @@
 {
-  "date": "2025-06-11",
+  "date": "2025-06-30",
   "table": [
     {
-      "Asset": "MSFT ",
-      "Weight (%)": " 8 ",
+      "Asset": " GOOGL ",
+      "Weight (%)": 10,
       "Thesis": " Top-ranked firm ",
       "Edge": " Strong tech sector performance ",
-      "Risk": " Market volatility"
+      "Risk": " Market volatility "
     },
     {
-      "Asset": "AAPL ",
-      "Weight (%)": " 8 ",
+      "Asset": " AMZN  ",
+      "Weight (%)": 10,
       "Thesis": " Top-ranked firm ",
-      "Edge": " Innovation leadership ",
-      "Risk": " Supply chain disruptions"
+      "Edge": " E-commerce growth ",
+      "Risk": " Competitive pressure "
     },
     {
-      "Asset": "XOM ",
-      "Weight (%)": " 8 ",
+      "Asset": " MSFT  ",
+      "Weight (%)": 10,
       "Thesis": " Top-ranked firm ",
-      "Edge": " Energy sector strength ",
-      "Risk": " Commodity price fluctuations"
+      "Edge": " Cloud computing expansion ",
+      "Risk": " Regulatory scrutiny "
     },
     {
-      "Asset": "SLB ",
-      "Weight (%)": " 8 ",
+      "Asset": " AAPL  ",
+      "Weight (%)": 10,
       "Thesis": " Top-ranked firm ",
-      "Edge": " Energy sector strength ",
-      "Risk": " Geopolitical risks"
+      "Edge": " Innovation in consumer tech ",
+      "Risk": " Supply chain disruptions "
     },
     {
-      "Asset": "MRK ",
-      "Weight (%)": " 8 ",
+      "Asset": " MRK   ",
+      "Weight (%)": 5,
       "Thesis": " Top-ranked firm ",
       "Edge": " Healthcare demand ",
-      "Risk": " Regulatory changes"
+      "Risk": " Drug pricing regulations "
     },
     {
-      "Asset": "NKE ",
-      "Weight (%)": " 8 ",
+      "Asset": " NKE   ",
+      "Weight (%)": 5,
       "Thesis": " Top-ranked firm ",
       "Edge": " Brand strength ",
-      "Risk": " Consumer spending shifts"
+      "Risk": " Consumer spending shifts "
     },
     {
-      "Asset": "NVDA ",
-      "Weight (%)": " 8 ",
-      "Thesis": " Top-ranked firm ",
-      "Edge": " AI and gaming growth ",
-      "Risk": " Tech sector volatility"
-    },
-    {
-      "Asset": "CSCO ",
-      "Weight (%)": " 8 ",
-      "Thesis": " Top-ranked firm ",
-      "Edge": " Networking demand ",
-      "Risk": " Competitive pressures"
-    },
-    {
-      "Asset": "BAC ",
-      "Weight (%)": " 8 ",
-      "Thesis": " Top-ranked firm ",
-      "Edge": " Financial sector resilience ",
-      "Risk": " Interest rate changes"
-    },
-    {
-      "Asset": "KO ",
-      "Weight (%)": " 8 ",
-      "Thesis": " Top-ranked firm ",
-      "Edge": " Consumer staples stability ",
-      "Risk": " Currency fluctuations"
-    },
-    {
-      "Asset": "UBER ",
-      "Weight (%)": " 8 ",
-      "Thesis": " Top-ranked firm ",
-      "Edge": " Mobility recovery ",
-      "Risk": " Regulatory challenges"
-    },
-    {
-      "Asset": "T ",
-      "Weight (%)": " 8 ",
-      "Thesis": " Top-ranked firm ",
-      "Edge": " Telecom stability ",
-      "Risk": " Market competition"
-    },
-    {
-      "Asset": "WMT ",
-      "Weight (%)": " 8 ",
+      "Asset": " WMT   ",
+      "Weight (%)": 5,
       "Thesis": " Top-ranked firm ",
       "Edge": " Retail dominance ",
-      "Risk": " Supply chain issues"
+      "Risk": " Margin pressures "
     },
     {
-      "Asset": "WFC ",
-      "Weight (%)": " 8 ",
+      "Asset": " KO    ",
+      "Weight (%)": 5,
       "Thesis": " Top-ranked firm ",
-      "Edge": " Financial sector resilience ",
-      "Risk": " Economic downturns"
+      "Edge": " Global brand presence ",
+      "Risk": " Health trend impacts "
     },
     {
-      "Asset": "XLV ",
-      "Weight (%)": " 4 ",
-      "Thesis": " Healthcare ETF ",
-      "Edge": " Sector diversification ",
-      "Risk": " Sector-specific risks"
+      "Asset": " CSCO  ",
+      "Weight (%)": 5,
+      "Thesis": " Top-ranked firm ",
+      "Edge": " Networking solutions ",
+      "Risk": " Tech sector competition "
+    },
+    {
+      "Asset": " XOM   ",
+      "Weight (%)": 5,
+      "Thesis": " Top-ranked firm ",
+      "Edge": " Energy sector resilience ",
+      "Risk": " Oil price fluctuations "
+    },
+    {
+      "Asset": " NVDA  ",
+      "Weight (%)": 5,
+      "Thesis": " Top-ranked firm ",
+      "Edge": " AI and GPU leadership ",
+      "Risk": " Semiconductor supply issues "
+    },
+    {
+      "Asset": " UBER  ",
+      "Weight (%)": 5,
+      "Thesis": " Top-ranked firm ",
+      "Edge": " Mobility and delivery growth ",
+      "Risk": " Regulatory challenges "
+    },
+    {
+      "Asset": " XLE   ",
+      "Weight (%)": 5,
+      "Thesis": " Energy sector ETF ",
+      "Edge": " Energy sector resilience ",
+      "Risk": " Commodity price volatility "
+    },
+    {
+      "Asset": " XLV   ",
+      "Weight (%)": 5,
+      "Thesis": " Healthcare sector ETF ",
+      "Edge": " Defensive sector strength ",
+      "Risk": " Policy changes "
     }
   ]
 }

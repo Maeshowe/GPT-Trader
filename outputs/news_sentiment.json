@@ -1,73 +1,85 @@
 [
   {
     "ticker": "MSFT",
-    "avg_sent": 0.569,
+    "avg_sent": 0.429,
     "is_negative": false,
     "weight_adjustment": 0
   },
   {
     "ticker": "AAPL",
-    "avg_sent": 0.12,
+    "avg_sent": 0.062,
     "is_negative": false,
     "weight_adjustment": 0
   },
   {
-    "ticker": "BAC",
-    "avg_sent": 0.5,
-    "is_negative": false,
-    "weight_adjustment": 0
-  },
-  {
-    "ticker": "PFE",
-    "avg_sent": 0.44,
-    "is_negative": false,
-    "weight_adjustment": 0
-  },
-  {
-    "ticker": "XLE",
-    "avg_sent": 0.0,
-    "is_negative": false,
-    "weight_adjustment": 0
-  },
-  {
-    "ticker": "XLB",
-    "avg_sent": 0.5,
-    "is_negative": false,
-    "weight_adjustment": 0
-  },
-  {
-    "ticker": "XLI",
-    "avg_sent": 0.0,
-    "is_negative": false,
-    "weight_adjustment": 0
-  },
-  {
-    "ticker": "XLP",
-    "avg_sent": 0.0,
-    "is_negative": false,
-    "weight_adjustment": 0
-  },
-  {
-    "ticker": "XLV",
+    "ticker": "XOM",
     "avg_sent": 0.333,
     "is_negative": false,
     "weight_adjustment": 0
   },
   {
-    "ticker": "XLF",
-    "avg_sent": 0.0,
+    "ticker": "SLB",
+    "avg_sent": 0.25,
     "is_negative": false,
     "weight_adjustment": 0
   },
   {
-    "ticker": "XLK",
+    "ticker": "MRK",
     "avg_sent": 0.5,
     "is_negative": false,
     "weight_adjustment": 0
   },
   {
-    "ticker": "XLC",
-    "avg_sent": 0.0,
+    "ticker": "NKE",
+    "avg_sent": 0.326,
+    "is_negative": false,
+    "weight_adjustment": 0
+  },
+  {
+    "ticker": "NVDA",
+    "avg_sent": 0.73,
+    "is_negative": false,
+    "weight_adjustment": 0
+  },
+  {
+    "ticker": "CSCO",
+    "avg_sent": 0.5,
+    "is_negative": false,
+    "weight_adjustment": 0
+  },
+  {
+    "ticker": "BAC",
+    "avg_sent": 0.684,
+    "is_negative": false,
+    "weight_adjustment": 0
+  },
+  {
+    "ticker": "KO",
+    "avg_sent": 0.5,
+    "is_negative": false,
+    "weight_adjustment": 0
+  },
+  {
+    "ticker": "UBER",
+    "avg_sent": 0.639,
+    "is_negative": false,
+    "weight_adjustment": 0
+  },
+  {
+    "ticker": "T",
+    "avg_sent": 0.647,
+    "is_negative": false,
+    "weight_adjustment": 0
+  },
+  {
+    "ticker": "WMT",
+    "avg_sent": 0.462,
+    "is_negative": false,
+    "weight_adjustment": 0
+  },
+  {
+    "ticker": "WFC",
+    "avg_sent": 0.857,
     "is_negative": false,
     "weight_adjustment": 0
   }
